@@ -1,0 +1,463 @@
+:root {
+	--primary: #3fa2db;
+	--secondary: #eff6ff;
+	--borderColor: #e2e8f0;
+	--textColor: #475569;
+	--borderColor: #3fa2db;
+}
+@media (min-width: 1400px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1545px !important;
+	}
+}
+
+body {
+	margin: 0 !important;
+	display: unset !important;
+	min-width: unset !important;
+	min-height: unset !important;
+	width: 100%;
+	height: 100vh;
+}
+p {
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+.MaxNumberOfLine {
+	line-height: 1.2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.outerContainerNavbar {
+	background-color: var(--primary);
+}
+/* custom dropdown */
+.custom-dropdown-option {
+	padding: 1px 15px;
+	color: #000;
+	border: 2px solid transparent;
+	font-weight: 600;
+}
+
+.custom-dropdown-option:hover {
+	background-color: #f1f1f4;
+	cursor: pointer;
+	border: 2px solid #638f9c;
+}
+
+.custom-dropdown-option.selected {
+	background-color: #f1f1f4;
+	cursor: pointer;
+	border: 2px solid #638f9c;
+}
+
+.custom-dropdown {
+	width: 100%;
+	position: relative;
+	border-radius: 5px;
+	color: #64748b;
+	padding: 4px 10px;
+	color: var(--primary);
+	background-color: white;
+	cursor: pointer;
+	border: 1px solid var(--borderColor);
+}
+.custom-dropdown-options {
+	position: absolute;
+	transform: translate(0px, 0px);
+	background-color: white;
+	border: 1px solid #bdbdbf;
+	border-radius: 8px;
+	width: 100%;
+	z-index: 9999;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.outerWrapperCarouselImage {
+	margin-top: -95px;
+}
+.carouselContent {
+	line-height: 25px;
+	font-size: 17px;
+}
+.dropdown-icon {
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translateY(-50%);
+	font-size: 22px;
+}
+.custom-dropdown:hover {
+	border-color: #4ca4bf !important;
+}
+ul {
+	list-style-type: none;
+}
+.DropDownLabelSelectOption {
+	font-size: 15px;
+	color: var(--primary);
+	font-weight: 600 !important;
+}
+.outerContainerFooter {
+	background-image: url("/assets/images/footerImage.png");
+	/* You can set additional background properties like size, position, repeat, etc. */
+	background-size: cover;
+	background-position: center;
+}
+.outerWrapperCarousel {
+	background-image: url("/assets/images/CarouselBackImage.png");
+	/* You can set additional background properties like size, position, repeat, etc. */
+	background-size: cover;
+	background-position: center;
+	padding: 31px 31px;
+	height: 550px;
+}
+.activeCarousel {
+	background-color: #3fa2db !important;
+	color: white !important;
+}
+.css-1qzevvg {
+	display: none !important;
+}
+.outerContainerHomeImage {
+	background-image: url("/assets/images/header.png");
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+}
+.headingHomeFixRepair {
+	font-size: 55px;
+	font-weight: 400;
+	text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8);
+}
+.contentInHomePage {
+	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3);
+}
+.contentHomeFixRepairHomeImage {
+	height: 100%;
+}
+.ContainerContentHomeFixRepair {
+	width: 58%;
+}
+.SearchField {
+	border: unset !important;
+	width: 328px;
+}
+.SearchField:focus {
+	outline: unset;
+}
+
+.outerWrapperSearchField {
+	border-radius: 6px;
+	padding: 5px;
+}
+.outerWrapperSearchHomePage {
+	background-color: #9fd1ed;
+	border-radius: 6px;
+	width: fit-content;
+}
+.outerWrapperSearchField img {
+	width: 7%;
+}
+.footerHeading {
+	font-size: 20px;
+	font-weight: 500;
+}
+.footerLinks {
+	font-size: 18px;
+	font-weight: 400;
+}
+.footerParagraph {
+	font-size: 14px;
+	line-height: 23px;
+	font-weight: 400;
+}
+.opacity_1 {
+	opacity: 1;
+}
+.headingColor {
+	color: var(--primary);
+}
+.textColor {
+	color: var(--textColor);
+}
+.button {
+	background-color: var(--primary) !important;
+	color: white !important;
+	border: unset !important;
+	border-radius: 7px !important;
+	padding: 6px 20px !important;
+	font-size: 15px !important;
+	font-weight: 400 !important;
+	text-transform: uppercase !important;
+}
+.btn:hover {
+	background-color: #0484ec !important;
+}
+.ServiceImage {
+	width: 100%;
+}
+.outerWrapperServiceBox {
+	width: 255px;
+}
+.ServiceBoxDescription {
+	line-height: 18px;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--textColor);
+}
+.ServiceBoxHeading {
+	font-size: 20px;
+	font-weight: 500;
+}
+.TextHolderContactUS {
+	width: 600px;
+}
+.inputContactUs {
+	border: unset;
+	border-bottom: 1px solid #e2e8f0;
+	border-radius: unset;
+	padding: 11px 3px;
+	font-size: 21px;
+}
+.LabelFormContactUs {
+	font-size: 24px;
+	font-weight: 500;
+}
+.inputContactUs:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+.outerWrapperEnterprise {
+	background-image: url("/assets/images/blackImages.svg");
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+.primaryColor {
+	color: var(--primary);
+}
+.line_height {
+	line-height: 23px;
+}
+.TextHolderEnterprise {
+	width: 230px;
+	line-height: 33px;
+}
+.LearnMoreButton {
+	color: #9a3412 !important;
+	background-color: white !important;
+	border: unset !important;
+	border-radius: 16px !important;
+	padding: 4px 14px !important;
+}
+.outerWrapperQuestion1 {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+.ServiceImage {
+	width: 100%;
+	border-radius: 6px;
+}
+.outerWrapperTabs {
+	background-color: #d9ecf8;
+}
+.tabsButton {
+	color: #000;
+	cursor: pointer;
+	font-weight: 600;
+}
+.active {
+	color: #3fa2db;
+}
+.boxShadow {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.PhoneInputInput {
+	border: unset !important;
+}
+.PhoneInputInput:focus {
+	outline: none !important;
+}
+.cancel {
+	background-color: transparent !important;
+	color: black !important;
+	/* border: unset !important; */
+	border-radius: 7px !important;
+	padding: 7px 20px !important;
+}
+
+._24OKz {
+	display: none !important;
+}
+._1aDvk {
+	display: none !important;
+}
+._3cxVN {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+._3KAu7 {
+	border-bottom: unset !important;
+	padding: unset !important;
+	font-size: 18px !important;
+}
+._1sbNu button {
+	background-color: #d9ecf8 !important;
+	color: #3fa2db !important;
+}
+._3curk {
+	position: unset !important;
+	border: 2px solid #94a3b8 !important;
+	border-radius: 6px !important;
+	background-color: unset !important;
+}
+._1yUS2 {
+	padding: unset !important;
+}
+._1hglr {
+	height: 2.64rem !important;
+	justify-content: center !important;
+}
+._1hglr button {
+	padding: unset !important;
+	font-size: 13px !important;
+}
+._1hglr button:hover {
+	background-color: #3fa2db !important;
+	color: white !important;
+}
+.outerWrapperTimes {
+	background-color: #ecf6fb;
+	color: #3fa2db;
+	padding: 12px;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 600;
+}
+.outerWrapperTimes:hover {
+	background-color: #3fa2db !important;
+	color: white !important;
+}
+.outerWrapperTimesActive {
+	background-color: #3fa2db !important;
+	color: white !important;
+}
+.LogoImage {
+	width: 90px;
+	height: 90px;
+}
+.StarImages {
+	width: 20px;
+}
+.outerWrapperBookProfessional {
+	background-color: #fafaf9;
+}
+
+.containerBoxes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.box-container {
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
+.box {
+	width: 100%;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.box-1 {
+	background-color: lightgray;
+	top: 0;
+}
+.css-1fzpoyk {
+	opacity: 1 !important;
+	width: 60% !important;
+}
+.box-2 {
+	background-color: lightblue;
+	top: 0;
+}
+
+.box-3 {
+	background-color: lightgreen;
+	bottom: 0;
+}
+.videoInAboutUs {
+	border-radius: 5px !important;
+}
+._1hglr button:active {
+	background-color: red !important;
+}
+._1hglr button:focus {
+	background-color: red !important;
+}
+
+/* src/components/Calendar.css */
+
+.calendar {
+	font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.calendar-header select {
+	padding: 5px;
+	font-size: 16px;
+}
+
+.calendar-days-of-week {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	background-color: #f0f0f0;
+	text-align: center;
+}
+
+.calendar-header-day {
+	font-weight: bold;
+	padding: 5px;
+}
+
+.calendar-days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 5px;
+}
+
+.calendar-day {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+}
+
+.calendar-day.empty {
+	background-color: #f0f0f0;
+}
+
+/* Add more styling as needed */

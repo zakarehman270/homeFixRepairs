@@ -1,30 +1,39 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import HomePage from "./pages/HomePage";
-import Footer from "./components/HeaderFooters/Footer";
-import Header from "./components/HeaderFooters/Headers";
-import ServiceDetail from "./pages/ServiceDetail";
-import FurnitureServiceDetails from "./pages/FurnitureServiceDetails";
-import BookProfessional from "./pages/BookProfessional";
-import ContactUs from "./pages/ContactUs";
-import AboutUs from "./pages/AboutUs";
+import Home from "./Pages/Home";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import BookProfessional from "./Pages/BookProfessional";
+import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
+import TermAndCondition from "./Pages/TermAndCondition";
+import Blog from "./Pages/Blog";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import ServiceDetails from "./Pages/ServiceDetails";
+import DeepServiceDetails from "./Pages/DeepServiceDetails";
 function App() {
-	return (
-		<div>
-			<Header />
-			<Routes>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/service-detail" element={<ServiceDetail />} />
-				<Route path="/furniture-service-details" element={<FurnitureServiceDetails />} />
-				<Route path="/book-professional" element={<BookProfessional />} />
-				<Route path="/contact-us" element={<ContactUs />} />
-				<Route path="/about-us" element={<AboutUs />} />
-			</Routes>
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <FloatingWhatsApp phoneNumber={"+971558504862"} accountName={"Ahmed"} 
+      darkMode={true} 
+      allowEsc={true}
+      allowClickAway={true}
+      statusMessage={"Contact as soon as possible"}
+      notification={true}
+      />
+      <Header /> 
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/book-professional" element={<BookProfessional />} />
+        <Route exact path="/contact-us" element={<ContactUs />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
+        <Route exact path="/term-condition" element={<TermAndCondition />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/deep-service-details" element={<DeepServiceDetails />} />
+        <Route exact path="/servicedetail" element={<ServiceDetails />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
-
 export default App;

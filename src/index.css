@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo&family=Inter&family=Open+Sans&family=Poppins&family=Sora&display=swap");
+
+:root {
+  ---primary: #3fa2db;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.HeaderContainer {
+  background-color: var(---primary);
+}
+.headerLinks {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-header {
+  background-color: white !important;
+  padding: 6px 12px 6px 12px !important;
+  border: 1px solid var(---primary) !important;
+  border-radius: 8px !important;
+  font-family: "Inter" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  line-height: 16px !important;
+  color: var(---primary) !important;
+}
+
+.SelectedDropDown {
+  background-color: var(---primary) !important;
+  color: white !important;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 8px;
+}
+
+.dropdown-options li {
+  padding: 6px;
+  cursor: pointer;
+  font-family: "Inter" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  margin: 8px;
+  line-height: 16px !important;
+  border-bottom: 1px solid #ccc;
+}
+.dropdown-options li:last-child {
+  border-bottom: none !important;
+}
+.HeaderLogo {
+  width: 84%;
+}
+.dropdown-options li:hover {
+  background-color: var(---primary);
+  color: white !important;
+}
+.selectedOptions {
+  background-color: var(---primary);
+  color: white !important;
+}
+.OuterWrapperHeaderHome {
+  height: 600px;
+}
+.outerWrapperHome {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 74%;
+}
+.MarginTop {
+  margin-top: 140px;
+}
+.HomeHeading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 100%;
+  /* identical to box height, or 80px */
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.SubHeadingInHome {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 126%;
+  color: #ffffff;
+}
+.outerWrapperSearchInHomeInHome {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(39px);
+  border-radius: 11px;
+  width: 88%;
+}
+.textInSearchHome {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffffff;
+}
+.outerWrapperSearchInHome {
+  background: #ffffff;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  color: #2c3e50;
+  padding: 4px 12px;
+  width: 76%;
+}
+.SearchInHome {
+  border: none !important;
+}
+.SearchInHome:focus {
+  outline: none;
+}
+.SearchIcons {
+  width: 20px;
+}
+.button {
+  padding: 4px 12px 4px 12px !important;
+  border-radius: 6px !important;
+  background-color: #3fa2db !important;
+  border: unset !important;
+}
+.TextHolderAdvanceSearch {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: #ffffff;
+  text-align: end;
+}
+.outerWrapperServices {
+  width: 23%;
+}
+.ourServiceHeading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: #1e293b;
+}
+.headingColor {
+  color: var(---primary);
+}
+.serviceHeading {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #1e293b;
+}
+.serviceDescription {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 122%;
+  text-align: center;
+  color: #475569;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.outerWrapperInterPriseSection {
+  background-image: url("/assets/images/blackImages.svg");
+  /* You can add more CSS properties for styling the background here */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.outerWrapperEnterpriseSuiteRightSection {
+  background-image: url("/assets/images/electrian.jpg");
+  /* You can add more CSS properties for styling the background here */
+  width: 100%;
+  height: 345px;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.textHolderEnterPrise {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
+  color: #ffffff;
+}
+.textHolderGoodCompany {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: var(---primary);
+}
+.textHolderThis {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  /* identical to box height, or 36px */
+  color: #ffffff;
+}
+.descriptionInEnterPriseSuit {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #ffffff;
+}
+.ButtonLearnMore {
+  padding: 6px 12px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 100% !important;
+  /* identical to box height, or 16px */
+  color: #9a3412 !important;
+  border: none !important;
+}
+.outerWrapperCarousel {
+  background-image: url("/assets/images/CarouselBackImage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add any other styles you need for the .outerWrapperCarousel element */
+  width: 100%; /* Example: Make the element 100% wide */
+  height: 420px; /* Example: Set a specific height for the element */
+}
+.css-1qzevvg {
+  display: none !important;
+}
+.outerWrapperCarouselBox {
+  box-sizing: border-box;
+  background: White;
+  border-radius: 12px;
+}
+.CarouselHeading {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: #1e293b;
+}
+.CarouselDescription {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 125%;
+  color: #475569;
+}
+.outerWrapperCarouselImage {
+  position: absolute;
+  transform: translate(215%, -80px);
+}
+.css-1fzpoyk {
+  opacity: 1 !important;
+  width: 60% !important;
+}
+.activeSlide {
+  background-color: var(---primary) !important;
+}
+.c_pointer {
+  cursor: pointer;
+}
+.headingOurClients {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 100%;
+  /* identical to box height, or 36px */
+  text-align: center;
+  color: #ffffff;
+}
+.css-doq0dk {
+  height: 67% !important;
+}
+.HeadingPickService {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 100%;
+  color: #1e293b;
+}
+.ServiceListHeading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  color: #1e293b;
+}
+.ServiceListSubHeading {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 128%;
+  /* identical to box height, or 18px */
+  color: #475569;
+}
+.outerWrapperFooter {
+  background-image: url("assets/images/footerImage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.FooterLine {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.headingInFooter {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  /* identical to box height, or 28px */
+  color: #ffffff;
+}
+.SubHeadingInFooter {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  color: #ffffff;
+}
+.textHolderFollowUp {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 100%;
+  /* identical to box height, or 28px */
+  color: #ffffff;
+}
+.descriptionInFooter {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 113%;
+  color: #ffffff;
+  width: 82%;
+}
+.logoInFooter {
+  width: 22%;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: calc(var(--bs-gutter-x) * 1.5) !important;
+  padding-left: calc(var(--bs-gutter-x) * 1.5) !important;
+}
+.outerWrapperForm {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+body {
+  background-color: #fafaf9 !important;
+}
+.FormLabel {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+  color: #475569;
+}
+.UpperHeadingInBookProfessional {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  /* identical to box height, or 20px */
+  color: #1e293b;
+}
+.headingInBookProfessional {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 100%;
+  /* identical to box height, or 36px */
+  color: #3fa2db;
+}
+
+/* Calendar.css */
+
+.calendar {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  /* Frame 814181 */
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #64748b;
+}
+.CenterDate {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 27px;
+  color: #64748b;
+}
+.day {
+  flex: 1;
+  text-align: center;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.date {
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.other-month {
+  opacity: 0.5;
+  background-color: unset !important;
+}
+.date p {
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  background: rgba(63, 162, 219, 0.2);
+  border-radius: 32px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #3fa2db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date p:hover {
+  background-color: #3498db !important; /* Change the background color as desired */
+  color: #fff !important; /* Change the text color as desired */
+}
+
+.today {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+/* Add this to your CSS stylesheet */
+.selected-date {
+  background-color: #3498db !important; /* Change the background color as desired */
+  color: #fff !important; /* Change the text color as desired */
+}
+.outerWrapper {
+  background-color: var(---primary);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  background: rgba(63, 162, 219, 0.1);
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+  color: #3fa2db;
+  padding: 15px 12px;
+}
+.outerWrapper:hover {
+  box-sizing: border-box;
+  background: #3fa2db;
+  color: white;
+}
+.SelectedDate {
+  background: #3fa2db !important;
+  color: white !important;
+}
+.SubmitButton {
+  padding: 10px 37px !important;
+  background: #3fa2db !important;
+  border-radius: 8px !important;
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  /* identical to box height, or 156% */
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.CancelButton {
+  padding: 10px 37px !important;
+  background: #ffffff !important;
+  border: 1px solid #94a3b8 !important;
+  border-radius: 8px !important;
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  /* identical to box height, or 156% */
+  color: #94a3b8 !important;
+}
+.CancelButton:hover {
+  background: #3fa2db !important;
+  color: white !important;
+}
+.form-control-contact-us {
+  border: unset !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  display: block !important;
+  width: 100% !important;
+  padding-bottom: 9px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #94a3b8;
+  background-color: transparent !important;
+}
+.form-control-contact-us:focus {
+  outline: unset !important;
+}
+.headingInContactUs {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  /* identical to box height, or 36px */
+  color: #1e293b;
+}
+.SubheadingInContactUs {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+  color: #475569;
+}
+.outerWrapperHeadingDropdown {
+  background-color: white;
+  padding: 17px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.labelContactUs {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+  color: #1e293b;
+}
+.subLabel {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  color: #475569;
+}
+.SubHeadingInAboutUs {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  color: #1e293b;
+}
+.DescriptionInAboutUs {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+  text-align: justify;
+  color: #475569;
+}
+.outerWrapperTerm {
+  background: #3fa2db;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 100%;
+  color: #ffffff;
+}
+.headingInTerm {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  color: #1e293b;
+}
+.SubHeadingInTerm {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #475569;
+}
+.LineInBlog {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+.HeadingInBlog {
+  font-family: "Plus Jakarta Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #0f172a;
+}
+.SubHeadingInBlog {
+  font-family: "Plus Jakarta Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1e293b;
+}
+.userHeadingInBlog {
+  font-family: "Plus Jakarta Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  color: #0f172a;
+}
+.userSubHeadingInBlog {
+  font-family: "Plus Jakarta Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #475569;
+}
+.TextHolderLatestStory {
+  font-family: "Plus Jakarta Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #0f172a;
+}
+.outerWrapperTabs {
+  background-color: #d9ecf8;
+}
+.tabsTitle {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+}
+.activeTabs {
+  color: #3fa2db;
+}
+.DeepServiceDetailsImage {
+  border-radius: 8px;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}

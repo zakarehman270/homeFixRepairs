@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-
+import { DeepServiceDetailsList } from "../Data";
+import { useLocation } from "react-router-dom";
 const DeepServiceDetails = () => {
-  const [ActiveTas, setActiveTas] = useState(0);
+  const [ActiveTas, setActiveTas] = useState("1");
+  const [DataService, setDataService] = useState(null);
+  const [TabsData, setTabsData] = useState(null)
+  const location = useLocation();
+  let userID = location?.search?.replace("?", "");
+  useEffect(() => {
+    for (let i = 0; i < DeepServiceDetailsList?.length; i++) {
+      if (userID === DeepServiceDetailsList[i]?.id) {
+        setDataService(DeepServiceDetailsList[i]);
+        setTabsData(DeepServiceDetailsList[i]?.tabs[0])
+        setActiveTas("1")
+        break;
+      }
+    }
+  }, [location?.search]);
   return (
     <div className="pb-5">
       <div className="container-fluid">
@@ -22,52 +37,31 @@ const DeepServiceDetails = () => {
               </div>
             </div>
             <p className="ourServiceHeading headingColor text-start ">
-              Professional handyman in dubai
+              Professional {DataService?.title} in dubai
             </p>
             <p className="ServiceListSubHeading mt-1">
-              A professional handyman in Dubai is a skilled and versatile
-              tradesperson who offers a wide range of repair, maintenance, and
-              improvement services for residential, commercial, and industrial
-              properties in the city of Dubai, United Arab Emirates. These
-              individuals are essential for ensuring that properties are
-              well-maintained, safe, and aesthetically pleasing. Here's a
-              description of what you can expect from a professional handyman in
-              Dubai:
+              {DataService?.description}
             </p>
           </div>
         </div>
       </div>
       <div className="outerWrapperTabs mt-2 p-2 d-flex justify-content-center align-items-center gap-5">
-        <p
-          className={`c_pointer tabsTitle ${
-            ActiveTas === 0 ? "activeTabs" : ""
-          }`}
-          onClick={() => {
-            setActiveTas(0);
-          }}
-        >
-          professional1
-        </p>
-        <p
-          className={`c_pointer tabsTitle ${
-            ActiveTas === 1 ? "activeTabs" : ""
-          }`}
-          onClick={() => {
-            setActiveTas(1);
-          }}
-        >
-          professional2
-        </p>
-        <p
-          className={`c_pointer tabsTitle ${
-            ActiveTas === 2 ? "activeTabs" : ""
-          }`}
-          onClick={() => {
-            setActiveTas(2);
-          }}
-        >
-          professional3
-        </p>
+        {DataService?.tabs?.map((item, index) => {
+          return (
+            <p
+              key={index}
+              className={`c_pointer tabsTitle ${
+                ActiveTas === item?.id ? "activeTabs" : ""
+              }`}
+              onClick={() => {
+                setActiveTas(item.id);
+                setTabsData(item)
+              }}
+            >
+              {item?.title}
+            </p>
+          );
+        })}
       </div>
       <div className="container-fluid mt-3">
         <div className="row">
@@ -76,21 +70,14 @@ const DeepServiceDetails = () => {
               Welcome to the furnature like asmble
             </p>
             <p className="ServiceListSubHeading mt-1">
-              A professional handyman in Dubai is a skilled and versatile
-              tradesperson who offers a wide range of repair, maintenance, and
-              improvement services for residential, commercial, and industrial
-              properties in the city of Dubai, United Arab Emirates. These
-              individuals are essential for ensuring that properties are
-              well-maintained, safe, and aesthetically pleasing. Here's a
-              description of what you can expect from a professional handyman in
-              Dubai:
+              {TabsData?.description}
             </p>
             <Button className="button mt-2">Book Now</Button>
           </div>
           <div className="col-md-5">
             <div>
               <img
-                src="/assets/images/furnitureassembly.jpg"
+                src={TabsData?.img}
                 alt="furnitureassembly"
                 className="DeepServiceDetailsImage"
               />

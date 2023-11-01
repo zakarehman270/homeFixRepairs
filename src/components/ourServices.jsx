@@ -12,13 +12,12 @@ const OurServices = () => {
       <p className="text-center mb-3">
         Check out some of our top home services
       </p>
-      <Link to={"/servicedetail"}>helo</Link>
       <div className="d-flex flex-wrap gap-4">
         {services?.map((item, index) => {
           return (
             <div key={index} className="outerWrapperServices text-center">
               <div>
-                <Link to={"/service-details"}>
+                <Link to={`/service-details?${item?.id}`}>
                   <img src={item?.img} alt={item?.title} className="w-100" />
                 </Link>
               </div>

@@ -353,8 +353,8 @@ p {
   font-family: "Sora";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 128%;
+  font-size: 14px;
+  line-height: 141%;
   /* identical to box height, or 18px */
   color: #475569;
 }
@@ -775,4 +775,20 @@ body {
   width: 100%;
   height: 340px;
   object-fit: cover;
+}
+.imageInServiceDetails {
+  width: 100%;
+  height: 357px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.ServiceListSubHeading h1{
+  font-size: 12px !important;
+}
+.ServiceListSubHeading h2{
+  font-size: 12px !important;
+}
+.TitleDetailService{
+  font-size: 26px !important ;
+  
 }

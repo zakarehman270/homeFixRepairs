@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import CustomDropdown from "./CustomDropdown";
-
 function Header() {
   const [SelectedIdex, setSelectedIdex] = useState(0);
   const [isOpen1, setIsOpen1] = useState(false);

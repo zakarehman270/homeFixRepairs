@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/term-condition" element={<TermAndCondition />} />
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/deep-service-details" element={<DeepServiceDetails />} />
-        <Route exact path="/servicedetail" element={<ServiceDetails />} />
+        <Route exact path="/service-details" element={<ServiceDetails />} />
       </Routes>
       <Footer />
     </div>

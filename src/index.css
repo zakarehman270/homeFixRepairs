@@ -782,13 +782,124 @@ body {
   object-fit: cover;
   border-radius: 9px;
 }
-.ServiceListSubHeading h1{
+.ServiceListSubHeading h1 {
   font-size: 12px !important;
 }
-.ServiceListSubHeading h2{
+.ServiceListSubHeading h2 {
   font-size: 12px !important;
 }
-.TitleDetailService{
+.TitleDetailService {
   font-size: 26px !important ;
-  
+}
+.BlogDetailsUser {
+  width: 8%;
+}
+.BlogDetailsUserHeading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+  color: #1e293b;
+}
+.BlogDetailsUserSubHeading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  color: #475569;
+}
+.mainHeadingInBlogDetails {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 130%;
+  color: #1e293b;
+}
+.blogDetailImage {
+  height: 284px;
+  border-radius: 8px;
+}
+.descriptionInBlogDetails {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  /* or 27px */
+  color: #475569;
+}
+.HeadingQuestions {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  color: #1e293b;
+}
+.outerWrapperRightSideOfBlogDetails {
+  border-left: 2px solid #e2e8f0;
+}
+.BlogDetailsUserRightSide {
+  width: 30%;
+}
+.HeadingUserInRightSideBlogDetails {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #1e293b;
+}
+.SubHeadingRightSideBlogDetails {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  color: #475569;
+}
+.FollowButton {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 6px 12px !important;
+  background: #3fa2db !important;
+  border-radius: 12px !important;
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 119% !important;
+  color: #ffffff !important;
+  border: unset !important;
+}
+.MainHeadingInRightBlogDetails {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: black;
+}
+.DescriptionDetailsBogUserInRightSide {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #475569;
+}
+.HeadingInRightSideBlogDetails {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1e293b;
 }

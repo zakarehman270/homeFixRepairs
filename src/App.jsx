@@ -11,6 +11,7 @@ import Blog from "./Pages/Blog";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ServiceDetails from "./Pages/ServiceDetails";
 import DeepServiceDetails from "./Pages/DeepServiceDetails";
+import BlogDetails from "./Pages/BlogDetails";
 function App() {
   return (
     <div>
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/deep-service-details" element={<DeepServiceDetails />} />
         <Route exact path="/service-details" element={<ServiceDetails />} />
+        <Route exact path="/blog-details" element={<BlogDetails />} />
       </Routes>
       <Footer />
     </div>

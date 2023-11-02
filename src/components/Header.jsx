@@ -54,7 +54,6 @@ function Header() {
       ],
     },
   ];
-
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="HeaderContainer">

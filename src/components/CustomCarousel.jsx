@@ -3,7 +3,7 @@ import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
 import CarouselBox from "./CarouselBox";
-
+import CarouselInMobile from "./CarouselInMobile";
 const getTouches = (evt) => {
   return evt.touches || evt.originalEvent.touches; // browser API
 };
@@ -16,6 +16,20 @@ const CustomCarousel = () => {
   const [xDown, setXDown] = useState(null);
   const [yDown, setYDown] = useState(null);
   console.log("goToSlide", goToSlide);
+  let CarouselData = [
+    {
+      image: "/assets/images/carousel1.svg",
+      des: "The Infinite Social Kickstarted the next stage of my life. I used to be too afraid to start conversations with new people, and now I feel confident and am surrounded by an entired new social gropu of friends. I learned valuable skills, but most importantly I am living a much happier life where I feel professionally and socially fulfilled.",
+    },
+    {
+      image: "/assets/images/carousel2.svg",
+      des: "The Infinite Social Kickstarted the next stage of my life. I used to be too afraid to start conversations with new people, and now I feel confident and am surrounded by an entired new social gropu of friends. I learned valuable skills, but most importantly I am living a much happier life where I feel professionally and socially fulfilled.",
+    },
+    {
+      image: "/assets/images/carousel3.svg",
+      des: "The Infinite Social Kickstarted the next stage of my life. I used to be too afraid to start conversations with new people, and now I feel confident and am surrounded by an entired new social gropu of friends. I learned valuable skills, but most importantly I am living a much happier life where I feel professionally and socially fulfilled.",
+    },
+  ]
   const slides = [
     {
       key: uuidv4(),
@@ -115,20 +129,27 @@ const CustomCarousel = () => {
 
   return (
     <div className="outerWrapperCarousel">
-      <h3 className="headingOurClients pt-5">our Clients</h3>
-      <div
-        style={{ width: "80%", height: "500px", margin: "0 auto" }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-      >
-        <Carousel
-          slides={slides}
-          goToSlide={goToSlide}
-          offsetRadius={offsetRadius}
-          showNavigation={showNavigation}
-          animationConfig={config.gentle}
-        />
+      <h3 className="headingOurClients pt-5">Our Clients</h3>
+      <div>
+        <CarouselInMobile data={CarouselData} />
       </div>
+
+      <div className="CarouselInMobile">
+        <div
+          style={{ width: "80%", height: "500px", margin: "0 auto" }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          <Carousel
+            slides={slides}
+            goToSlide={goToSlide}
+            offsetRadius={offsetRadius}
+            showNavigation={showNavigation}
+            animationConfig={config.gentle}
+          />
+        </div>
+      </div>
+
     </div>
   );
 };

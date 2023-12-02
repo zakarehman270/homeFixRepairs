@@ -14,7 +14,7 @@ const Home = () => {
         >
           <div className="container-fluid text-white">
             <div className="row">
-              <div className="col-md-6 ">
+              <div className="col-6 ">
                 <h3 className="MarginTop HomeHeading">Home Fix Repair</h3>
                 <p className="SubHeadingInHome">
                   Home Fix Repair is your trusted partner for all your home

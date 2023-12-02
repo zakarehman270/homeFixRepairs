@@ -176,7 +176,7 @@ const BlogDetails = () => {
                       Technologist, dive instructor, pilot —
                       https://EliElrom.com
                     </p>
-                    <div className="mt-2 d-flex gap-3 align-items-center">
+                    <div className="mt-2 d-flex flex-wrap gap-3 align-items-center">
                       <Button className="FollowButton">Follow</Button>
                       <div>
                         <img

@@ -35,7 +35,7 @@ const CustomDropdown = ({
     <div>
       <div className={`custom-dropdown`} ref={dropdownRef}>
         <div
-          className={`dropdown-header d-flex gap-3 justify-content-between ${
+          className={`dropdown-header d-flex flex-wrap gap-3 justify-content-between ${
             selected ? "SelectedDropDown" : ""
           }`}
           onClick={toggleDropdown}

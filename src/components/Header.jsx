@@ -102,7 +102,7 @@ function Header() {
         <div className="container-fluid">
           <div className="row">
             <div className="col">
-              <div className="d-flex gap-3">
+              <div className="d-flex flex-wrap gap-3">
                 {HeaderDropDown?.map((item, index) => {
                   return (
                     <div

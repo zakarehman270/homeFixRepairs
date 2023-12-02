@@ -3,19 +3,23 @@
 :root {
   ---primary: #3fa2db;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 p {
   padding: 0 !important;
   margin: 0 !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
+
 .HeaderContainer {
   background-color: var(---primary);
 }
+
 .headerLinks {
   font-family: "Poppins";
   font-style: normal;
@@ -24,6 +28,7 @@ p {
   line-height: 28px;
   color: #ffffff;
 }
+
 .custom-dropdown {
   position: relative;
   width: 100%;
@@ -73,23 +78,29 @@ p {
   line-height: 16px !important;
   border-bottom: 1px solid #ccc;
 }
+
 .dropdown-options li:last-child {
   border-bottom: none !important;
 }
+
 .HeaderLogo {
   width: 84%;
 }
+
 .dropdown-options li:hover {
   background-color: var(---primary);
   color: white !important;
 }
+
 .selectedOptions {
   background-color: var(---primary);
   color: white !important;
 }
+
 .OuterWrapperHeaderHome {
   height: 600px;
 }
+
 .outerWrapperHome {
   background-size: cover;
   background-repeat: no-repeat;
@@ -97,9 +108,11 @@ p {
   width: 100%;
   height: 74%;
 }
+
 .MarginTop {
   margin-top: 140px;
 }
+
 .HomeHeading {
   font-family: "Inter";
   font-style: normal;
@@ -110,6 +123,7 @@ p {
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .SubHeadingInHome {
   font-family: "Inter";
   font-style: normal;
@@ -118,12 +132,14 @@ p {
   line-height: 126%;
   color: #ffffff;
 }
+
 .outerWrapperSearchInHomeInHome {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(39px);
   border-radius: 11px;
   width: 88%;
 }
+
 .textInSearchHome {
   font-family: "Poppins";
   font-style: normal;
@@ -132,6 +148,7 @@ p {
   line-height: 100%;
   color: #ffffff;
 }
+
 .outerWrapperSearchInHome {
   background: #ffffff;
   border-radius: 8px;
@@ -144,21 +161,31 @@ p {
   padding: 4px 12px;
   width: 76%;
 }
+
 .SearchInHome {
   border: none !important;
+  width: 100%;
 }
+
 .SearchInHome:focus {
   outline: none;
 }
+
+.btn {
+  text-wrap: nowrap !important;
+}
+
 .SearchIcons {
   width: 20px;
 }
+
 .button {
   padding: 4px 12px 4px 12px !important;
   border-radius: 6px !important;
   background-color: #3fa2db !important;
   border: unset !important;
 }
+
 .TextHolderAdvanceSearch {
   font-family: "Poppins";
   font-style: normal;
@@ -168,10 +195,17 @@ p {
   text-decoration-line: underline;
   color: #ffffff;
   text-align: end;
+  text-wrap: nowrap !important;
 }
+
+.widthWhyChooseUsImage {
+  width: 50%;
+}
+
 .outerWrapperServices {
   width: 23%;
 }
+
 .ourServiceHeading {
   font-family: "Poppins";
   font-style: normal;
@@ -180,9 +214,11 @@ p {
   line-height: 100%;
   color: #1e293b;
 }
+
 .headingColor {
   color: var(---primary);
 }
+
 .serviceHeading {
   font-family: "Exo";
   font-style: normal;
@@ -191,6 +227,7 @@ p {
   line-height: 100%;
   color: #1e293b;
 }
+
 .serviceDescription {
   font-family: "Open Sans";
   font-style: normal;
@@ -205,6 +242,7 @@ p {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 .outerWrapperInterPriseSection {
   background-image: url("/assets/images/blackImages.svg");
   /* You can add more CSS properties for styling the background here */
@@ -214,6 +252,7 @@ p {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
+
 .outerWrapperEnterpriseSuiteRightSection {
   background-image: url("/assets/images/electrian.jpg");
   /* You can add more CSS properties for styling the background here */
@@ -224,6 +263,7 @@ p {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
+
 .textHolderEnterPrise {
   font-family: "Poppins";
   font-style: normal;
@@ -233,6 +273,7 @@ p {
   /* identical to box height, or 20px */
   color: #ffffff;
 }
+
 .textHolderGoodCompany {
   font-family: "Sora";
   font-style: normal;
@@ -241,6 +282,7 @@ p {
   line-height: 100%;
   color: var(---primary);
 }
+
 .textHolderThis {
   font-family: "Sora";
   font-style: normal;
@@ -250,6 +292,7 @@ p {
   /* identical to box height, or 36px */
   color: #ffffff;
 }
+
 .descriptionInEnterPriseSuit {
   font-family: "Poppins";
   font-style: normal;
@@ -258,6 +301,7 @@ p {
   line-height: 150%;
   color: #ffffff;
 }
+
 .ButtonLearnMore {
   padding: 6px 12px !important;
   background: #ffffff !important;
@@ -271,23 +315,29 @@ p {
   color: #9a3412 !important;
   border: none !important;
 }
+
 .outerWrapperCarousel {
   background-image: url("/assets/images/CarouselBackImage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* Add any other styles you need for the .outerWrapperCarousel element */
-  width: 100%; /* Example: Make the element 100% wide */
-  height: 420px; /* Example: Set a specific height for the element */
+  width: 100%;
+  /* Example: Make the element 100% wide */
+  height: 420px;
+  /* Example: Set a specific height for the element */
 }
+
 .css-1qzevvg {
   display: none !important;
 }
+
 .outerWrapperCarouselBox {
   box-sizing: border-box;
   background: White;
   border-radius: 12px;
 }
+
 .CarouselHeading {
   font-family: "Sora";
   font-style: normal;
@@ -297,6 +347,7 @@ p {
   text-align: center;
   color: #1e293b;
 }
+
 .CarouselDescription {
   font-family: "Poppins";
   font-style: normal;
@@ -305,20 +356,41 @@ p {
   line-height: 125%;
   color: #475569;
 }
+
 .outerWrapperCarouselImage {
   position: absolute;
-  transform: translate(215%, -80px);
+  top: -57px;
+  left: 37%;
 }
+
+.outerWrapperCarouselImageInMobileSize {
+  position: absolute;
+  top: -71px;
+  left: 43%;
+  z-index: 999;
+}
+
+.carousel-item {
+  top: 71px !important;
+}
+
+.carousel-inner {
+  height: 302px !important;
+}
+
 .css-1fzpoyk {
   opacity: 1 !important;
   width: 60% !important;
 }
+
 .activeSlide {
   background-color: var(---primary) !important;
 }
+
 .c_pointer {
   cursor: pointer;
 }
+
 .headingOurClients {
   font-family: "Poppins";
   font-style: normal;
@@ -329,9 +401,11 @@ p {
   text-align: center;
   color: #ffffff;
 }
+
 .css-doq0dk {
   height: 67% !important;
 }
+
 .HeadingPickService {
   font-family: "Poppins";
   font-style: normal;
@@ -340,6 +414,7 @@ p {
   line-height: 100%;
   color: #1e293b;
 }
+
 .ServiceListHeading {
   font-family: "Poppins";
   font-style: normal;
@@ -349,6 +424,7 @@ p {
   /* identical to box height, or 24px */
   color: #1e293b;
 }
+
 .ServiceListSubHeading {
   font-family: "Sora";
   font-style: normal;
@@ -358,15 +434,18 @@ p {
   /* identical to box height, or 18px */
   color: #475569;
 }
+
 .outerWrapperFooter {
   background-image: url("assets/images/footerImage.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .FooterLine {
   color: #ffffff !important;
   opacity: 1 !important;
 }
+
 .headingInFooter {
   font-family: "Exo";
   font-style: normal;
@@ -376,6 +455,7 @@ p {
   /* identical to box height, or 28px */
   color: #ffffff;
 }
+
 .SubHeadingInFooter {
   font-family: "Open Sans";
   font-style: normal;
@@ -385,6 +465,7 @@ p {
   /* identical to box height, or 24px */
   color: #ffffff;
 }
+
 .textHolderFollowUp {
   font-family: "Exo";
   font-style: normal;
@@ -394,6 +475,7 @@ p {
   /* identical to box height, or 28px */
   color: #ffffff;
 }
+
 .descriptionInFooter {
   font-family: "Open Sans";
   font-style: normal;
@@ -403,9 +485,11 @@ p {
   color: #ffffff;
   width: 82%;
 }
+
 .logoInFooter {
   width: 22%;
 }
+
 .container,
 .container-fluid,
 .container-lg,
@@ -416,14 +500,17 @@ p {
   padding-right: calc(var(--bs-gutter-x) * 1.5) !important;
   padding-left: calc(var(--bs-gutter-x) * 1.5) !important;
 }
+
 .outerWrapperForm {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 }
+
 body {
   background-color: #fafaf9 !important;
 }
+
 .FormLabel {
   font-family: "Poppins";
   font-style: normal;
@@ -433,6 +520,7 @@ body {
   /* identical to box height, or 18px */
   color: #475569;
 }
+
 .UpperHeadingInBookProfessional {
   font-family: "Sora";
   font-style: normal;
@@ -442,6 +530,7 @@ body {
   /* identical to box height, or 20px */
   color: #1e293b;
 }
+
 .headingInBookProfessional {
   font-family: "Sora";
   font-style: normal;
@@ -492,6 +581,7 @@ body {
   line-height: 25px;
   color: #64748b;
 }
+
 .CenterDate {
   font-family: "Open Sans";
   font-style: normal;
@@ -500,6 +590,7 @@ body {
   line-height: 27px;
   color: #64748b;
 }
+
 .day {
   flex: 1;
   text-align: center;
@@ -519,10 +610,12 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .other-month {
   opacity: 0.5;
   background-color: unset !important;
 }
+
 .date p {
   box-sizing: border-box;
   width: 35px;
@@ -542,8 +635,10 @@ body {
 }
 
 .date p:hover {
-  background-color: #3498db !important; /* Change the background color as desired */
-  color: #fff !important; /* Change the text color as desired */
+  background-color: #3498db !important;
+  /* Change the background color as desired */
+  color: #fff !important;
+  /* Change the text color as desired */
 }
 
 .today {
@@ -551,11 +646,15 @@ body {
   color: white;
   border-radius: 50%;
 }
+
 /* Add this to your CSS stylesheet */
 .selected-date {
-  background-color: #3498db !important; /* Change the background color as desired */
-  color: #fff !important; /* Change the text color as desired */
+  background-color: #3498db !important;
+  /* Change the background color as desired */
+  color: #fff !important;
+  /* Change the text color as desired */
 }
+
 .outerWrapper {
   background-color: var(---primary);
   color: white;
@@ -572,15 +671,18 @@ body {
   color: #3fa2db;
   padding: 15px 12px;
 }
+
 .outerWrapper:hover {
   box-sizing: border-box;
   background: #3fa2db;
   color: white;
 }
+
 .SelectedDate {
   background: #3fa2db !important;
   color: white !important;
 }
+
 .SubmitButton {
   padding: 10px 37px !important;
   background: #3fa2db !important;
@@ -608,10 +710,12 @@ body {
   /* identical to box height, or 156% */
   color: #94a3b8 !important;
 }
+
 .CancelButton:hover {
   background: #3fa2db !important;
   color: white !important;
 }
+
 .form-control-contact-us {
   border: unset !important;
   border-bottom: 1px solid #e2e8f0 !important;
@@ -626,9 +730,11 @@ body {
   color: #94a3b8;
   background-color: transparent !important;
 }
+
 .form-control-contact-us:focus {
   outline: unset !important;
 }
+
 .headingInContactUs {
   font-family: "Sora";
   font-style: normal;
@@ -638,6 +744,7 @@ body {
   /* identical to box height, or 36px */
   color: #1e293b;
 }
+
 .SubheadingInContactUs {
   font-family: "Poppins";
   font-style: normal;
@@ -647,12 +754,14 @@ body {
   /* or 27px */
   color: #475569;
 }
+
 .outerWrapperHeadingDropdown {
   background-color: white;
   padding: 17px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
 .labelContactUs {
   font-family: "Sora";
   font-style: normal;
@@ -662,6 +771,7 @@ body {
   /* identical to box height, or 18px */
   color: #1e293b;
 }
+
 .subLabel {
   font-family: "Poppins";
   font-style: normal;
@@ -671,6 +781,7 @@ body {
   /* identical to box height, or 27px */
   color: #475569;
 }
+
 .SubHeadingInAboutUs {
   font-family: "Sora";
   font-style: normal;
@@ -679,6 +790,7 @@ body {
   line-height: 100%;
   color: #1e293b;
 }
+
 .DescriptionInAboutUs {
   font-family: "Sora";
   font-style: normal;
@@ -689,6 +801,7 @@ body {
   text-align: justify;
   color: #475569;
 }
+
 .outerWrapperTerm {
   background: #3fa2db;
   font-family: "Poppins";
@@ -698,6 +811,7 @@ body {
   line-height: 100%;
   color: #ffffff;
 }
+
 .headingInTerm {
   font-family: "Poppins";
   font-style: normal;
@@ -707,6 +821,7 @@ body {
   /* identical to box height, or 24px */
   color: #1e293b;
 }
+
 .SubHeadingInTerm {
   font-family: "Poppins";
   font-style: normal;
@@ -715,10 +830,12 @@ body {
   line-height: 150%;
   color: #475569;
 }
+
 .LineInBlog {
   color: #cbd5e1 !important;
   opacity: 1 !important;
 }
+
 .HeadingInBlog {
   font-family: "Plus Jakarta Display";
   font-style: normal;
@@ -727,6 +844,7 @@ body {
   line-height: 150%;
   color: #0f172a;
 }
+
 .SubHeadingInBlog {
   font-family: "Plus Jakarta Text";
   font-style: normal;
@@ -735,6 +853,7 @@ body {
   line-height: 150%;
   color: #1e293b;
 }
+
 .userHeadingInBlog {
   font-family: "Plus Jakarta Display";
   font-style: normal;
@@ -743,6 +862,7 @@ body {
   line-height: 12px;
   color: #0f172a;
 }
+
 .userSubHeadingInBlog {
   font-family: "Plus Jakarta Text";
   font-style: normal;
@@ -751,6 +871,7 @@ body {
   line-height: 12px;
   color: #475569;
 }
+
 .TextHolderLatestStory {
   font-family: "Plus Jakarta Display";
   font-style: normal;
@@ -759,41 +880,51 @@ body {
   line-height: 100%;
   color: #0f172a;
 }
+
 .outerWrapperTabs {
   background-color: #d9ecf8;
 }
+
 .tabsTitle {
   font-size: 20px;
   color: black;
   font-weight: 600;
 }
+
 .activeTabs {
   color: #3fa2db;
 }
+
 .DeepServiceDetailsImage {
   border-radius: 8px;
   width: 100%;
   height: 340px;
   object-fit: cover;
 }
+
 .imageInServiceDetails {
   width: 100%;
   height: 357px;
   object-fit: cover;
   border-radius: 9px;
 }
+
 .ServiceListSubHeading h1 {
   font-size: 12px !important;
 }
+
 .ServiceListSubHeading h2 {
   font-size: 12px !important;
 }
+
 .TitleDetailService {
-  font-size: 26px !important ;
+  font-size: 26px !important;
 }
+
 .BlogDetailsUser {
   width: 8%;
 }
+
 .BlogDetailsUserHeading {
   font-family: "Poppins";
   font-style: normal;
@@ -803,6 +934,7 @@ body {
   /* identical to box height, or 18px */
   color: #1e293b;
 }
+
 .BlogDetailsUserSubHeading {
   font-family: "Poppins";
   font-style: normal;
@@ -812,6 +944,7 @@ body {
   /* identical to box height, or 14px */
   color: #475569;
 }
+
 .mainHeadingInBlogDetails {
   font-family: "Sora";
   font-style: normal;
@@ -820,10 +953,12 @@ body {
   line-height: 130%;
   color: #1e293b;
 }
+
 .blogDetailImage {
   height: 284px;
   border-radius: 8px;
 }
+
 .descriptionInBlogDetails {
   font-family: "Poppins";
   font-style: normal;
@@ -833,6 +968,7 @@ body {
   /* or 27px */
   color: #475569;
 }
+
 .HeadingQuestions {
   font-family: "Sora";
   font-style: normal;
@@ -842,12 +978,15 @@ body {
   /* identical to box height, or 24px */
   color: #1e293b;
 }
+
 .outerWrapperRightSideOfBlogDetails {
   border-left: 2px solid #e2e8f0;
 }
+
 .BlogDetailsUserRightSide {
   width: 30%;
 }
+
 .HeadingUserInRightSideBlogDetails {
   font-family: "Poppins";
   font-style: normal;
@@ -856,6 +995,7 @@ body {
   line-height: 100%;
   color: #1e293b;
 }
+
 .SubHeadingRightSideBlogDetails {
   font-family: "Poppins";
   font-style: normal;
@@ -864,6 +1004,7 @@ body {
   line-height: 150%;
   color: #475569;
 }
+
 .FollowButton {
   box-sizing: border-box !important;
   display: flex !important;
@@ -879,6 +1020,7 @@ body {
   color: #ffffff !important;
   border: unset !important;
 }
+
 .MainHeadingInRightBlogDetails {
   font-family: "Poppins";
   font-style: normal;
@@ -887,6 +1029,7 @@ body {
   line-height: 100%;
   color: black;
 }
+
 .DescriptionDetailsBogUserInRightSide {
   font-family: "Poppins";
   font-style: normal;
@@ -895,6 +1038,7 @@ body {
   line-height: 100%;
   color: #475569;
 }
+
 .HeadingInRightSideBlogDetails {
   font-family: "Poppins";
   font-style: normal;
@@ -902,4 +1046,102 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: #1e293b;
+}
+
+.CarouselInMobile {
+  display: block;
+}
+
+.carousel-indicators {
+  margin-bottom: unset !important;
+}
+
+@media (max-width: 768px) {
+  .CarouselInMobile {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 446px) {
+  .widthWhyChooseUsImage {
+    width: 70%;
+  }
+}
+
+@media (max-width: 594px) {
+  .carousel-inner {
+    height: 318px !important;
+  }
+}
+
+@media (max-width: 536px) {
+  .carousel-inner {
+    height: 328px !important;
+  }
+
+  .outerWrapperCarousel {
+    height: 442px;
+  }
+}
+
+@media (max-width: 534px) {
+  .carousel-inner {
+    height: 338px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-inner {
+    height: 353px !important;
+  }
+  .outerWrapperCarousel {
+    height: 452px;
+  }
+}
+
+@media (max-width: 428px) {
+  .carousel-inner {
+    height: 384px !important;
+  }
+  .outerWrapperCarousel {
+    height: 472px;
+  }
+}
+
+@media (max-width: 388px) {
+  .carousel-inner {
+    height: 403px !important;
+  }
+  .outerWrapperCarousel {
+    height: 499px;
+  }
+}
+
+@media (max-width: 376px) {
+  .carousel-inner {
+    height: 428px !important;
+  }
+  .outerWrapperCarousel {
+    height: 529px;
+  }
+}
+
+@media (max-width: 354px) {
+  .carousel-inner {
+    height: 458px !important;
+  }
+  .outerWrapperCarousel {
+    height: 549px;
+  }
+}
+
+@media (max-width: 354px) {
+  .carousel-inner {
+    height: 498px !important;
+  }
+  .outerWrapperCarousel {
+    height: 589px;
+  }
 }

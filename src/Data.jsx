@@ -7,6 +7,7 @@ export let DeepServiceDetailsList = [
     tabs: [
       {
         title: "Expertise and Experience",
+        
         subTitle: "",
         description:
           "HomeFixRepairs boasts a team of skilled and experienced professionals who are experts in furniture assembly. They have the knowledge and skills to assemble a wide range of furniture items, from flat-pack furniture, such as IKEA products, to more complex and customized pieces.",
@@ -37,14 +38,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://goloadup.com/wp-content/uploads/2021/09/furniture-assembly-professionals.jpg",
       },
-      {
-        title: "Flexible Scheduling",
-        subTitle: "",
-        description:
-          "The company offers flexible scheduling options, making it convenient for customers to choose assembly times that suit their needs. Whether you need same-day service or prefer to schedule an appointment in advance, HomeFixRepairs accommodates your preferences.",
-        id: "5",
-        img: "https://media.architecturaldigest.com/photos/5aa83175d91fc303af543841/16:9/w_2560%2Cc_limit/ikea-taskrabbit-01.jpg",
-      },
+      // {
+      //   title: "Flexible Scheduling",
+      //   subTitle: "",
+      //   description:
+      //     "The company offers flexible scheduling options, making it convenient for customers to choose assembly times that suit their needs. Whether you need same-day service or prefer to schedule an appointment in advance, HomeFixRepairs accommodates your preferences.",
+      //   id: "5",
+      //   img: "https://media.architecturaldigest.com/photos/5aa83175d91fc303af543841/16:9/w_2560%2Cc_limit/ikea-taskrabbit-01.jpg",
+      // },
     ],
   },
   {
@@ -85,14 +86,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://furniturerestorationandrepair.co.uk/wp-content/uploads/2019/06/furniture-restoration.jpg",
       },
-      {
-        title: "Customer-Centric Approach",
-        subTitle: "",
-        description:
-          "Customer satisfaction is at the core of HomeFixRepairs' business philosophy. They work closely with their clients to understand their needs and preferences. They also offer consultation services, providing expert advice on the best approach to repair and restore furniture.",
-        id: "5",
-        img: "https://www.moneypit.com/wp-content/uploads/2018/09/AdobeStock_138660714.jpeg",
-      },
+      // {
+      //   title: "Customer-Centric Approach",
+      //   subTitle: "",
+      //   description:
+      //     "Customer satisfaction is at the core of HomeFixRepairs' business philosophy. They work closely with their clients to understand their needs and preferences. They also offer consultation services, providing expert advice on the best approach to repair and restore furniture.",
+      //   id: "5",
+      //   img: "https://www.moneypit.com/wp-content/uploads/2018/09/AdobeStock_138660714.jpeg",
+      // },
     ],
   },
   {
@@ -173,14 +174,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://www.sansiled.com/cdn/shop/articles/ea01ad55ab9cf5fe6d2e9197c5084f99_7bda687a-5019-471b-bcb2-dc819e4917a2.jpg?v=1686730320&width=2048",
       },
-      {
-        title: "Competitive Pricing",
-        subTitle: "",
-        description:
-          "HomeFixRepairs offers competitive pricing on all their products, making it an affordable choice for individuals and businesses looking to upgrade their lighting.",
-        id: "5",
-        img: "https://www.vinayelectricals.com/wp-content/uploads/2020/02/38426766806_265a9b4157_b.jpg",
-      },
+      // {
+      //   title: "Competitive Pricing",
+      //   subTitle: "",
+      //   description:
+      //     "HomeFixRepairs offers competitive pricing on all their products, making it an affordable choice for individuals and businesses looking to upgrade their lighting.",
+      //   id: "5",
+      //   img: "https://www.vinayelectricals.com/wp-content/uploads/2020/02/38426766806_265a9b4157_b.jpg",
+      // },
     ],
   },
 
@@ -262,14 +263,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://redfordelectric.ca/wp-content/uploads/2023/07/homeguide-electrician-installing-chandelier-ceiling-light.jpg",
       },
-      {
-        title: "Timely Service",
-        subTitle: "",
-        description:
-          "HomeFixRepairs prides itself on its punctuality. They strive to complete chandelier installations within the agreed-upon timeframe, minimizing disruption to your home or business.",
-        id: "5",
-        img: "https://i.pinimg.com/originals/cc/d3/e1/ccd3e19b2fac6cb684438fc7fb7678c1.jpg",
-      },
+      // {
+      //   title: "Timely Service",
+      //   subTitle: "",
+      //   description:
+      //     "HomeFixRepairs prides itself on its punctuality. They strive to complete chandelier installations within the agreed-upon timeframe, minimizing disruption to your home or business.",
+      //   id: "5",
+      //   img: "https://i.pinimg.com/originals/cc/d3/e1/ccd3e19b2fac6cb684438fc7fb7678c1.jpg",
+      // },
     ],
   },
   {
@@ -310,14 +311,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://cdn.homecrux.com/wp-content/uploads/2023/01/How-to-prepare-for-Power-Outage-in-Winter.jpg",
       },
-      {
-        title: "Wiring Issues",
-        subTitle: "",
-        description:
-          "Aging or faulty wiring can pose safety risks and hinder the company's ability to use power effectively. Electrical wiring problems can cause power outages, short circuits, and fire hazards if not addressed promptly.",
-        id: "5",
-        img: "https://www.exitlightco.com/blog/wp-content/uploads/2012/07/FO8113986DEA2.jpg",
-      },
+      // {
+      //   title: "Wiring Issues",
+      //   subTitle: "",
+      //   description:
+      //     "Aging or faulty wiring can pose safety risks and hinder the company's ability to use power effectively. Electrical wiring problems can cause power outages, short circuits, and fire hazards if not addressed promptly.",
+      //   id: "5",
+      //   img: "https://www.exitlightco.com/blog/wp-content/uploads/2012/07/FO8113986DEA2.jpg",
+      // },
     ],
   },
 
@@ -359,14 +360,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://www.newhomesource.com/learn/wp-content/uploads/2020/01/modern-curtains.jpg",
       },
-      {
-        title: "Expert Guidance",
-        subTitle: "",
-        description:
-          "HomeFixRepairs prides itself on its knowledgeable and friendly staff. They are ready to assist customers in choosing the ideal curtains that align with their interior design vision, considering factors like light control, privacy, and insulation.",
-        id: "5",
-        img: "https://www.at-home.co.in/cdn/shop/products/HCR12HDSTBLK02675_2_27de5f98-eb22-4289-9ddb-10f0935d09b4.jpg?v=1648012850",
-      },
+      // {
+      //   title: "Expert Guidance",
+      //   subTitle: "",
+      //   description:
+      //     "HomeFixRepairs prides itself on its knowledgeable and friendly staff. They are ready to assist customers in choosing the ideal curtains that align with their interior design vision, considering factors like light control, privacy, and insulation.",
+      //   id: "5",
+      //   img: "https://www.at-home.co.in/cdn/shop/products/HCR12HDSTBLK02675_2_27de5f98-eb22-4289-9ddb-10f0935d09b4.jpg?v=1648012850",
+      // },
     ],
   },
 
@@ -408,14 +409,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://englishsunglish.com/wp-content/uploads/2023/10/EWF-Blinds-scaled-1.jpg",
       },
-      {
-        title: "Precise Installation",
-        subTitle: "",
-        description:
-          "Our experts take the utmost care when installing blinds. They ensure that the blinds are level, secure, and fully functional. We pay attention to detail to make sure your blinds are installed flawlessly.",
-        id: "5",
-        img: "https://cdn.blindster.com/site/blog/164/main-images-2.jpg",
-      },
+      // {
+      //   title: "Precise Installation",
+      //   subTitle: "",
+      //   description:
+      //     "Our experts take the utmost care when installing blinds. They ensure that the blinds are level, secure, and fully functional. We pay attention to detail to make sure your blinds are installed flawlessly.",
+      //   id: "5",
+      //   img: "https://cdn.blindster.com/site/blog/164/main-images-2.jpg",
+      // },
     ],
   },
 
@@ -457,14 +458,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://i2-prod.mirror.co.uk/incoming/article9738907.ece/ALTERNATES/n615/Stock-of-a-drill.jpg",
       },
-      {
-        title: "Consultation and Advice",
-        subTitle: "",
-        description:
-          "The company may also provide consultation services to help homeowners plan and execute drilling projects efficiently, offering advice on the right locations, materials, and techniques.",
-        id: "5",
-        img: "https://cdn.diys.com/wp-content/uploads/2020/02/cordless-drills.jpg",
-      },
+      // {
+      //   title: "Consultation and Advice",
+      //   subTitle: "",
+      //   description:
+      //     "The company may also provide consultation services to help homeowners plan and execute drilling projects efficiently, offering advice on the right locations, materials, and techniques.",
+      //   id: "5",
+      //   img: "https://cdn.diys.com/wp-content/uploads/2020/02/cordless-drills.jpg",
+      // },
     ],
   },
 
@@ -506,14 +507,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2018/12/Hide_TV_Wires_and_More_with_3M_Hooks_03.jpg",
       },
-      {
-        title: "Customer Satisfaction",
-        subTitle: "",
-        description:
-          "HomeFixRepairs is dedicated to providing an excellent customer experience. They take the time to understand your preferences and needs and work efficiently to deliver results that exceed your expectations. Customer satisfaction is their top priority, and they stand by their work.",
-        id: "5",
-        img: "https://tvmounting.us/wp-content/uploads/2021/06/sliderimage-3.jpg",
-      },
+      // {
+      //   title: "Customer Satisfaction",
+      //   subTitle: "",
+      //   description:
+      //     "HomeFixRepairs is dedicated to providing an excellent customer experience. They take the time to understand your preferences and needs and work efficiently to deliver results that exceed your expectations. Customer satisfaction is their top priority, and they stand by their work.",
+      //   id: "5",
+      //   img: "https://tvmounting.us/wp-content/uploads/2021/06/sliderimage-3.jpg",
+      // },
     ],
   },
 
@@ -555,14 +556,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://www.checkatrade.com/blog/wp-content/uploads/2020/09/Feature-window-seal-replacement-cost-with-caulk.jpg",
       },
-      {
-        title: "Exterior Siding and Stucco Leak Repair",
-        subTitle: "",
-        description:
-          "Water can penetrate through damaged or improperly installed siding and stucco, causing damage to the underlying structure. HomeFixRepairs offers solutions to repair or replace siding and stucco to prevent leaks and maintain the aesthetic appeal of your home.",
-        id: "5",
-        img: "https://lh4.googleusercontent.com/B_05Hh9UXW7rbQo47b-edmChxxoZwe2FjtCsM3aWZ01ueKWFo3DsizDMkA-rsWkX_T4MYlFOZ7kWA8AX-clzgGgoWgGSMaggUEG4VMcTRA73m3Ider_bAHJ1eacL1A0rzrGBnMwGwMsqlS5HKw",
-      },
+      // {
+      //   title: "Exterior Siding and Stucco Leak Repair",
+      //   subTitle: "",
+      //   description:
+      //     "Water can penetrate through damaged or improperly installed siding and stucco, causing damage to the underlying structure. HomeFixRepairs offers solutions to repair or replace siding and stucco to prevent leaks and maintain the aesthetic appeal of your home.",
+      //   id: "5",
+      //   img: "https://lh4.googleusercontent.com/B_05Hh9UXW7rbQo47b-edmChxxoZwe2FjtCsM3aWZ01ueKWFo3DsizDMkA-rsWkX_T4MYlFOZ7kWA8AX-clzgGgoWgGSMaggUEG4VMcTRA73m3Ider_bAHJ1eacL1A0rzrGBnMwGwMsqlS5HKw",
+      // },
     ],
   },
 
@@ -604,14 +605,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/09/drain-pipe.jpeg.jpg",
       },
-      {
-        title: "French Drains",
-        subTitle: "",
-        description:
-          "If you have issues with excess water in your yard or basement, Homefixrepairs can install French drains to redirect water away from your home, preventing water damage and flooding.",
-        id: "5",
-        img: "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-install-a-french-drain-step-2.jpg",
-      },
+      // {
+      //   title: "French Drains",
+      //   subTitle: "",
+      //   description:
+      //     "If you have issues with excess water in your yard or basement, Homefixrepairs can install French drains to redirect water away from your home, preventing water damage and flooding.",
+      //   id: "5",
+      //   img: "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-install-a-french-drain-step-2.jpg",
+      // },
     ],
   },
 
@@ -653,14 +654,14 @@ export let DeepServiceDetailsList = [
         id: "4",
         img: "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/09/featured-image-install-plumbing.jpeg.jpg",
       },
-      {
-        title: "Transparent Pricing",
-        subTitle: "",
-        description:
-          "Homefixrepairs is known for its transparent and competitive pricing. They provide upfront quotes and explanations of the work required, so you know exactly what to expect in terms of cost.",
-        id: "5",
-        img: "https://sanityde.com/wp-content/uploads/2023/07/pexels-photo-4239128.jpeg",
-      },
+      // {
+      //   title: "Transparent Pricing",
+      //   subTitle: "",
+      //   description:
+      //     "Homefixrepairs is known for its transparent and competitive pricing. They provide upfront quotes and explanations of the work required, so you know exactly what to expect in terms of cost.",
+      //   id: "5",
+      //   img: "https://sanityde.com/wp-content/uploads/2023/07/pexels-photo-4239128.jpeg",
+      // },
     ],
   },
 ];
@@ -672,7 +673,7 @@ export let services = [
     description:
       "HomeFixRepair is a reputable carpentry company that specializes in providing top-notch home repair and renovation services. With a commitment to excellence and a passion for craftsmanship, HomeFixRepair has built a strong reputation as a trusted partner for homeowners looking to enhance the beauty and functionality of their homes. Here's a detailed description of HomeFixRepair:",
     id: "1",
-    img: "assets/images/Service1.svg",
+    img: "/assets/images/Service1.svg",
   },
   {
     title: "Electrician",
@@ -680,7 +681,7 @@ export let services = [
     description:
       "Electrician, an integral part of the HomeFixRepair company, is a highly skilled and dedicated professional specializing in electrical installations, repairs, and maintenance. With a deep commitment to safety, precision, and electrical expertise, our Electrician is your trusted partner for all your electrical needs. Here is a detailed description of the Electrician's role within the HomeFixRepair company:",
     id: "2",
-    img: "assets/images/Service2.svg",
+    img: "/assets/images/Service2.svg",
   },
   {
     title: "Handyman",
@@ -688,7 +689,7 @@ export let services = [
     description:
       "Handyman, a valued member of the HomeFixRepair company, is a versatile and skilled professional dedicated to handling a wide range of maintenance, repair, and improvement tasks. With a knack for problem-solving and a commitment to ensuring the functionality and aesthetics of homes and businesses, our Handyman is your go-to expert for all your general maintenance needs. Here is a detailed description of the Handyman's role within the HomeFixRepair company:",
     id: "3",
-    img: "assets/images/Service3.svg",
+    img: "/assets/images/Service3.svg",
   },
   {
     title: "Plumbing",
@@ -696,30 +697,30 @@ export let services = [
     description:
       "Plumbing, a vital service within the HomeFixRepair company, is delivered by skilled and certified professionals who specialize in the installation, repair, and maintenance of plumbing systems. These experts are essential for ensuring the proper functioning of water supply and drainage systems in homes, businesses, and industrial settings. Here's a comprehensive description of the Plumbing service offered by HomeFixRepair:",
     id: "4",
-    img: "assets/images/Service4.svg",
+    img: "/assets/images/Service4.svg",
   },
-  {
-    title: "Electrical Maintenance",
-    url: "/electrical-maintenance",
-    description:
-      "Electrical Maintenance, a specialized service provided by HomeFixRepair, focuses on ensuring the continuous and safe operation of electrical systems within residential, commercial, and industrial settings. This service is essential for preventing electrical issues, enhancing energy efficiency, and promoting the safety of occupants. Here's a comprehensive description of the Electrical Maintenance service offered by HomeFixRepair:",
-    id: "5",
-    img: "assets/images/Service5.svg",
-  },
-  {
-    title: "Cleaning",
-    url: "/cleaning",
-    description:
-      "Cleaning services provided by HomeFixRepair are designed to deliver thorough and professional cleaning solutions for residential, commercial, and industrial spaces. Our cleaning professionals are dedicated to creating clean, safe, and comfortable environments for our clients. Here is a detailed description of our Cleaning service:",
-    id: "6",
-    img: "assets/images/Service6.svg",
-  },
+  // {
+  //   title: "Electrical Maintenance",
+  //   url: "/electrical-maintenance",
+  //   description:
+  //     "Electrical Maintenance, a specialized service provided by HomeFixRepair, focuses on ensuring the continuous and safe operation of electrical systems within residential, commercial, and industrial settings. This service is essential for preventing electrical issues, enhancing energy efficiency, and promoting the safety of occupants. Here's a comprehensive description of the Electrical Maintenance service offered by HomeFixRepair:",
+  //   id: "5",
+  //   img: "/assets/images/Service5.svg",
+  // },
+  // {
+  //   title: "Cleaning",
+  //   url: "/cleaning",
+  //   description:
+  //     "Cleaning services provided by HomeFixRepair are designed to deliver thorough and professional cleaning solutions for residential, commercial, and industrial spaces. Our cleaning professionals are dedicated to creating clean, safe, and comfortable environments for our clients. Here is a detailed description of our Cleaning service:",
+  //   id: "6",
+  //   img: "/assets/images/Service6.svg",
+  // },
 ];
 
 export let serviceDetailsList = [
   {
     id: "1",
-    img: "assets/images/Carpenter.jpeg",
+    img: "/assets/images/Carpenter.jpeg",
     video:"https://www.youtube.com/watch?v=wuLm8kMDZOk",
     title: "Carpenter Service",
     title2:
@@ -736,7 +737,7 @@ export let serviceDetailsList = [
   },
   {
     id: "2",
-    img: "assets/images/Electrician.jpeg",
+    img: "/assets/images/Electrician.jpeg",
     video:"https://www.youtube.com/watch?v=qn8htnR6XtY",
     title: "Electrician Work at Home",
     title2: "Why need for Electrician Work at Home",
@@ -802,7 +803,7 @@ export let serviceDetailsList = [
   },
   {
     id: "4",
-    img: "assets/images/Plumbing.jpeg",
+    img: "/assets/images/Plumbing.jpeg",
     video:"https://www.youtube.com/watch?v=3UywnY3lGhI",
     title: "Emergency Plumbing Dubai",
     title2:
@@ -854,7 +855,7 @@ export let serviceDetailsList = [
   },
   {
     id: "5",
-    img: "assets/images/ElectricalMaintenance.jpeg",
+    img: "/assets/images/ElectricalMaintenance.jpeg",
     video:"https://www.youtube.com/watch?v=lYlBcy_y7U8",
     title: "Electrical Maintenance",
     title2: "Why need for electrical maintenance company in Dubai",
@@ -903,7 +904,7 @@ export let serviceDetailsList = [
   },
   {
     id: "3",
-    img: "assets/images/Handyman.jpeg",
+    img: "/assets/images/Handyman.jpeg",
     video:"https://www.youtube.com/watch?v=Hh3MjLaDNG8",
     title: "Handyman in dubai",
     title2:
@@ -1017,7 +1018,7 @@ export let serviceDetailsList = [
   },
   { 
     id: "6",
-    img: "assets/images/Cleaning.jpeg",
+    img: "/assets/images/Cleaning.jpeg",
     video:"https://www.youtube.com/watch?v=I1kCO7wXR6M",
     title: "Cleaning Service in dubai",
     title2:

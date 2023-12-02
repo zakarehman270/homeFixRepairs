@@ -1,13 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
 import ReactPlayer from "react-player";
 import WhyChooseUs from "../components/WhyChooseUs";
+import { useLocation } from "react-router-dom";
 const AboutUs = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return () => {
+    }
+  }, [location.pathname])
   return (
     <div>
       <div className="mb-5">
         <div className="container-fluid">
           <div className="row">
-            <p className="text-center my-5 headingInBookProfessional">
+            <p className="text-center mt-5 mb-2 headingInBookProfessional">
               About Us
             </p>
             <div className="col-md-12">

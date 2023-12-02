@@ -8,7 +8,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
+* {
+  /* font-family: "Poppins";
+  font-family: "Open Sans"; */
+  font-family: "Sora";
+  /* font-family: Arial, sans-serif; */
+}
 p {
   padding: 0 !important;
   margin: 0 !important;
@@ -21,12 +26,12 @@ p {
 }
 
 .headerLinks {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 28px;
   color: #ffffff;
+  padding: 0px 15px;
 }
 
 .custom-dropdown {
@@ -40,10 +45,9 @@ p {
   padding: 6px 12px 6px 12px !important;
   border: 1px solid var(---primary) !important;
   border-radius: 8px !important;
-  font-family: "Inter" !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   line-height: 16px !important;
   color: var(---primary) !important;
 }
@@ -65,17 +69,23 @@ p {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 8px;
+  z-index: 999;
 }
-
+input:focus::placeholder {
+  opacity: 0.5;
+}
+textarea:focus::placeholder {
+  opacity: 0.5;
+}
 .dropdown-options li {
   padding: 6px;
   cursor: pointer;
-  font-family: "Inter" !important;
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 17px !important;
   margin: 8px;
   line-height: 16px !important;
+  color: black;
   border-bottom: 1px solid #ccc;
 }
 
@@ -84,7 +94,7 @@ p {
 }
 
 .HeaderLogo {
-  width: 84%;
+  width: 100%;
 }
 
 .dropdown-options li:hover {
@@ -110,11 +120,10 @@ p {
 }
 
 .MarginTop {
-  margin-top: 140px;
+  margin-top: 73px !important;
 }
 
 .HomeHeading {
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 58px;
@@ -125,7 +134,6 @@ p {
 }
 
 .SubHeadingInHome {
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -141,7 +149,6 @@ p {
 }
 
 .textInSearchHome {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -152,7 +159,6 @@ p {
 .outerWrapperSearchInHome {
   background: #ffffff;
   border-radius: 8px;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -179,15 +185,82 @@ p {
   width: 20px;
 }
 
+/* hover border bottom */
+
+/* styles.css */
+.border-animation {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.border-animation::before,
+.border-animation::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 0;
+  background-color: white; /* Set your desired border color */
+  transition: all 0.9s ease-in-out;
+  margin-bottom: -5px !important;
+}
+
+.border-animation::before {
+  bottom: 0; /* Adjusted from top to bottom */
+  left: 0;
+}
+
+.border-animation::after {
+  bottom: 0; /* Adjusted from top to bottom */
+  right: 0;
+}
+
+.border-animation:hover::before {
+  width: 100%;
+}
+
+.border-animation:hover::after {
+  width: 100%;
+}
+
+/* end */
 .button {
   padding: 4px 12px 4px 12px !important;
   border-radius: 6px !important;
   background-color: #3fa2db !important;
   border: unset !important;
 }
+.button:hover {
+  background-color: #001aff !important;
+}
+/* styles.css */
+.ImageHover {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ImageHover:hover {
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
 
 .TextHolderAdvanceSearch {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -199,20 +272,20 @@ p {
 }
 
 .widthWhyChooseUsImage {
-  width: 50%;
+  width: 38%;
 }
 
 .outerWrapperServices {
-  width: 23%;
+  width: 192px;
 }
 
 .ourServiceHeading {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 100%;
   color: #1e293b;
+  text-wrap: nowrap;
 }
 
 .headingColor {
@@ -220,7 +293,6 @@ p {
 }
 
 .serviceHeading {
-  font-family: "Exo";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -229,7 +301,6 @@ p {
 }
 
 .serviceDescription {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -249,23 +320,22 @@ p {
   width: 100%;
   background-size: cover;
   background-position: center;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+  /* border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px; */
 }
 
 .outerWrapperEnterpriseSuiteRightSection {
   background-image: url("/assets/images/electrian.jpg");
   /* You can add more CSS properties for styling the background here */
   width: 100%;
-  height: 345px;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  /* border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px; */
 }
 
 .textHolderEnterPrise {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -275,7 +345,6 @@ p {
 }
 
 .textHolderGoodCompany {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -284,7 +353,6 @@ p {
 }
 
 .textHolderThis {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -294,7 +362,6 @@ p {
 }
 
 .descriptionInEnterPriseSuit {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -306,7 +373,6 @@ p {
   padding: 6px 12px !important;
   background: #ffffff !important;
   border-radius: 12px !important;
-  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 16px !important;
@@ -315,19 +381,23 @@ p {
   color: #9a3412 !important;
   border: none !important;
 }
-
-.outerWrapperCarousel {
-  background-image: url("/assets/images/CarouselBackImage.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Add any other styles you need for the .outerWrapperCarousel element */
-  width: 100%;
-  /* Example: Make the element 100% wide */
-  height: 420px;
-  /* Example: Set a specific height for the element */
+.outerWrapperHeaderClients {
+  margin-top: 0px;
+  margin-bottom: 185px;
 }
-
+.BackImagesInCarousel {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.outerContainerCarousel {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+.CarouselSize {
+  width: 80% !important;
+}
 .css-1qzevvg {
   display: none !important;
 }
@@ -337,9 +407,10 @@ p {
   background: White;
   border-radius: 12px;
 }
-
+.carousel-indicators {
+  display: none !important;
+}
 .CarouselHeading {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -349,18 +420,17 @@ p {
 }
 
 .CarouselDescription {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 140%;
   color: #475569;
 }
 
 .outerWrapperCarouselImage {
   position: absolute;
   top: -57px;
-  left: 37%;
+  left: 41%;
 }
 
 .outerWrapperCarouselImageInMobileSize {
@@ -369,13 +439,15 @@ p {
   left: 43%;
   z-index: 999;
 }
-
+.TotalPrice {
+  color: #007bff !important;
+}
+.AEDTextHolder {
+  font-size: 12px !important;
+  color: #007bff;
+}
 .carousel-item {
   top: 71px !important;
-}
-
-.carousel-inner {
-  height: 302px !important;
 }
 
 .css-1fzpoyk {
@@ -392,7 +464,6 @@ p {
 }
 
 .headingOurClients {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 29px;
@@ -401,22 +472,24 @@ p {
   text-align: center;
   color: #ffffff;
 }
+.Stars {
+  width: 30px;
+}
 
 .css-doq0dk {
   height: 67% !important;
 }
 
 .HeadingPickService {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 33px;
   line-height: 100%;
   color: #1e293b;
+  text-wrap: nowrap;
 }
 
 .ServiceListHeading {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 21px;
@@ -426,7 +499,6 @@ p {
 }
 
 .ServiceListSubHeading {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -436,9 +508,12 @@ p {
 }
 
 .outerWrapperFooter {
-  background-image: url("assets/images/footerImage.png");
+  background-image: url("/assets/images/footerImage.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .FooterLine {
@@ -447,7 +522,6 @@ p {
 }
 
 .headingInFooter {
-  font-family: "Exo";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -457,7 +531,6 @@ p {
 }
 
 .SubHeadingInFooter {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -467,7 +540,6 @@ p {
 }
 
 .textHolderFollowUp {
-  font-family: "Exo";
   font-style: normal;
   font-weight: 600;
   font-size: 21px;
@@ -477,13 +549,12 @@ p {
 }
 
 .descriptionInFooter {
-  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 113%;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 147%;
   color: #ffffff;
-  width: 82%;
+  width: 100%;;
 }
 
 .logoInFooter {
@@ -505,6 +576,7 @@ p {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  padding: 1.5rem;
 }
 
 body {
@@ -512,7 +584,6 @@ body {
 }
 
 .FormLabel {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -522,7 +593,6 @@ body {
 }
 
 .UpperHeadingInBookProfessional {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -532,7 +602,6 @@ body {
 }
 
 .headingInBookProfessional {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -544,7 +613,6 @@ body {
 /* Calendar.css */
 
 .calendar {
-  font-family: Arial, sans-serif;
   padding: 10px;
   /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
   /* Frame 814181 */
@@ -573,17 +641,15 @@ body {
 .days {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
   color: #64748b;
+  gap: 16px;
 }
 
 .CenterDate {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -618,16 +684,13 @@ body {
 
 .date p {
   box-sizing: border-box;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background: rgba(63, 162, 219, 0.2);
   border-radius: 32px;
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 22px;
-  /* identical to box height */
+  font-size: 12px;
   color: #3fa2db;
   display: flex;
   justify-content: center;
@@ -646,6 +709,18 @@ body {
   color: white;
   border-radius: 50%;
 }
+.BorderRed {
+  border-color: red !important;
+}
+.BackHover {
+  background-color: rgba(0, 0, 0, 0.288);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
 
 /* Add this to your CSS stylesheet */
 .selected-date {
@@ -662,7 +737,6 @@ body {
   box-sizing: border-box;
   background: rgba(63, 162, 219, 0.1);
   border-radius: 8px;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -684,30 +758,21 @@ body {
 }
 
 .SubmitButton {
-  padding: 10px 37px !important;
   background: #3fa2db !important;
   border-radius: 8px !important;
-  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
   /* identical to box height, or 156% */
   color: #ffffff !important;
   border: none !important;
 }
 
 .CancelButton {
-  padding: 10px 37px !important;
   background: #ffffff !important;
   border: 1px solid #94a3b8 !important;
   border-radius: 8px !important;
-  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
-  /* identical to box height, or 156% */
   color: #94a3b8 !important;
 }
 
@@ -718,16 +783,15 @@ body {
 
 .form-control-contact-us {
   border: unset !important;
-  border-bottom: 1px solid #e2e8f0 !important;
+  border-bottom: 2px solid #e2e8f0 !important;
   display: block !important;
   width: 100% !important;
-  padding-bottom: 9px;
-  font-family: "Poppins";
+  padding-bottom: 5px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: #94a3b8;
+  color: black;
   background-color: transparent !important;
 }
 
@@ -736,20 +800,18 @@ body {
 }
 
 .headingInContactUs {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 100%;
   /* identical to box height, or 36px */
   color: #1e293b;
 }
 
 .SubheadingInContactUs {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 150%;
   /* or 27px */
   color: #475569;
@@ -763,7 +825,6 @@ body {
 }
 
 .labelContactUs {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -773,29 +834,29 @@ body {
 }
 
 .subLabel {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 150%;
   /* identical to box height, or 27px */
   color: #475569;
 }
+.navbar-toggler {
+  color: white !important;
+}
 
 .SubHeadingInAboutUs {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 100%;
   color: #1e293b;
 }
 
 .DescriptionInAboutUs {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 150%;
   /* or 27px */
   text-align: justify;
@@ -804,7 +865,6 @@ body {
 
 .outerWrapperTerm {
   background: #3fa2db;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 27px;
@@ -813,7 +873,6 @@ body {
 }
 
 .headingInTerm {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -823,7 +882,6 @@ body {
 }
 
 .SubHeadingInTerm {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -837,7 +895,6 @@ body {
 }
 
 .HeadingInBlog {
-  font-family: "Plus Jakarta Display";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -846,7 +903,6 @@ body {
 }
 
 .SubHeadingInBlog {
-  font-family: "Plus Jakarta Text";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -855,7 +911,6 @@ body {
 }
 
 .userHeadingInBlog {
-  font-family: "Plus Jakarta Display";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -864,7 +919,6 @@ body {
 }
 
 .userSubHeadingInBlog {
-  font-family: "Plus Jakarta Text";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -873,7 +927,6 @@ body {
 }
 
 .TextHolderLatestStory {
-  font-family: "Plus Jakarta Display";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -885,10 +938,43 @@ body {
   background-color: #d9ecf8;
 }
 
+.react-tel-input .form-control {
+  display: block !important;
+  width: 100% !important;
+  padding: 0.375rem 2.75rem !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-clip: padding-box !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  border-radius: 0.375rem !important;
+  border-color: #dee2e6 !important;
+}
+
+.alert {
+  padding: 3px 8px !important;
+  display: inline-block !important;
+  font-size: 12px !important;
+  margin-top: 3px !important;
+}
+
 .tabsTitle {
   font-size: 20px;
   color: black;
   font-weight: 600;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
+.WidthTab {
+  width: 257px !important;
+}
+
+.OverFlow {
+  overflow-x: auto;
 }
 
 .activeTabs {
@@ -922,11 +1008,10 @@ body {
 }
 
 .BlogDetailsUser {
-  width: 8%;
+  width: 35px;
 }
 
 .BlogDetailsUserHeading {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -936,7 +1021,6 @@ body {
 }
 
 .BlogDetailsUserSubHeading {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -946,7 +1030,6 @@ body {
 }
 
 .mainHeadingInBlogDetails {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
   font-size: 29px;
@@ -960,7 +1043,6 @@ body {
 }
 
 .descriptionInBlogDetails {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -970,7 +1052,6 @@ body {
 }
 
 .HeadingQuestions {
-  font-family: "Sora";
   font-style: normal;
   font-weight: 600;
   font-size: 21px;
@@ -988,7 +1069,6 @@ body {
 }
 
 .HeadingUserInRightSideBlogDetails {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -997,7 +1077,6 @@ body {
 }
 
 .SubHeadingRightSideBlogDetails {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -1012,7 +1091,6 @@ body {
   padding: 6px 12px !important;
   background: #3fa2db !important;
   border-radius: 12px !important;
-  font-family: "Poppins" !important;
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 14px !important;
@@ -1022,7 +1100,6 @@ body {
 }
 
 .MainHeadingInRightBlogDetails {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1031,7 +1108,6 @@ body {
 }
 
 .DescriptionDetailsBogUserInRightSide {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1040,7 +1116,6 @@ body {
 }
 
 .HeadingInRightSideBlogDetails {
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -1056,13 +1131,148 @@ body {
   margin-bottom: unset !important;
 }
 
+.carouselInFullSize {
+  display: none;
+}
+
+.outerContainerHomeImage {
+  position: absolute;
+  top: 0;
+}
+
+img.homeImage {
+  width: 100%;
+  object-fit: contain;
+}
+.ActiveLink {
+  border-bottom: 2px solid white !important;
+}
+.nav-link{
+  color: white !important;
+  padding: 0px 15px !important;
+}
+.outerWrapperSelectInContactUs .css-v68sna-control {
+  background-color: transparent !important;
+  border: unset !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.outerWrapperSelectInContactUs .css-blhudp-control {
+  background-color: transparent !important;
+  border: unset !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+.outerWrapperSelectInContactUs .css-blhudp-control:focus-visible {
+  outline: unset !important;
+  box-shadow: none !important;
+}
+
+.outerWrapperSelectInContactUs .css-1u9des2-indicatorSeparator {
+  display: none !important;
+}
+
+.slick-prev {
+  left: 33px !important;
+  top: 67%;
+}
+.slick-next {
+  right: 29px !important;
+}
+
+.MarginTopInHome{
+margin-top: 147px ;
+}
+
+@media (max-width: 904px) {
+  .SubHeadingInFooter {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .CarouselInMobile {
     display: none;
   }
+
+  .carouselInFullSize {
+    display: block;
+  }
+
+  .outerWrapperUserInBlog {
+    margin-bottom: 12px;
+  }
+
+  .outerWrapperRightSideOfBlogDetails {
+    border-left: none;
+  }
+
+  .SubmitButton {
+    font-size: 13px !important;
+    padding: 5px !important;
+  }
+
+  .CancelButton {
+    padding: 5px !important;
+    font-size: 13px !important;
+  }
+
+  .FormContainer {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .outerWrapperHeaderClients {
+    margin-bottom: 5px !important;
+  }
+}
+@media (max-width: 764px) {
+  .BackImagesInCarousel {
+    object-fit: cover;
+    height: 300px;
+  }
+}
+@media (max-width: 734px) {
+  .outerWrapperHome {
+    background-size: contain;
+    background-position: unset;
+  }
+
+  .MarginTop {
+    margin-top: 12px !important;
+  }
+  .MarginTopInHome {
+    margin-top: 7px;
+  }
+
+  .HomeHeading {
+    font-size: 21px;
+    text-wrap: nowrap;
+  }
+
+  .outerWrapperSearchInHome {
+    width: 100%;
+  }
+
+  .outerWrapperSearchInHomeInHome {
+    width: 100%;
+  }
+}
+@media (max-width: 734px) {
+  .MarginTop {
+    margin-top: 70px !important;
+  }
 }
 
+@media (max-width: 720px) {
+  .outerWrapperSearchInHomeInHome {
+    display: none;
+  }
+}
 
+@media (max-width: 646px) {
+  .BackImagesInCarousel {
+    height: 400px;
+  }
+}
 
 @media (max-width: 446px) {
   .widthWhyChooseUsImage {
@@ -1071,77 +1281,127 @@ body {
 }
 
 @media (max-width: 594px) {
-  .carousel-inner {
-    height: 318px !important;
+}
+
+@media (max-width: 544px) {
+  .outerWrapperCarouselImageInMobileSize {
+    width: 60px !important;
+    top: -34px !important;
+  }
+  .MarginTop {
+    margin-top: 35px !important;
   }
 }
 
 @media (max-width: 536px) {
-  .carousel-inner {
-    height: 328px !important;
-  }
-
   .outerWrapperCarousel {
     height: 442px;
   }
 }
 
 @media (max-width: 534px) {
-  .carousel-inner {
-    height: 338px !important;
+  .SubHeadingInHome {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    /* number of lines to show */
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
   }
 }
 
 @media (max-width: 480px) {
-  .carousel-inner {
-    height: 353px !important;
-  }
   .outerWrapperCarousel {
     height: 452px;
   }
 }
 
-@media (max-width: 428px) {
-  .carousel-inner {
-    height: 384px !important;
+@media (max-width: 456px) {
+  .date p {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
+}
+
+@media (max-width: 428px) {
   .outerWrapperCarousel {
     height: 472px;
   }
 }
 
-@media (max-width: 388px) {
-  .carousel-inner {
-    height: 403px !important;
+@media (max-width: 438px) {
+  .SubHeadingInHome {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    /* number of lines to show */
+    line-clamp: 8;
+    -webkit-box-orient: vertical;
+    font-size: 11px;
   }
+  .HomeHeading {
+    font-size: 15px;
+  }
+  .MediaIcons {
+    width: 88%;
+  }
+  .slick-prev {
+    left: 19px !important;
+  }
+  .slick-next {
+    right: 13px !important;
+  }
+}
+
+@media (max-width: 388px) {
   .outerWrapperCarousel {
     height: 499px;
   }
 }
 
 @media (max-width: 376px) {
-  .carousel-inner {
-    height: 428px !important;
-  }
   .outerWrapperCarousel {
     height: 529px;
+  }
+  .BackImagesInCarousel {
+    height: 500px;
+  }
+
+  .SubHeadingInHome {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* number of lines to show */
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+  .outerWrapperForm {
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 354px) {
-  .carousel-inner {
-    height: 458px !important;
-  }
   .outerWrapperCarousel {
     height: 549px;
   }
 }
 
 @media (max-width: 354px) {
-  .carousel-inner {
-    height: 498px !important;
-  }
   .outerWrapperCarousel {
-    height: 589px;
+    height: 619px;
+  }
+
+  .days {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slick-prev {
+    left: 12px !important;
+  }
+  .slick-next {
+    right: 9px !important;
   }
 }

@@ -1,12 +1,19 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Button } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 const TermAndCondition = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return () => {
+    }
+  }, [location.pathname])
   return (
     <div className="mb-5">
       <div className="container-fluid">
         <div className="row">
-          <p className="text-center my-5 headingInBookProfessional">
+          <p className="text-center mt-5 mb-2 headingInBookProfessional">
             Term and Conditions
           </p>
           <div className="mt-3 outerWrapperTerm d-flex gap-2 p-3 align-items-center">
@@ -40,15 +47,15 @@ const TermAndCondition = () => {
             </p>
           </div>
           <div className="mt-3 d-flex align-items-center flex-column">
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" value="" />I
+            <div className="form-check">
+              <label className="form-check-label">
+                <input type="checkbox" className="form-check-input" value="" />I
                 agree with the terms and conditions.
               </label>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" value="" />I
+            <div className="form-check">
+              <label className="form-check-label">
+                <input type="checkbox" className="form-check-input" value="" />I
                 agree with Privacy Policy
               </label>
             </div>

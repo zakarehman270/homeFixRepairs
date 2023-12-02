@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import CustomDropdown from "./CustomDropdown";
 function Header() {
   const [SelectedIdex, setSelectedIdex] = useState(0);
+  const location = useLocation();
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
@@ -16,8 +17,8 @@ function Header() {
       setOpen: setIsOpen1,
       defaultSelected: "Carpenter",
       options: [
-        { label: "Furniture assembly", value: "Furniture assembly",id:"1" },
-        { label: "Furniture repair", value: "Furniture repair",id:"2" },
+        { label: "Furniture assembly", value: "Furniture assembly", id: "1" },
+        { label: "Furniture repair", value: "Furniture repair", id: "2" },
       ],
     },
     {
@@ -25,11 +26,15 @@ function Header() {
       setOpen: setIsOpen2,
       defaultSelected: "Electrician",
       options: [
-        { label: "Wiring", value: "Wiring" ,id:"3" },
-        { label: "Light bulbs", value: "Light bulbs",id:"4" },
-        { label: "switches change", value: "switches change",id:"5" },
-        { label: "Chandelier installation", value: "Chandelier installation",id:"6" },
-        { label: "Power issue", value: "Power issue",id:"7" },
+        { label: "Wiring", value: "Wiring", id: "3" },
+        { label: "Light bulbs", value: "Light bulbs", id: "4" },
+        { label: "switches change", value: "switches change", id: "5" },
+        {
+          label: "Chandelier installation",
+          value: "Chandelier installation",
+          id: "6",
+        },
+        { label: "Power issue", value: "Power issue", id: "7" },
       ],
     },
     {
@@ -37,10 +42,10 @@ function Header() {
       setOpen: setIsOpen3,
       defaultSelected: "Handyman",
       options: [
-        { label: "Curtains", value: "Curtains" , id:"8"  },
-        { label: "blinds Installation", value: "blinds Installation" , id:"9"  },
-        { label: "Drilling", value: "Drilling" , id:"10"  },
-        { label: "Tv Mounting", value: "Tv Mounting" , id:"11"  },
+        { label: "Curtains", value: "Curtains", id: "8" },
+        { label: "blinds Installation", value: "blinds Installation", id: "9" },
+        { label: "Drilling", value: "Drilling", id: "10" },
+        { label: "Tv Mounting", value: "Tv Mounting", id: "11" },
       ],
     },
     {
@@ -48,9 +53,9 @@ function Header() {
       setOpen: setIsOpen4,
       defaultSelected: "Plumbing",
       options: [
-        { label: "Leakage Fixing", value: "Leakage Fixing" , id:"12"  },
-        { label: "Drainage Works", value: "Drainage Works" , id:"13"  },
-        { label: "Plumbing", value: "Plumbing" , id:"14"  },
+        { label: "Leakage Fixing", value: "Leakage Fixing", id: "12" },
+        { label: "Drainage Works", value: "Drainage Works", id: "13" },
+        { label: "Plumbing", value: "Plumbing", id: "14" },
       ],
     },
   ];
@@ -70,30 +75,61 @@ function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
-            <Nav className="d-flex align-items-center gap-4">
-              <Link className="text-decoration-none headerLinks">Home</Link>
-              <Link className="text-decoration-none headerLinks">Services</Link>
-              <Link className="text-decoration-none headerLinks" to={"/blog"}>
-                Blog
-              </Link>
-              <Link
-                className="text-decoration-none headerLinks"
-                to={"/book-professional"}
+            <Nav className="d-flex">
+              <Nav.Link
+                as={Link}
+                eventKey="/"
+                to="/"
+                className={`text-decoration-none headerLinks ${
+                  location.pathname === "/" ? "ActiveLink" : ""
+                }`}
               >
-                Instant Booking
-              </Link>
-              <Link
-                className="text-decoration-none headerLinks"
-                to={"/about-us"}
+                Home
+              </Nav.Link>
+
+              <Nav.Link
+                as={Link}
+                eventKey="/blog"
+                to="/blog"
+                className={`text-decoration-none headerLinks ${
+                  location.pathname === "/blog" ? "ActiveLink" : ""
+                }`}
+              >
+                Blog{" "}
+              </Nav.Link>
+
+              <Nav.Link
+                as={Link}
+                eventKey="/book-professional"
+                to={`/book-professional?${1}`}
+                className={`text-decoration-none headerLinks ${
+                  location.pathname === "/book-professional" ? "ActiveLink" : ""
+                }`}
+              >
+                Book Professional
+              </Nav.Link>
+
+              <Nav.Link
+                as={Link}
+                eventKey="/about-us"
+                to="/about-us"
+                className={`text-decoration-none headerLinks ${
+                  location.pathname === "/about-us" ? "ActiveLink" : ""
+                }`}
               >
                 About Us
-              </Link>
-              <Link
-                className="text-decoration-none headerLinks"
-                to={"/contact-us"}
+              </Nav.Link>
+
+              <Nav.Link
+                as={Link}
+                eventKey="/contact-us"
+                to="/contact-us"
+                className={`text-decoration-none headerLinks ${
+                  location.pathname === "/contact-us" ? "ActiveLink" : ""
+                }`}
               >
                 Contact Us
-              </Link>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

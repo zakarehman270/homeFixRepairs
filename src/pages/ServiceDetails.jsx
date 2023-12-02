@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { serviceDetailsList } from "../Data";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ReactPlayer from "react-player";
 const ServiceDetails = () => {
   const [DataService, setDataService] = useState(null);
@@ -15,39 +15,61 @@ const ServiceDetails = () => {
       }
     }
   }, [location?.search]);
-
-  console.log("name,, data", DataService);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return () => {
+    }
+  }, [location.pathname])
   return (
     <div className="pb-5">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <div className="pt-4 d-flex align-items-center justify-content-between">
-              <p className="ourServiceHeading headingColor text-start ">
+            <div className="pt-4 d-flex flex-wrap gap-2 align-items-center justify-content-between">
+              <p className="ourServiceHeading headingColor text-wrap text-start ">
                 {DataService?.title}
               </p>
-              <div className=" ">
+              <div className="">
                 <div className="d-flex justify-content-end gap-2">
-                  <img
-                    src="/assets/icons/facebookService.svg"
-                    alt="facebookService"
-                  />
-                  <img
-                    src="/assets/icons/whatsAppService.svg"
-                    alt="whatsAppService"
-                  />
-                  <img
-                    src="/assets/icons/EmialService.svg"
-                    alt="EmialService"
-                  />
+                  <div>
+                    <a href="https://www.facebook.com/" className="">
+                      <img
+                        src="/assets/icons/facebookService.svg"
+                        alt="facebookService"
+                        className="MediaIcons ImageHover"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://web.whatsapp.com/" className="">
+                      <img
+                        src="/assets/icons/whatsAppService.svg"
+                        alt="whatsAppService"
+                        className="MediaIcons ImageHover"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://mail.google.com/" className="">
+                      <img
+                        src="/assets/icons/EmialService.svg"
+                        alt="EmialService"
+                        className="MediaIcons ImageHover"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 d-none d-md-block">
             <p className="ServiceListSubHeading">{DataService?.description1}</p>
-            <Button className="button mt-2">Book Now</Button>
+            <Link
+              className="text-decoration-none"
+              to={`/book-professional?${DataService?.id}`}
+            >
+              <Button className="button mt-2">Book Now</Button>
+            </Link>
           </div>
           <div className="col-md-6">
             <img

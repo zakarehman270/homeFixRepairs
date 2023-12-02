@@ -1,10 +1,15 @@
+import moment from "moment";
 import React, { useState } from "react";
 
-const CustomCalendar = () => {
+const CustomCalendar = ({ setDate }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-
   const handleDateClick = (date) => {
+    // Check if the clicked date is in the past
+    if (date.getTime() < new Date().getTime()) {
+      return;
+    }
     setSelectedDate(date);
+    setDate(moment(date).format("dddd, MMMM DD"));
   };
 
   const renderDays = () => {

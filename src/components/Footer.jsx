@@ -13,36 +13,88 @@ const Footer = () => {
               alt="logo"
             />
             <p className="descriptionInFooter mt-3">
-              This is the version of our website addressed to speakers of
-              English in the United States, your country or region in the
-              drop-down menu. more
+              "HomeFixRepairs" suggests a company dedicated to providing
+              solutions for home-related issues and repairs. The name conveys a
+              sense of reliability, expertise, and a focus on fixing and
+              maintaining residential properties. Here's a brief description
+              based on the name:
+              <b>HomeFixRepairs: Your Trusted Partner in Home Solutions </b>
+              Welcome to HomeFixRepairs, where we transform houses into homes by
+              offering comprehensive repair and maintenance services. With a
+              commitment to excellence, we take pride in being your go-to
+              partner for addressing a wide range of home-related issues.
             </p>
           </div>
           <div className="col-md-8">
             <div className="row">
               <div className="col-md-4">
-                <p className="headingInFooter">Customer Services</p>
-                <p className="mt-3 SubHeadingInFooter">Contact Us</p>
-                <p className="mt-2 SubHeadingInFooter">Shipping</p>
-                <p className="mt-2 SubHeadingInFooter">Return Policy</p>
-                <Link className="text-decoration-none" to={"/term-condition"}> 
+                <p className="headingInFooter">Contact</p>
+                <Link
+                  to={"/contact-us"}
+                  className="text-decoration-none border-animation"
+                >
+                  <p className="mt-3 SubHeadingInFooter">Contact Us</p>
+                </Link>
+                <Link
+                  className="text-decoration-none border-animation"
+                  to={"/term-condition"}
+                >
                   <p className="mt-2 SubHeadingInFooter">Term and Condition</p>
                 </Link>
               </div>
               <div className="col-md-4">
                 <p className="headingInFooter">Popular Services</p>
-                <p className="mt-3 SubHeadingInFooter">Carpenter</p>
-                <p className="mt-2 SubHeadingInFooter">Electrician</p>
-                <p className="mt-2 SubHeadingInFooter">Handyman</p>
-                <p className="mt-2 SubHeadingInFooter">Plumbing</p>
-                <p className="mt-2 SubHeadingInFooter">
-                  Electrical Maintenance
-                </p>
+                <div>
+                  <Link
+                    to={"/service-details?1"}
+                    className="text-decoration-none border-animation border-animation"
+                  >
+                    <p className="mt-3 SubHeadingInFooter">Carpenter</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    to={"/service-details?2"}
+                    className="text-decoration-none border-animation"
+                  >
+                    <p className="mt-2 SubHeadingInFooter">Electrician</p>
+                  </Link>
+                </div>
+
+                <div>
+                  <Link
+                    to={"/service-details?3"}
+                    className="text-decoration-none border-animation"
+                  >
+                    <p className="mt-2 SubHeadingInFooter">Handyman</p>
+                  </Link>
+                </div>
+
+                <div>
+                  <Link
+                    to={"/service-details?4"}
+                    className="text-decoration-none border-animation"
+                  >
+                    <p className="mt-2 SubHeadingInFooter">Plumbing</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    to={"/service-details?5"}
+                    className="text-decoration-none border-animation"
+                  >
+                    <p className="mt-2 SubHeadingInFooter">
+                      Electrical Maintenance
+                    </p>
+                  </Link>
+                </div>
               </div>
               <div className="col-md-4">
                 <p className="headingInFooter">Contact Information</p>
-                <p className="mt-3 SubHeadingInFooter">760-393-4773</p>
-                <p className="mt-2 SubHeadingInFooter">info@maleartese.art</p>
+                <p className="mt-3 SubHeadingInFooter">+971558504862</p>
+                <p className="mt-2 SubHeadingInFooter">
+                  info@homefixrepairs.com
+                </p>
                 <div className="mt-3">
                   <p className="textHolderFollowUp">Follow Us</p>
                   <div className="d-flex gap-2 align-items-center mt-2">

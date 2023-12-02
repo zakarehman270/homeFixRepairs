@@ -1,26 +1,38 @@
-import React, { useState, useMemo } from "react";
-import { Button } from "react-bootstrap";
+import React, { useState, useMemo, useEffect } from "react";
+import { Alert, Button } from "react-bootstrap";
+import emailjs from "emailjs-com";
+import ReactLoading from "react-loading";
+import Swal from "sweetalert2";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import Select from "react-select";
+import { services } from "../Data";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
+  const location = useLocation();
   const [Phone, setPhone] = useState();
   const [SelectedDate, setSelectedDate] = useState(0);
-
+  const [selectedOption, setSelectedOption] = useState();
+  const [Loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    first_name: "",
+    last_name: "",
+    phone: "",
+    email: "",
+    address: "",
+    service: "",
+    instruction: "",
   });
-
-  // Validation functions for username and password
-  const isUsernameValid = useMemo(
-    () => formData.username.length >= 5,
-    [formData.username]
-  );
-
-  const isPasswordValid = useMemo(
-    () => formData.password.length >= 8,
-    [formData.password]
-  );
-
+  const [validate, setValidate] = useState({
+    first_name: false,
+    last_name: false,
+    phone: false,
+    email: false,
+    address: false,
+    service: false,
+    numberOfHour: false,
+  });
   // Event handler for input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -31,20 +43,82 @@ const ContactUs = () => {
   };
   // Event handler for form submission
   const handleSubmit = (event) => {
+    const form = event.currentTarget;
     event.preventDefault();
-    if (isUsernameValid && isPasswordValid) {
-      console.log("Form submitted:", formData);
-      // You can send the data to a server here
-    } else {
-      console.log("Form validation failed");
+    // Perform form validation
+    const newValidate = {
+      first_name: formData.first_name === "",
+      last_name: formData.last_name === "",
+      phone: Phone === "",
+      email: formData.email === "",
+      address: formData.address === "",
+      numberOfHour: formData.numberOfHour === "",
+      service: selectedOption === null,
+    };
+    setValidate(newValidate);
+    // Check if there are any validation errors
+    if (Object.values(newValidate).some((error) => error)) {
+      // Handle validation errors, e.g., show an alert
+      return;
     }
+    setLoading(true);
+    // If validation passes, proceed with form submission
+    event.preventDefault();
+    emailjs
+      .sendForm(
+        "service_m7qeuhh",
+        "template_vfvjvyg",
+        event.target,
+        "O8x20B2okyS1wHgXo"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          Swal.fire({
+            title: "Thank You !",
+            text: "Our team will review your details and get back to you as soon as possible.",
+            icon: "success",
+          });
+        },
+        (error) => {}
+      );
+    // navigate("/thank-you-message");
   };
+  const colourStylesForService = {
+    control: (styles) => ({ ...styles, backgroundColor: "white" }),
+    option: (styles) => {
+      return {
+        ...styles,
+        borderColor: validate.service ? "BorderRed" : "",
+      };
+    },
+  };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return () => {
+    }
+  }, [location.pathname])
+
   return (
-    <div className="outerContainerBookProfessional mb-5">
+    <div className="outerContainerBookProfessional position-relative pb-5">
+      <div className="">
+        {Loading && (
+          <div className="BackHover d-flex justify-content-center pt-5">
+            <ReactLoading
+              type={"spinningBubbles"}
+              color={"Black"}
+              height={"10%"}
+              width={"10%"}
+            />
+          </div>
+        )}
+      </div>
       <div className="container-fluid">
         <div className="row">
-          <p className="text-center my-5 headingInBookProfessional">Contact Us</p>
-          <div className="col-md-9">
+          <p className="text-center mt-5 mb-2 headingInBookProfessional">
+            Contact Us
+          </p>
+          <div className="col-md-8">
             <h3 className="headingInContactUs">Feel Free To Contact Us</h3>
             <p className="SubheadingInContactUs">
               Let us help you become even greater at what you do. Fill out the
@@ -54,125 +128,155 @@ const ContactUs = () => {
               <div className="row g-3 mt-3">
                 <div className="col-md-12">
                   <div>
-                    <label htmlFor="username" className="FormLabel mb-3">
-                      What's your name?
+                    <label htmlFor="first_name" className="FormLabel mb-3">
+                      What's your First Name?
                     </label>
                     <input
                       type="text"
-                      id="username"
-                      name="username"
+                      id="first_name"
+                      name="first_name"
                       className="form-control-contact-us"
-                      placeholder="Type Your Full Name"
-                      value={formData.username}
+                      placeholder="Type Your First Name"
+                      value={formData.first_name}
                       onChange={handleInputChange}
                     />
-                    {!isUsernameValid && (
-                      <p className="error-message">
-                        Username must be at least 5 characters long.
-                      </p>
+                    {validate.first_name && (
+                      <Alert variant="danger">First Name is required.</Alert>
                     )}
                   </div>
                 </div>
                 <div className="col-md-12">
                   <div>
-                    <label htmlFor="password" className="FormLabel mb-3">
+                    <label htmlFor="last_name" className="FormLabel mb-3">
+                      What's your Last Name?
+                    </label>
+                    <input
+                      type="text"
+                      id="last_name"
+                      name="last_name"
+                      className="form-control-contact-us"
+                      placeholder="Type Your Last  Name"
+                      value={formData.last_name}
+                      onChange={handleInputChange}
+                    />
+                    {validate.last_name && (
+                      <Alert variant="danger">Last Name is required.</Alert>
+                    )}
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div>
+                    <label htmlFor="email" className="FormLabel mb-3">
                       What's your email address?
                     </label>
                     <input
-                      type="password"
-                      id="password"
+                      type="email"
+                      id="email"
                       className="form-control-contact-us"
-                      name="password"
-                      value={formData.password}
+                      name="email"
+                      placeholder="Type Your Email"
+                      value={formData.email}
                       onChange={handleInputChange}
                     />
-                    {!isPasswordValid && (
-                      <p className="error-message">
-                        Password must be at least 8 characters long.
-                      </p>
+                    {validate.email && (
+                      <Alert variant="danger">Email Address is required.</Alert>
                     )}
                   </div>
                 </div>
                 <div className="col-md-12">
                   <div>
-                    <label htmlFor="password" className="FormLabel mb-3">
+                    <label htmlFor="address" className="FormLabel mb-3">
+                      What's your address?
+                    </label>
+                    <input
+                      type="text"
+                      id="address"
+                      className="form-control-contact-us"
+                      name="address"
+                      placeholder="Type Your address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                    />
+                    {validate.address && (
+                      <Alert variant="danger">Address is required.</Alert>
+                    )}
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div>
+                    <label htmlFor="phone" className="FormLabel mb-3">
                       What's your phone number?
                     </label>
                     <input
-                      type="password"
-                      id="password"
+                      type="phone"
+                      id="phone"
                       className="form-control-contact-us"
-                      name="password"
-                      value={formData.password}
+                      name="phone"
+                      placeholder="Type Your Phone"
+                      value={formData.phone}
                       onChange={handleInputChange}
                     />
-                    {!isPasswordValid && (
-                      <p className="error-message">
-                        Password must be at least 8 characters long.
-                      </p>
+                    {validate.phone && (
+                      <Alert variant="danger">Phone number is required.</Alert>
                     )}
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <div>
-                    <label htmlFor="password" className="FormLabel mb-3">
+                  <div className="outerWrapperSelectInContactUs">
+                    <label htmlFor="service" className="FormLabel mb-3">
                       What's services are you looking for?
                     </label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="form-control-contact-us"
-                      name="password"
-                      value={formData.password}
-                      onChange={handleInputChange}
+                    <Select
+                      styles={colourStylesForService}
+                      value={selectedOption}
+                      onChange={(options) => {
+                        setSelectedOption(options);
+                        formData.service = options.value;
+                        setFormData({ ...formData });
+                      }}
+                      options={services?.map((item) => ({
+                        label: item.title,
+                        value: item.id,
+                      }))}
                     />
-                    {!isPasswordValid && (
-                      <p className="error-message">
-                        Password must be at least 8 characters long.
-                      </p>
+                    {validate.service && (
+                      <Alert variant="danger">Service is required.</Alert>
                     )}
                   </div>
                 </div>
                 <div className="col-md-12">
                   <div>
-                    <label htmlFor="password" className="FormLabel mb-3">
+                    <label htmlFor="instruction" className="FormLabel mb-3">
                       What's your Instructions?
                     </label>
-                    <input
-                      type="password"
-                      id="password"
+                    <textarea
+                      type="instruction"
+                      id="instruction"
                       className="form-control-contact-us"
-                      name="password"
-                      value={formData.password}
+                      name="instruction"
+                      placeholder="Type Instructions"
+                      value={formData.instruction}
                       onChange={handleInputChange}
                     />
-                    {!isPasswordValid && (
-                      <p className="error-message">
-                        Password must be at least 8 characters long.
-                      </p>
-                    )}
                   </div>
                 </div>
-                <div className="col-md-12">
-                  <div>
-                    <label htmlFor="password" className="FormLabel mb-3">
-                      What you Suggest?
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="form-control-contact-us"
-                      name="password"
-                      value={formData.password}
-                      onChange={handleInputChange}
-                    />
-                    {!isPasswordValid && (
-                      <p className="error-message">
-                        Password must be at least 8 characters long.
-                      </p>
-                    )}
-                  </div>
-                </div>
+              </div>
+              <div className="d-none">
+                <textarea
+                  name="message"
+                  value={`First Name:    ${formData.first_name} 
+								      Email:             ${formData.email} 
+											Phone:             ${formData.phone} 
+                      Message:           ${formData.instruction} 
+                      Service:           ${formData.service} 
+                      Last Name:         ${formData.last_name} 
+                      Address:           ${formData.address}  
+											SubmittedFrom:     ${"Contact Us"}
+														`}
+                  onChange={() => {
+                    console.log("Onchange");
+                  }}
+                />
               </div>
               <div className="d-flex gap-2 mt-4">
                 <Button className="CancelButton" type="submit">
@@ -184,7 +288,7 @@ const ContactUs = () => {
               </div>
             </form>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <div>
               <p className="labelContactUs mb-2">CALL US</p>
               <p className="subLabel">+971558504862</p>
@@ -196,9 +300,11 @@ const ContactUs = () => {
             </div>
             <div>
               <p className="labelContactUs mb-2 mt-2">ADDRESS</p>
-              <p className="subLabel">Office 204, Albraha area, Jessco market building Dubai, UAE</p>
+              <p className="subLabel">
+                Office 204, Albraha area, Jessco market building Dubai, UAE
+              </p>
             </div>
-            <img src="/assets/icons/map.svg" className="mt-3" alt="map" />
+            <img src="/assets/icons/map.svg" className="mt-3 w-100" alt="map" />
           </div>
         </div>
       </div>

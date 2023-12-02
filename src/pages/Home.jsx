@@ -1,67 +1,150 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import OurServices from "../components/ourServices";
 import { services } from "../Data";
 import WhyChooseUs from "../components/WhyChooseUs";
 import CustomCarousel from "../components/CustomCarousel";
+import { Link, useLocation } from "react-router-dom";
+import { useRef } from "react";
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [SelectedInnerIndex, setSelectedInnerIndex] = useState(0);
+  const [ServiceId, setServiceId] = useState(null);
+  const [filter, setFilter] = useState("");
+  const dropdownRef = useRef(null);
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return () => {};
+  }, [location.pathname]);
+  const handleSearchInputChange = (event) => {
+    setFilter(event.target.value);
+  };
+  const filteredServices = services.filter((option) =>
+    option.title.toLowerCase().includes(filter.toLowerCase())
+  );
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        // Clicked outside the dropdown, close it
+        setIsOpen(false);
+      }
+    };
+
+    // Add event listener to the document body
+    document.addEventListener('click', handleClickOutside);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   return (
     <div className="mb-5">
       <div className="">
-        <div
-          style={{ backgroundImage: 'url("/assets/images/header.png")' }}
-          className="outerWrapperHome"
-        >
-          <div className="container-fluid text-white">
-            <div className="row">
-              <div className="col-6 ">
-                <h3 className="MarginTop HomeHeading">Home Fix Repair</h3>
-                <p className="SubHeadingInHome">
-                  Home Fix Repair is your trusted partner for all your home
-                  improvement needs. Our team of skilled professionals is
-                  dedicated to delivering top-notch repair and maintenance
-                  services. Whether it's a leaky faucet, a faulty electrical
-                  system, or a renovation project, we're here to make your home
-                  a better place. With Home Fix Repair, your home is in capable
-                  hands.
-                </p>
-                <div className="my-3  outerWrapperSearchInHomeInHome py-2 px-3">
-                  <p className="textInSearchHome mb-1">
-                    Where would you like to receive your services?
+        <div className="position-relative">
+          <img src="/assets/images/header.jpg" className="homeImage" alt="" />
+          <div className="outerContainerHomeImage">
+            <div className="container-fluid text-white ">
+              <div className="row">
+                <div className="col-6 ">
+                  <h3 className="MarginTopInHome HomeHeading">
+                    Home Fix Repair
+                  </h3>
+                  <p className="SubHeadingInHome">
+                    Home Fix Repair is your trusted partner for all your home
+                    improvement needs. Our team of skilled professionals is
+                    dedicated to delivering top-notch repair and maintenance
+                    services. Whether it's a leaky faucet, a faulty electrical
+                    system, or a renovation project, we're here to make your
+                    home a better place. With Home Fix Repair, your home is in
+                    capable hands.
                   </p>
-                  <div className="d-flex align-items-baseline gap-2">
-                    <div className="d-flex justify-content-between outerWrapperSearchInHome">
-                      <input type="text" className="SearchInHome" />
-                      <img
-                        src="/assets/icons/Search.svg"
-                        className="SearchIcons"
-                        alt="Search"
-                      />
+                  <div className="my-3  outerWrapperSearchInHomeInHome py-2 px-3">
+                    <p className="textInSearchHome mb-1">
+                      Select your service.
+                    </p>
+                    <div className="d-flex align-items-baseline gap-2" >
+                      <div className="d-flex justify-content-between outerWrapperSearchInHome" ref={dropdownRef}>
+                        <input
+                          type="text"
+                          className="SearchInHome"
+                          placeholder="Search your service"
+                          value={filter}
+                          onFocus={() => setIsOpen(true)}
+                          onChange={handleSearchInputChange}
+                        />
+                        <img
+                          src="/assets/icons/Search.svg"
+                          className="SearchIcons"
+                          alt="Search"
+                        />
+                      </div>
+                      <div>
+                        <Link
+                          className="text-decoration-none"
+                          to={`/book-professional?${ServiceId}`}
+                        >
+                          <Button className="button">Book Now</Button>
+                        </Link>
+                      </div>
+                      {isOpen && (
+                        <ul className={`dropdown-options`} >
+                          {filteredServices.map((option, index) => (
+                            <li
+                              className={` ${
+                                SelectedInnerIndex === index
+                                  ? "selectedOptions"
+                                  : ""
+                              }`}
+                              key={option.value}
+                              onClick={() => {
+                                setSelectedInnerIndex(index);
+                                setServiceId(option.id);
+                                setFilter(option?.title)
+                              }}
+                            >
+                              {option.title}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                  <div className="d-flex  mb-4">
+                    <div>
+                      <a href="https://www.facebook.com/" className="">
+                        <img
+                          src="/assets/icons/facebookService.svg"
+                          alt="facebookService"
+                          className="MediaIcons ImageHover"
+                        />
+                      </a>
                     </div>
                     <div>
-                      <Button className="button">Book Now</Button>
-                      <p className="TextHolderAdvanceSearch mt-1">
-                        Advance Search
-                      </p>
+                      <a href="https://web.whatsapp.com/" className="">
+                        <img
+                          src="/assets/icons/whatsAppService.svg"
+                          alt="whatsAppService"
+                          className="MediaIcons ImageHover"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://mail.google.com/" className="">
+                        <img
+                          src="/assets/icons/EmialService.svg"
+                          alt="EmialService"
+                          className="MediaIcons ImageHover"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div className="d-flex gap-2 mb-4">
-                  <img
-                    src="/assets/icons/facebookService.svg"
-                    alt="facebookService"
-                  />
-                  <img
-                    src="/assets/icons/whatsAppService.svg"
-                    alt="whatsAppService"
-                  />
-                  <img
-                    src="/assets/icons/EmialService.svg"
-                    alt="EmialService"
-                  />
-                </div>
+                <div className="col-md-6"></div>
               </div>
-              <div className="col-md-6"></div>
             </div>
           </div>
         </div>
@@ -74,8 +157,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="row mt-5">
-          <div className="col-md-6 pe-0">
+      </div>
+      <div className="">
+        <div className="d-flex mt-5">
+          <div className="col-md-6 pe-0 ps-0">
             <div className="outerWrapperInterPriseSection py-4 px-3">
               <p className="text-white textHolderEnterPrise">
                 Enterprise Suite
@@ -112,10 +197,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 ps-0">
+          <div className="col-md-6 ps-0 pe-0">
             <div className="outerWrapperEnterpriseSuiteRightSection"></div>
           </div>
         </div>
+      </div>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-12">
             <div className="mt-5">
@@ -129,7 +216,7 @@ const Home = () => {
       </div>
       <div className="container-fluid">
         <div className="row mt-5">
-          <div className="d-flex gap-1 justify-content-center mb-3">
+          <div className="d-flex gap-1 justify-content-center flex-wrap mb-3">
             <h3 className="HeadingPickService">Pick from </h3>
             <h3 className="HeadingPickService headingColor">
               over 5000 services{" "}

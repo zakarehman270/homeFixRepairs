@@ -6,10 +6,11 @@ import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import moment from "moment";
 import { services } from "../Data";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import ReactLoading from "react-loading";
 import Swal from "sweetalert2";
+
 const BookProfessional = () => {
   const [Phone, setPhone] = useState();
   const [SelectedDate, setSelectedDate] = useState(0);
@@ -19,6 +20,7 @@ const BookProfessional = () => {
     { label: "1 Hour", value: "1" },
   ]);
   const location = useLocation();
+  const navigate = useNavigate()
   let userID = location?.search?.replace("?", "");
   const [formData, setFormData] = useState({
     first_name: "",
@@ -77,10 +79,10 @@ const BookProfessional = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     emailjs
       .sendForm(
-        "service_m7qeuhh",
-        "template_vfvjvyg",
+        "service_9ecy55l",
+        "template_8wr7t4p",
         event.target,
-        "O8x20B2okyS1wHgXo"
+        "ng0MaJFLD-mYiEWhw"
       )
       .then(
         (result) => {
@@ -89,6 +91,9 @@ const BookProfessional = () => {
             title: "Thank You !",
             text: "Our team will review your details and get back to you as soon as possible.",
             icon: "success",
+          }).then(()=>{
+            console.log("helo this is called")
+            navigate("/")
           });
         },
         (error) => {}
@@ -142,9 +147,8 @@ const BookProfessional = () => {
   };
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    return () => {
-    }
-  }, [location.pathname])
+    return () => {};
+  }, [location.pathname]);
   return (
     <div className="outerContainerBookProfessional position-relative pb-5">
       <div className="">
@@ -283,7 +287,7 @@ const BookProfessional = () => {
                     value={selectedOption}
                     onChange={(options) => {
                       setSelectedOption(options);
-                      formData.service = options.value;
+                      formData.service = options.label;
                       setFormData({ ...formData });
                     }}
                     options={services?.map((item) => ({
@@ -410,8 +414,12 @@ const BookProfessional = () => {
               <div className="col-md-12">
                 <div className="form-check">
                   <label className="form-check-label">
-                    <input type="checkbox" className="form-check-input" value="" />I
-                    Agree{" "}
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      value=""
+                    />
+                    I Agree{" "}
                     <Link className="text-decoration-none" to="/term-condition">
                       Terms & Policy
                     </Link>
@@ -436,18 +444,19 @@ const BookProfessional = () => {
             <div className="d-none">
               <textarea
                 name="message"
-                value={`First Name:     ${formData.first_name} 
-								      Email:            ${formData.email} 
-											Phone:            ${formData.phone} 
-                      Message:          ${formData.instruction} 
-                      Service:          ${formData.service} 
+                value={`
+                      First Name:       ${formData.first_name} 
                       Last Name:        ${formData.last_name} 
+								      Email:            ${formData.email} 
+											Phone:            ${formData.phone}  
+                      Number Of Hours:  ${formData.numberOfHour + " " + "hours"} 
+                      Service:          ${formData.service} 
                       Address:          ${formData.address} 
                       Date:             ${formData.date} 
-                      Time:             ${formData.numberOfHour} 
-                      Price:            ${formData.price} 
-                      Number Of Hours:  ${formData.numberOfHour} 
-											SubmittedFrom:  ${"Form"}
+                      Message:          ${formData.instruction}
+                      Start Time:       ${formData.time} 
+                      Price:            ${"AED" + " " + parseInt(100) *parseInt(SelectedOptionNumberOfHour.value? SelectedOptionNumberOfHour.value: 1)} 
+											SubmittedFrom:  ${"Booking Form"}
 														`}
                 onChange={() => {
                   console.log("Onchange");

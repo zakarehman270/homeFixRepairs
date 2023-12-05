@@ -7,12 +7,11 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import { services } from "../Data";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
   const location = useLocation();
   const [Phone, setPhone] = useState();
-  const [SelectedDate, setSelectedDate] = useState(0);
   const [selectedOption, setSelectedOption] = useState();
   const [Loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -24,6 +23,7 @@ const ContactUs = () => {
     service: "",
     instruction: "",
   });
+  const navigate = useNavigate()
   const [validate, setValidate] = useState({
     first_name: false,
     last_name: false,
@@ -62,14 +62,15 @@ const ContactUs = () => {
       return;
     }
     setLoading(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     // If validation passes, proceed with form submission
     event.preventDefault();
     emailjs
       .sendForm(
-        "service_m7qeuhh",
-        "template_vfvjvyg",
+        "service_9ecy55l",
+        "template_8wr7t4p",
         event.target,
-        "O8x20B2okyS1wHgXo"
+        "ng0MaJFLD-mYiEWhw"
       )
       .then(
         (result) => {
@@ -78,6 +79,9 @@ const ContactUs = () => {
             title: "Thank You !",
             text: "Our team will review your details and get back to you as soon as possible.",
             icon: "success",
+          }).then(() => {
+            console.log("helo this is called");
+            navigate("/");
           });
         },
         (error) => {}
@@ -95,9 +99,8 @@ const ContactUs = () => {
   };
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    return () => {
-    }
-  }, [location.pathname])
+    return () => {};
+  }, [location.pathname]);
 
   return (
     <div className="outerContainerBookProfessional position-relative pb-5">
@@ -231,7 +234,7 @@ const ContactUs = () => {
                       value={selectedOption}
                       onChange={(options) => {
                         setSelectedOption(options);
-                        formData.service = options.value;
+                        formData.service = options.label;
                         setFormData({ ...formData });
                       }}
                       options={services?.map((item) => ({
@@ -264,14 +267,15 @@ const ContactUs = () => {
               <div className="d-none">
                 <textarea
                   name="message"
-                  value={`First Name:    ${formData.first_name} 
-								      Email:             ${formData.email} 
-											Phone:             ${formData.phone} 
-                      Message:           ${formData.instruction} 
-                      Service:           ${formData.service} 
+                  value={`
+                      First Name:        ${formData.first_name} 
                       Last Name:         ${formData.last_name} 
+								      Email:             ${formData.email} 
+											Phone:             ${formData.phone}  
                       Address:           ${formData.address}  
-											SubmittedFrom:     ${"Contact Us"}
+                      Service:           ${formData.service} 
+                      Message:           ${formData.instruction}
+											SubmittedFrom:     ${"Contact Us Form"}
 														`}
                   onChange={() => {
                     console.log("Onchange");

@@ -80,7 +80,7 @@ function Header() {
                 as={Link}
                 eventKey="/"
                 to="/"
-                className={`text-decoration-none headerLinks ${
+                className={`text-decoration-none headerLinks border-animation-header ${
                   location.pathname === "/" ? "ActiveLink" : ""
                 }`}
               >
@@ -91,7 +91,7 @@ function Header() {
                 as={Link}
                 eventKey="/blog"
                 to="/blog"
-                className={`text-decoration-none headerLinks ${
+                className={`text-decoration-none headerLinks border-animation-header ${
                   location.pathname === "/blog" ? "ActiveLink" : ""
                 }`}
               >
@@ -102,7 +102,7 @@ function Header() {
                 as={Link}
                 eventKey="/book-professional"
                 to={`/book-professional?${1}`}
-                className={`text-decoration-none headerLinks ${
+                className={`text-decoration-none headerLinks border-animation-header ${
                   location.pathname === "/book-professional" ? "ActiveLink" : ""
                 }`}
               >
@@ -113,7 +113,7 @@ function Header() {
                 as={Link}
                 eventKey="/about-us"
                 to="/about-us"
-                className={`text-decoration-none headerLinks ${
+                className={`text-decoration-none headerLinks border-animation-header ${
                   location.pathname === "/about-us" ? "ActiveLink" : ""
                 }`}
               >
@@ -124,7 +124,7 @@ function Header() {
                 as={Link}
                 eventKey="/contact-us"
                 to="/contact-us"
-                className={`text-decoration-none headerLinks ${
+                className={`text-decoration-none headerLinks border-animation-header ${
                   location.pathname === "/contact-us" ? "ActiveLink" : ""
                 }`}
               >

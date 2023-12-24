@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { DeepServiceDetailsList } from "../Data";
 import { Link, useLocation } from "react-router-dom";
+// import _sidebar-and-main-panel from '../pages/_sidebar-and-main-panel.scss'
 const DeepServiceDetails = () => {
   const [ActiveTas, setActiveTas] = useState("1");
   const [DataService, setDataService] = useState(null);
@@ -20,23 +21,23 @@ const DeepServiceDetails = () => {
   }, [location?.search]);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    return () => {
-    }
-  }, [location.pathname])
+    return () => {};
+  }, [location.pathname]);
   return (
-    <div className="pb-5">
+    <div className="pb-5 mt-4">
       <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <div className="pt-4 ">
-              <div className="d-flex justify-content-end ">
+            <div className="d-flex flex-wrap gap-3 justify-content-between"> 
+              <p className="ourServiceHeading headingColor text-wrap text-start ">
+                Professional {DataService?.title} In Dubai
+              </p>
+              <div className="d-flex">
                 <Link
                   className="text-decoration-none"
                   to={`/book-professional?1`}
                 >
-                  <Button className="button d-block d-lg-none">
-                    Book Now
-                  </Button>
+                  <Button className="button d-block d-lg-none">Book Now</Button>
                 </Link>
                 <div>
                   <a href="https://www.facebook.com/" className="">
@@ -69,43 +70,48 @@ const DeepServiceDetails = () => {
                 </div>
               </div>
             </div>
-            <p className="ourServiceHeading headingColor text-wrap text-start ">
-              Professional {DataService?.title} in dubai
-            </p>
             <p className="ServiceListSubHeading mt-1">
               {DataService?.description}
             </p>
           </div>
         </div>
       </div>
-      <div className="outerWrapperTabs mt-2 p-2">
-        <div className="container-fluid">
-          <div className="d-flex align-items-center OverFlow justify-content-between">
-            {DataService?.tabs?.map((item, index) => {
-              return (
-                <div className="WidthTab">
-                  <p
-                    key={index}
-                    className={`c_pointer tabsTitle ${
+      <div className="container-fluid mt-3">
+        <div className="row">
+          <div className="col-md-3">
+            <div className="outerWrapperSideMenu">
+              <div className="mb-3 d-flex justify-content-center">
+                <Link to={"/"}>
+                  <div>
+                    <img
+                      src="/assets/icons/logo.svg"
+                      alt="logo"
+                      className="HeaderLogoInMenu"
+                    />
+                  </div>
+                </Link>
+              </div>
+              {DataService?.tabs?.map((item, index) => {
+                return (
+                  <div
+                    className={`c_pointer tabsTitle d-flex  gap-1 ${
                       ActiveTas === item?.id ? "activeTabs" : ""
                     }`}
+                    key={index}
                     onClick={() => {
                       setActiveTas(item.id);
                       setTabsData(item);
                     }}
                   >
-                    {item?.title}
-                  </p>
-                </div>
-              );
-            })}
+                    <img src={item?.img} alt="img" className="imageInMenu" />
+                    <p>{item?.title}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="container-fluid mt-3">
-        <div className="row">
-          <div className="col-md-7">
-            <p className="ourServiceHeading text-wrap">
+          <div className="col-md-5">
+            <p className="ourServiceHeading MarginTopInMobileSize text-wrap">
               Welcome to the {TabsData?.title}
             </p>
             <p className="ServiceListSubHeading mt-1">
@@ -117,7 +123,7 @@ const DeepServiceDetails = () => {
               </Button>
             </Link>
           </div>
-          <div className="col-md-5">
+          <div className="col-md-4">
             <div>
               <img
                 src={TabsData?.img}

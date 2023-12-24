@@ -98,9 +98,15 @@ const Footer = () => {
                 <div className="mt-3">
                   <p className="textHolderFollowUp">Follow Us</p>
                   <div className="d-flex gap-2 align-items-center mt-2">
-                    <img src="/assets/icons/insta.svg" alt="insta" />
-                    <img src="/assets/icons/apple.svg" alt="apple" />
-                    <img src="/assets/icons/facebook.svg" alt="facebook" />
+                    <a href="https://www.instagram.com/">
+                      <img src="/assets/icons/insta.svg" alt="insta" />
+                    </a>
+                    <a href="https://mail.google.com/">
+                      <img src="/assets/icons/apple.svg" alt="apple" />
+                    </a>
+                    <a href="https://www.facebook.com/">
+                      <img src="/assets/icons/facebook.svg" alt="facebook" />
+                    </a>
                   </div>
                 </div>
               </div>

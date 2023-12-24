@@ -23,7 +23,7 @@ const ContactUs = () => {
     service: "",
     instruction: "",
   });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [validate, setValidate] = useState({
     first_name: false,
     last_name: false,
@@ -117,10 +117,10 @@ const ContactUs = () => {
         )}
       </div>
       <div className="container-fluid">
-        <div className="row">
-          <p className="text-center mt-5 mb-2 headingInBookProfessional">
+        <div className="row mt-5 mb-2">
+          {/* <p className="text-center mt-5 mb-2 headingInBookProfessional">
             Contact Us
-          </p>
+          </p> */}
           <div className="col-md-8">
             <h3 className="headingInContactUs">Feel Free To Contact Us</h3>
             <p className="SubheadingInContactUs">
@@ -295,18 +295,30 @@ const ContactUs = () => {
           <div className="col-md-4">
             <div>
               <p className="labelContactUs mb-2">CALL US</p>
-              <p className="subLabel">+971558504862</p>
-              <p className="subLabel">+971558504862</p>
+              <div className="d-flex gap-1">
+                <img src="/assets/icons/whatsapp.png" alt="whatsapp" className="MediaIconsInContact" />
+                <p className="subLabel">+971 55 8504862</p>
+              </div>
+              <div className="d-flex gap-1 ">
+                <img src="/assets/icons/whatsapp.png" alt="whatsapp" className="MediaIconsInContact" />
+                <p className="subLabel">+971 55 3068247</p>
+              </div>
             </div>
             <div>
               <p className="labelContactUs mb-2 mt-2">Email</p>
-              <p className="subLabel">babalqatya4@gmail.com</p>
+              <div className="d-flex gap-1 ">
+                <img src="/assets/icons/gmail.png" alt="gmail" className="MediaIconsInContact" />
+                <p className="subLabel">Info@homefixrepairs.com</p>
+              </div>
             </div>
             <div>
               <p className="labelContactUs mb-2 mt-2">ADDRESS</p>
-              <p className="subLabel">
-                Office 204, Albraha area, Jessco market building Dubai, UAE
-              </p>
+              <div className="d-flex gap-1 ">
+                <img src="/assets/icons/location.png" alt="location" className="MediaIconsInContact" />
+                <p className="subLabel">
+                Office 316, Jessco building, Albraha, Dubai
+                </p>
+              </div>
             </div>
             <img src="/assets/icons/map.svg" className="mt-3 w-100" alt="map" />
           </div>

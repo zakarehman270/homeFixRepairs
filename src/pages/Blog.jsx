@@ -26,22 +26,25 @@ const Blog = () => {
               </Link>
             </div>
             <div className="d-flex justify-content-between align-items-center mt-1">
-              <p className="my-2 HeadingInBlog">
-                Case Study: HappyX app & brand identity
-              </p>
+              <p className="my-2 HeadingInBlog">Carpenter</p>
               <Link to={"/blog-details"}>
                 <Button className="button">Learn More</Button>
               </Link>
             </div>
 
             <p className="SubHeadingInBlog mb-2">
-              The design process with a mission to make an easier life for
-              separated families
+              A carpenter is a skilled craftsman who specializes in working with
+              wood to create, construct, and repair various structures and
+              objects. The role of a carpenter extends beyond simply cutting and
+              shaping wood; it encompasses a range of tasks related to building
+              and finishing. Carpenters play a crucial role in the construction
+              industry and are essential for both residential and commercial
+              projects.
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/blogUser.svg" alt="blogUser" />
+              <img src="/assets/images/PeterHese.jpg" alt="PeterHese" className="UserImageInBlog" />
               <div>
-                <p className="userHeadingInBlog">Assad Ali</p>
+                <p className="userHeadingInBlog">Peter Hese</p>
                 <p className="mt-2 userSubHeadingInBlog">
                   Jun 14 . 16 min read
                 </p>
@@ -60,23 +63,25 @@ const Blog = () => {
             </div>
 
             <div className="d-flex justify-content-between align-items-center mt-1">
-              <p className="my-2 HeadingInBlog">
-                Case Study: HappyX app & brand identity
-              </p>
+              <p className="my-2 HeadingInBlog">Electrician</p>
               <Link to={"/blog-details"}>
                 <Button className="button">Learn More</Button>
               </Link>
             </div>
             <p className="SubHeadingInBlog mb-2">
-              The design process with a mission to make an easier life for
-              separated families
+              An electrician is a skilled tradesperson who specializes in the
+              installation, maintenance, and repair of electrical systems and
+              components. The role of an electrician is crucial in ensuring that
+              electrical systems function safely and efficiently in various
+              settings, including residential, commercial, and industrial
+              environments. Here are key aspects of an electrician's work:
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/blogUser.svg" alt="blogUser" />
+              <img src="/assets/images/johnDeo.webp" alt="johnDeo" className="UserImageInBlog" />
               <div>
-                <p className="userHeadingInBlog">Assad Ali</p>
+                <p className="userHeadingInBlog">John Deo</p>
                 <p className="mt-2 userSubHeadingInBlog">
-                  Jun 14 . 16 min read
+                  Des 12 . 10 min read
                 </p>
               </div>
             </div>
@@ -93,23 +98,24 @@ const Blog = () => {
             </Link>
 
             <div className="d-flex justify-content-between align-items-center mt-1">
-              <p className="my-2 HeadingInBlog">
-                Case Study: HappyX app & brand identity
-              </p>
+              <p className="my-2 HeadingInBlog">Handyman</p>
               <Link to={"/blog-details"}>
                 <Button className="button">Learn More</Button>
               </Link>
             </div>
             <p className="SubHeadingInBlog mb-2">
-              The design process with a mission to make an easier life for
-              separated families
+              A handyman is a skilled and versatile tradesperson who is
+              proficient in a wide range of home maintenance and repair tasks.
+              Handymen are often hired to handle various odd jobs and minor
+              repairs around homes, offices, or commercial spaces. Here are key
+              aspects of a handyman's work:
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/blogUser.svg" alt="blogUser" />
+              <img src="/assets/images/charlie.webp" alt="charlie" className="UserImageInBlog" />
               <div>
-                <p className="userHeadingInBlog">Assad Ali</p>
+                <p className="userHeadingInBlog">Charlie</p>
                 <p className="mt-2 userSubHeadingInBlog">
-                  Jun 14 . 16 min read
+                  Des 11 . 6 min read
                 </p>
               </div>
             </div>
@@ -123,23 +129,25 @@ const Blog = () => {
               />
             </Link>
             <div className="d-flex justify-content-between align-items-center mt-1">
-              <p className="my-2 HeadingInBlog">
-                Case Study: HappyX app & brand identity
-              </p>
+              <p className="my-2 HeadingInBlog">Plumbing</p>
               <Link to={"/blog-details"}>
                 <Button className="button">Learn More</Button>
               </Link>
             </div>
             <p className="SubHeadingInBlog mb-2">
-              The design process with a mission to make an easier life for
-              separated families
+              Plumbing is a critical aspect of construction and home maintenance
+              that involves the installation, repair, and maintenance of systems
+              that convey fluids, usually water and sewage. Plumbers are skilled
+              tradespeople who specialize in working with pipes, fixtures, and
+              other components to ensure the proper functioning of plumbing
+              systems. Here are key aspects of plumbing:
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/blogUser.svg" alt="blogUser" />
+              <img src="/assets/images/timkozak.jpg" alt="timkozak" className="UserImageInBlog" />
               <div>
-                <p className="userHeadingInBlog">Assad Ali</p>
+                <p className="userHeadingInBlog">Timko Zak</p>
                 <p className="mt-2 userSubHeadingInBlog">
-                  Jun 14 . 16 min read
+                  APR 23 . 20 min read
                 </p>
               </div>
             </div>
@@ -153,23 +161,25 @@ const Blog = () => {
               />
             </Link>
             <div className="d-flex justify-content-between align-items-center mt-1">
-              <p className="my-2 HeadingInBlog">
-                Case Study: HappyX app & brand identity
-              </p>
+              <p className="my-2 HeadingInBlog">Electrician</p>
               <Link to={"/blog-details"}>
                 <Button className="button">Learn More</Button>
               </Link>
             </div>
             <p className="SubHeadingInBlog mb-2">
-              The design process with a mission to make an easier life for
-              separated families
+              An electrician is a skilled tradesperson who specializes in the
+              installation, maintenance, and repair of electrical systems and
+              components. The role of an electrician is crucial in ensuring that
+              electrical systems function safely and efficiently in various
+              settings, including residential, commercial, and industrial
+              environments. Here are key aspects of an electrician's work:
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/blogUser.svg" alt="blogUser" />
+              <img src="/assets/images/Will.jpg" alt="William" className="UserImageInBlog" />
               <div>
-                <p className="userHeadingInBlog">Assad Ali</p>
+                <p className="userHeadingInBlog">William E. Carter</p>
                 <p className="mt-2 userSubHeadingInBlog">
-                  Jun 14 . 16 min read
+                  JAN 29 . 2 min read
                 </p>
               </div>
             </div>

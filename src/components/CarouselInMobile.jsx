@@ -17,47 +17,125 @@ function CarouselInMobile({ data }) {
           <div className="d-flex justify-content-center MarginTop">
             <div className="outerWrapperCarouselBox position-relative activeSlide p-4 text-white w-75">
               <img
+                src={data[0].image}
+                className="outerWrapperCarouselImageInMobileSize"
+                alt=""
+              />
+              <p className={`CarouselHeading mt-2 text-white`}>
+                {data[0].title}
+              </p>
+              <div className="d-flex justify-content-center my-2">
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+              </div>
+              <p className="CarouselDescription text-white">{data[0].des}</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="d-flex justify-content-center MarginTop">
+            <div className="outerWrapperCarouselBox position-relative activeSlide p-4 text-white w-75">
+              <img
                 src={data[1].image}
                 className="outerWrapperCarouselImageInMobileSize"
                 alt=""
               />
-              <p
-                className={`CarouselHeading mt-2 text-white`}
-              >
+              <p className={`CarouselHeading mt-2 text-white`}>
                 {data[1].title}
               </p>
               <div className="d-flex justify-content-center my-2">
-        <img src="/assets/icons/star.png" alt="star" className="Stars" />
-        <img src="/assets/icons/star.png" alt="star" className="Stars" />
-        <img src="/assets/icons/star.png" alt="star" className="Stars" />
-        <img src="/assets/icons/star.png" alt="star" className="Stars" />
-        <img src="/assets/icons/star.png" alt="star" className="Stars" />
-      </div>
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+              </div>
               <p className="CarouselDescription text-white">{data[1].des}</p>
             </div>
           </div>
         </div>
         <div>
-          <div className="d-flex justify-content-center marginTop">
+          <div className="d-flex justify-content-center MarginTop">
             <div className="outerWrapperCarouselBox position-relative activeSlide p-4 text-white w-75">
               <img
-                src={data[1].image}
+                src={data[2].image}
                 className="outerWrapperCarouselImageInMobileSize"
                 alt=""
               />
-              <p className="CarouselDescription text-white">{data[1].des}</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="d-flex justify-content-center marginTop">
-            <div className="outerWrapperCarouselBox position-relative activeSlide p-4 text-white w-75">
-              <img
-                src={data[1].image}
-                className="outerWrapperCarouselImageInMobileSize"
-                alt=""
-              />
-              <p className="CarouselDescription text-white">{data[1].des}</p>
+              <p className={`CarouselHeading mt-2 text-white`}>
+                {data[1].title}
+              </p>
+              <div className="d-flex justify-content-center my-2">
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+                <img
+                  src="/assets/icons/star.png"
+                  alt="star"
+                  className="Stars"
+                />
+              </div>
+              <p className="CarouselDescription text-white">{data[2].des}</p>
             </div>
           </div>
         </div>

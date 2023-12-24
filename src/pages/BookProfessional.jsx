@@ -221,8 +221,9 @@ const BookProfessional = () => {
                     Phone*
                   </label>
                   <PhoneInput
-                    country={"us"}
+                    country={"ae"}
                     value={Phone}
+                    enableSearch
                     className={`${validate.first_name ? "BorderRed" : ""}`}
                     onChange={(phone) => {
                       setPhone(phone);

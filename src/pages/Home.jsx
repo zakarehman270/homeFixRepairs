@@ -6,6 +6,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import CustomCarousel from "../components/CustomCarousel";
 import { Link, useLocation } from "react-router-dom";
 import { useRef } from "react";
+import LeftRightSideAnimation from "../components/LeftRightSideAnimation";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [SelectedInnerIndex, setSelectedInnerIndex] = useState(0);
@@ -33,26 +34,23 @@ const Home = () => {
     };
 
     // Add event listener to the document body
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener("click", handleClickOutside);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [dropdownRef]);
 
   return (
     <div className="mb-5">
       <div className="">
-        <div className="position-relative">
-          <img src="/assets/images/header.jpg" className="homeImage" alt="" />
-          <div className="outerContainerHomeImage">
-            <div className="container-fluid text-white ">
-              <div className="row">
-                <div className="col-6 ">
-                  <h3 className="MarginTopInHome HomeHeading">
-                    Home Fix Repair
-                  </h3>
+        <div className="">
+          <div className="d-flex SizeOhHome">
+            <div className="outerWrapperEllipseImage position-relative">
+              <LeftRightSideAnimation x={"-100%"}>
+                <div className="outerWrapperLeftSideContentHome">
+                  <h3 className="HomeHeading">Home Fix Repair</h3>
                   <p className="SubHeadingInHome">
                     Home Fix Repair is your trusted partner for all your home
                     improvement needs. Our team of skilled professionals is
@@ -66,8 +64,11 @@ const Home = () => {
                     <p className="textInSearchHome mb-1">
                       Select your service.
                     </p>
-                    <div className="d-flex align-items-baseline gap-2" >
-                      <div className="d-flex justify-content-between outerWrapperSearchInHome" ref={dropdownRef}>
+                    <div className="d-flex align-items-baseline gap-2">
+                      <div
+                        className="d-flex justify-content-between outerWrapperSearchInHome"
+                        ref={dropdownRef}
+                      >
                         <input
                           type="text"
                           className="SearchInHome"
@@ -91,7 +92,7 @@ const Home = () => {
                         </Link>
                       </div>
                       {isOpen && (
-                        <ul className={`dropdown-options`} >
+                        <ul className={`dropdown-options`}>
                           {filteredServices.map((option, index) => (
                             <li
                               className={` ${
@@ -103,7 +104,7 @@ const Home = () => {
                               onClick={() => {
                                 setSelectedInnerIndex(index);
                                 setServiceId(option.id);
-                                setFilter(option?.title)
+                                setFilter(option?.title);
                               }}
                             >
                               {option.title}
@@ -143,7 +144,95 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6"></div>
+              </LeftRightSideAnimation>
+
+              <img
+                src="/assets/images/EllipseImage.png"
+                alt="EllipseImage"
+                className="EllipseImage"
+              />
+            </div>
+            <div className="EllipseImageRightSide">
+              <div className="d-flex h-100">
+                <div className="d-flex flex-column outerWrapperImagesInHome justify-content-between h-100">
+                  <Link to={"/service-details?1"}>
+                    <div className="position-relative outerWrapperCurveImage">
+                      <div className="estrellas inverso">
+                        <span>R</span>
+                        <span>E</span>
+                        <span>T</span>
+                        <span>N</span>
+                        <span>E</span>
+                        <span>P</span>
+                        <span>R</span>
+                        <span>A</span>
+                        <span>C</span>
+                      </div>
+                      <p>
+                          <img
+                            src="/assets/images/carpenters.jpg"
+                            alt="carpenters"
+                            className="HomeImages"
+                          />
+                      </p>
+                    </div>
+                  </Link>
+                  <div className="position-relative">
+                    <Link to={"/service-details?2"}>
+                      <div className="estrellas estrellasSecondWord inverso">
+                        <span>N</span>
+                        <span>A</span>
+                        <span>I</span>
+                        <span>C</span>
+                        <span>I</span>
+                        <span>R</span>
+                        <span>T</span>
+                        <span>C</span>
+                        <span>E</span>
+                        <span>L</span>
+                        <span>E</span>
+                      </div>
+                      <p>
+                          <img
+                            src="/assets/images/Electrician.jpg"
+                            alt="Electrician"
+                            className="HomeImages"
+                          />
+                      </p>
+                    </Link>
+                  </div>
+                  <div className="position-relative outerWrapperThirdCurveImage">
+                    <Link to={"/service-details?3"}>
+                      <div className="estrellas estrellasThird inverso">
+                        {/* <span>I</span> */}
+                        <span>N</span>
+                        <span>A</span>
+                        <span>M</span>
+                        <span>Y</span>
+                        <span>D</span>
+                        <span>N</span>
+                        <span>A</span>
+                        <span>H</span>
+                      </div>
+                      <p>
+                          <img
+                            src="/assets/images/handyman.jpg"
+                            alt="handyman"
+                            className="HomeImages"
+                          />
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+                <div className="outerWrapperLeftImageInHome">
+                  <LeftRightSideAnimation x={"100%"}>
+                    <img
+                      src="/assets/images/handyManHomePic.png"
+                      alt="handyManHomePic"
+                      className="handyManHomePic"
+                    />
+                  </LeftRightSideAnimation>
+                </div>
               </div>
             </div>
           </div>
@@ -167,7 +256,7 @@ const Home = () => {
               </p>
               <p className="text-white textHolderThis my-3">This is how </p>
               <p className="textHolderGoodCompany">
-                good companies Services you!
+                Good Companies Services You!
               </p>
               <p className="text-white descriptionInEnterPriseSuit my-3">
                 Access the top 1% of talent on UPwork, and a full suite of

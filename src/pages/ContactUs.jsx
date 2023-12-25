@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import { services } from "../Data";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
   const location = useLocation();
@@ -283,9 +283,13 @@ const ContactUs = () => {
                 />
               </div>
               <div className="d-flex gap-2 mt-4">
-                <Button className="CancelButton" type="submit">
-                  Cancel
-                </Button>
+                <div>
+                  <Link to="/">
+                    <Button className="CancelButton" type="submit">
+                      Cancel
+                    </Button>
+                  </Link>
+                </div>
                 <Button className="SubmitButton" type="submit">
                   Submit
                 </Button>
@@ -294,29 +298,45 @@ const ContactUs = () => {
           </div>
           <div className="col-md-4">
             <div>
-              <p className="labelContactUs mb-2">CALL US</p>
+              <p className="labelContactUs mb-2 CallUsInMobileSize">CALL US</p>
               <div className="d-flex gap-1">
-                <img src="/assets/icons/whatsapp.png" alt="whatsapp" className="MediaIconsInContact" />
+                <img
+                  src="/assets/icons/whatsapp.png"
+                  alt="whatsapp"
+                  className="MediaIconsInContact"
+                />
                 <p className="subLabel">+971 55 8504862</p>
               </div>
               <div className="d-flex gap-1 ">
-                <img src="/assets/icons/whatsapp.png" alt="whatsapp" className="MediaIconsInContact" />
+                <img
+                  src="/assets/icons/whatsapp.png"
+                  alt="whatsapp"
+                  className="MediaIconsInContact"
+                />
                 <p className="subLabel">+971 55 3068247</p>
               </div>
             </div>
             <div>
               <p className="labelContactUs mb-2 mt-2">Email</p>
               <div className="d-flex gap-1 ">
-                <img src="/assets/icons/gmail.png" alt="gmail" className="MediaIconsInContact" />
+                <img
+                  src="/assets/icons/gmail.png"
+                  alt="gmail"
+                  className="MediaIconsInContact"
+                />
                 <p className="subLabel">Info@homefixrepairs.com</p>
               </div>
             </div>
             <div>
               <p className="labelContactUs mb-2 mt-2">ADDRESS</p>
               <div className="d-flex gap-1 ">
-                <img src="/assets/icons/location.png" alt="location" className="MediaIconsInContact" />
+                <img
+                  src="/assets/icons/location.png"
+                  alt="location"
+                  className="MediaIconsInContact"
+                />
                 <p className="subLabel">
-                Office 316, Jessco building, Albraha, Dubai
+                  Office 316, Jessco building, Albraha, Dubai
                 </p>
               </div>
             </div>

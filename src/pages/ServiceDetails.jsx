@@ -79,6 +79,15 @@ const ServiceDetails = () => {
             />
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-md-12">
+            <div className="mt-3">
+              {DataService?.details}
+            </div>
+          </div>
+        </div>
+        
         <div className="row">
           <div className="col-md-12">
             <div className="mt-3">

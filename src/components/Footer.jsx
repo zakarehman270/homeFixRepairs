@@ -28,19 +28,23 @@ const Footer = () => {
           <div className="col-md-8">
             <div className="row">
               <div className="col-md-4">
-                <p className="headingInFooter">Contact</p>
+                <p className="headingInFooter contactInFooter">Contact</p>
                 <Link
                   to={"/contact-us"}
                   className="text-decoration-none border-animation"
                 >
                   <p className="mt-3 SubHeadingInFooter">Contact Us</p>
                 </Link>
-                <Link
-                  className="text-decoration-none border-animation"
-                  to={"/term-condition"}
-                >
-                  <p className="mt-2 SubHeadingInFooter">Term and Condition</p>
-                </Link>
+                <div>
+                  <Link
+                    className="text-decoration-none border-animation"
+                    to={"/term-condition"}
+                  >
+                    <p className="mt-2 SubHeadingInFooter">
+                      Term and Condition
+                    </p>
+                  </Link>
+                </div>
               </div>
               <div className="col-md-4">
                 <p className="headingInFooter">Popular Services</p>

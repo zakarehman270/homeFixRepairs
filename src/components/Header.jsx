@@ -28,7 +28,7 @@ function Header() {
       options: [
         { label: "Wiring", value: "Wiring", id: "3" },
         { label: "Light bulbs", value: "Light bulbs", id: "4" },
-        { label: "switches change", value: "switches change", id: "5" },
+        { label: "Switches change", value: "Switches change", id: "5" },
         {
           label: "Chandelier installation",
           value: "Chandelier installation",
@@ -43,7 +43,7 @@ function Header() {
       defaultSelected: "Handyman",
       options: [
         { label: "Curtains", value: "Curtains", id: "8" },
-        { label: "blinds Installation", value: "blinds Installation", id: "9" },
+        { label: "Blinds Installation", value: "Blinds Installation", id: "9" },
         { label: "Drilling", value: "Drilling", id: "10" },
         { label: "Tv Mounting", value: "Tv Mounting", id: "11" },
       ],

@@ -7,7 +7,7 @@ export let DeepServiceDetailsList = [
     tabs: [
       {
         title: "Expertise and Experience",
-        
+
         subTitle: "",
         description:
           "HomeFixRepairs boasts a team of skilled and experienced professionals who are experts in furniture assembly. They have the knowledge and skills to assemble a wide range of furniture items, from flat-pack furniture, such as IKEA products, to more complex and customized pieces.",
@@ -721,30 +721,104 @@ export let serviceDetailsList = [
   {
     id: "1",
     img: "/assets/images/Carpenter.jpeg",
-    video:"https://www.youtube.com/watch?v=wuLm8kMDZOk",
+    video: "https://www.youtube.com/watch?v=wuLm8kMDZOk",
     title: "Carpenter Service",
     title2:
       "For big projects always rely on top carpenter service Dubai like Home Fix Repairs",
     title3: "Kitchen Door Hinges Fixing Dubai:",
 
     description1:
-      "Are you starting to get bored with how your house looks inside and out? If so consider top carpenter service Dubai as your preference in this spectrum. If you have an idea or a plan that has been brewing in your head for a few months, or even a year, about how to breathe new life into your home but do not have the carpentry skills to turn your ideas into reality, it is time to look for carpenter services to assist you. In every city and every town, there are a good number skilled professionals working under banner of top notch carpenter service Dubai like us. And these carpenters have a diverse set of skills, which vary according to their experience and the size of the company. For example, a lone carpenter who has been in his trade for only a couple of years must just be specializing in home repairs. That is for things like fixing your door and window, fixing a creaking floor, or building a nice tree house for your kids. There are also the big-time guys, the carpenters, who can work on every carpentry and construction project, and for the typical homeowner customer, they are offering home improvement services. These are the guys that you would want to contact if your home remodeling ideas consist of putting up an addition to your house, re-roofing, or completely remodeling the inside of your home.",
+      "Carpenters install different wooden fixtures and fittings using organic materials such as wood or lumber. In this position, you may be responsible for installing doors, flooring, and furniture in newly built spaces, restoring or adapting existing buildings, building sets for film and theater performances, and doing a variety of carpentry-related duties. Are you starting to get bored with how your house looks inside and out? If so consider top carpenter service Dubai as your preference in this spectrum. If you have an idea or a plan that has been brewing in your head for a few months, or even a year, about how to breathe new life into your home but do not have the carpentry skills to turn your ideas into reality, it is time to look for carpenter services to assist you. In every city and every town, there are a good number skilled professionals working under banner of top notch carpenter service Dubai like us. And these carpenters have a diverse set of skills, which vary according to their experience and the size of the company. For example, a lone carpenter who has been in his trade for only a couple of years must just be specializing in home repairs. That is for things like fixing your door and window, fixing a creaking floor, or building a nice tree house for your kids. There are also the big-time guys, the carpenters, who can work on every carpentry and construction project, and for the typical homeowner customer, they are offering home improvement services. These are the guys that you would want to contact if your home remodeling ideas consist of putting up an addition to your house, re-roofing, or completely remodeling the inside of your home.",
 
     description2:
       "When projects as big as these are part of your home improvement plan, then you should put much effort into finding and hiring the right carpenter service Dubai for the job. You can start by asking a friend who recently had a home improvement project of his own if he can recommend the carpenter that worked for him. That is the best kind of recommendation that you can get because not only is your friend a reliable source, but you can actually see the work of that carpenter. If that does not work for you, then simply make some phone calls and individually interview these carpenter service Dubai. Look for the amount of experience that they have, and most importantly, ask for a portfolio of their previous carpentry projects so that you can get a good idea if they are the right people to do your home improvement. However, if all you want is a set of new kitchen cabinets, then you will have to look for carpenters who specialize in cabinetry. Some carpenters would prefer to just work on one specialty rather than spread their services too thinly. Because this allows them to master the art of cabinetry and establish themselves as the expert or authority on that type of carpentry service. And there are the multitude of professionals from carpenter service Dubai who call themselves handymen and who can do all the minor home repairs, including some Electrical and Plumbing repairs. These are the people that you will call when all you want are some minor repair jobs. As a result, the most important thing is to determine how complicated or large your home improvement or home repair is. Then narrow down your list to Home Fix Repairs as your prime carpenter service Dubai. Give us a call now to discuss the bright prospects.",
     description3:
       "If your kitchen door hinges want a restore, our organisation Handyman chippie Dubai can help. we've got a group of experienced carpenters who can quick and effortlessly fix any door hinge problem you can have. Door hinges are an important a part of any door, and maintaining them in precise operating order is critical to the overall feature of your door. Our chippie in Dubai is professional in fixing all sorts of door hinges, from small ones to massive ones. We keep in mind that occasionally doors can get damaged or wiped out over time, and we are here to help you repair those problems. We want to make certain that your doors are functioning properly and searching their excellent.",
+    details: (
+      <div>
+        <p>
+          {" "}
+          <strong>Planning and Designing:</strong>
+        </p>
+        <p>
+          Carpenters usually begin their job by analyzing blueprints, making
+          designs, and building structures or furniture items to specified
+          requirement.
+        </p>
+        <p>
+          <strong>Measuring and Cutting:</strong>
+        </p>
+        <p>
+          Carpentry requires a high level of precision. Carpenters precisely
+          measure and mark wood before cutting it using instruments such as
+          saws, chisels, and planes.
+        </p>
+        <p>
+          <strong>Installation and assembly: </strong>
+        </p>
+        <p>
+          It entail carpenters putting together and installing components
+          on-site, whether it's constructing a home, fitting doors and windows,
+          or finishing off furniture.
+        </p>
+        <p>
+          <strong>Repair and restoration:</strong>
+        </p>
+        <p>
+          It refer to a carpenter's ability to successfully repair damaged
+          constructions or products. This may entail replacing components,
+          reinforcing buildings, or restoring antique furniture to its former
+          glory.
+        </p>
+        <p>
+          <strong>Completing and detailing</strong>
+        </p>
+        <p>
+          Sanding, staining, painting, and adding protective coatings are all
+          methods for improving the beauty and longevity of wood surfaces.
+        </p>
+        <p>
+          <strong>Maintenance and safety:</strong>
+        </p>
+        <p>
+          Carpenters stress safety by utilizing proper tools and keeping work
+          places secure. Furthermore, they guarantee that their instruments are
+          well-maintained for peak performance.
+        </p>
+        <p>
+          <strong>Skill Enhancement:</strong>
+        </p>
+        <p>
+          Carpenters constantly hone their skills, learning new techniques and
+          ideas as they work on a variety of projects. This constant learning
+          journey keeps the workplace interesting and stimulating.
+        </p>
+        <p>
+          <strong>Contentment:</strong>
+        </p>
+        <p>
+          The tangible results of carpentry bring enormous delight. Completing a
+          project and seeing the physical consequences of your efforts may be
+          quite fulfilling.
+        </p>
+        <p>
+          <strong>Artistry</strong> Carpenters work on a variety of projects,
+          which gives them the creative flexibility to imagine and realize a
+          wide range of buildings, furnishings, and decorative items.
+        </p>
+      </div>
+    ),
   },
   {
     id: "2",
     img: "/assets/images/Electrician.jpeg",
-    video:"https://www.youtube.com/watch?v=qn8htnR6XtY",
+    video: "https://www.youtube.com/watch?v=qn8htnR6XtY",
     title: "Electrician Work at Home",
     title2: "Why need for Electrician Work at Home",
     title3:
       "Checkout Reasons to Hire a Professional Electrician Services in Dubai",
     description1:
-      "Before talking about electrician work at home let’s discuss what these services are. Electrician services refer to the work performed by professionals who are trained and licensed to install, repair, and maintain electrical systems and equipment. This can include tasks such as wiring a new home or office building, installing and repairing electrical outlets and switches, and troubleshooting and repairing electrical problems. Electricians may also be responsible for installing and maintaining lighting systems, as well as working on motors, generators, and other electrical machinery. It is important to hire a licensed and qualified electrician for any electrician work at home to ensure that the job is completed safely and to code. Improperly installed or repaired electrical systems can pose a serious safety hazard and can cause damage to your home or business. If you need electrician services, it is recommended to research and compare electricians in your area to find a reputable and reliable professional like Home Fix Repairs.",
+      "A variety of expert services pertaining to electrical systems, installations, repairs, and maintenance are commonly referred to as electrical services. In residential, commercial, or industrial contexts, this might involve duties like wiring, electrical installations, fixture replacements, troubleshooting, and general maintenance and improvements of electrical systems. Before talking about electrician work at home let’s discuss what these services are. Electrician services refer to the work performed by professionals who are trained and licensed to install, repair, and maintain electrical systems and equipment. This can include tasks such as wiring a new home or office building, installing and repairing electrical outlets and switches, and troubleshooting and repairing electrical problems. Electricians may also be responsible for installing and maintaining lighting systems, as well as working on motors, generators, and other electrical machinery. It is important to hire a licensed and qualified electrician for any electrician work at home to ensure that the job is completed safely and to code. Improperly installed or repaired electrical systems can pose a serious safety hazard and can cause damage to your home or business. If you need electrician services, it is recommended to research and compare electricians in your area to find a reputable and reliable professional like Home Fix Repairs.",
     description2: (
       <div>
         <h1>Electrician Services at Your Home</h1>
@@ -800,17 +874,51 @@ export let serviceDetailsList = [
     ),
     description3:
       "In case you need a plumber to restoration broken things like a blocked drain, an avouched toilet, or a leaky spout, we're right here to help you with all of the things without letting you fear anymore. but, in some cases, it may be hard to find a dependable, high-quality-appearing plumber. Many questions may also arise on your mind when you need a plumber. Are they reliable enough? Can they do their task nicely sufficient? Will the difficulty stand up again? just when such conditions are in query, We provide you the best provider. if you are thinking, “how can i find plumbers in my region?”, you may just e book it thru our app or website",
+    details: (
+      <div>
+        <p>
+          <strong>Wiring</strong>
+        </p>
+        <p>
+          Electricians are in charge of installing and maintaining wiring
+          systems used to distribute electricity throughout buildings, which
+          includes the installation of wires in walls, ceilings, and floors.
+        </p>
+        <p>
+          <strong>Circuit Breakers and Panels</strong>
+        </p>
+        <p>
+          These components control power distribution by monitoring current and
+          protecting against electrical surges.
+        </p>
+        <p>
+          <strong>Outlets and Switches:</strong>
+        </p>
+        <p>
+          Electricians install and repair outlets (sockets) and switches that
+          govern the supply of electricity to appliances, lights, and other
+          devices.
+        </p>
+        <p>
+          <strong>Lighting:</strong>
+        </p>
+        <p>
+          Electricians install and maintain a variety of lighting fixtures,
+          including recessed, pendant, chandelier, and outdoor lighting options.
+        </p>
+      </div>
+    ),
   },
   {
     id: "4",
-    img: "/assets/images/Plumbing.jpeg",
-    video:"https://www.youtube.com/watch?v=3UywnY3lGhI",
+    img: "/assets/images/Plumbing.jpg",
+    video: "https://www.youtube.com/watch?v=3UywnY3lGhI",
     title: "Emergency Plumbing Dubai",
     title2:
       "Benefits of acquiring top emergency plumbing Dubai service like Home Fix Repairs",
     title3: "The way to find exceptional neighborhood Plumbers on your area?",
     description1:
-      "Before we get into the need for emergency plumbing Dubai services, let's define plumbing. Plumbing is the system of pipes, tanks, fittings, and other fixtures that is used to supply water to a building and to remove waste water and other waste products from the building. Plumbers are professionals who install and maintain these systems. Plumbing work can be quite complex, as it involves installing and repairing pipes, fittings, and fixtures that are used to carry water, gas, and waste in residential, commercial, and industrial buildings. Some common tasks that plumbers working under banner of any top emergency plumbing Dubai services might do include installing water heaters, repairing or replacing leaking pipes, and cleaning clogged drains",
+      "Plumbing services are professional services offered for the installation, maintenance, repair, and replacement of water supply, drainage, and sewage systems in buildings or infrastructure. Plumbers are experienced craftsmen who specialize in these systems, assuring appropriate operation, repairing leaks, blockages, and damages, and installing fixtures such as pipes, faucets, toilets, water heaters, and so on. Plumbing services include a variety of duties designed to assure the effective and safe movement of water into and out of homes, commercial buildings, and other structures. Before we get into the need for emergency plumbing Dubai services, let's define plumbing. Plumbing is the system of pipes, tanks, fittings, and other fixtures that is used to supply water to a building and to remove waste water and other waste products from the building. Plumbers are professionals who install and maintain these systems. Plumbing work can be quite complex, as it involves installing and repairing pipes, fittings, and fixtures that are used to carry water, gas, and waste in residential, commercial, and industrial buildings. Some common tasks that plumbers working under banner of any top emergency plumbing Dubai services might do include installing water heaters, repairing or replacing leaking pipes, and cleaning clogged drains",
     description2: (
       <div>
         <h1>Why Choose Professional Plumbers?</h1>
@@ -852,11 +960,101 @@ export let serviceDetailsList = [
     ),
     description3:
       "In case you need a plumber to restoration broken things like a blocked drain, an avouched toilet, or a leaky spout, we're right here to help you with all of the things without letting you fear anymore. but, in some cases, it may be hard to find a dependable, high-quality-appearing plumber. Many questions may also arise on your mind when you need a plumber. Are they reliable enough? Can they do their task nicely sufficient? Will the difficulty stand up again? just when such conditions are in query, We provide you the best provider. if you are thinking, “how can i find plumbers in my region?”, you may just e book it thru our app or website",
+    details: (
+      <div>
+        <p>
+          {" "}
+          <strong>Water Supply System:</strong>
+        </p>
+
+        <p>
+          Piping: Serving as channels for distributing fresh water within a
+          structure, these can be fashioned from materials such as copper, PVC
+          (polyvinyl chloride), PEX (cross-linked polyethylene), and galvanized
+          steel. • Fittings and Tapware: Encompassing sinks, showers, bathtubs,
+          toilets, and taps, these components link to the water source and
+          facilitate water usage when required. • Water Heating Systems: These
+          devices heat water for a variety of applications, including cooking,
+          cleaning, and bathing. Tankless, storage-tank, and heat pump water
+          heaters are the most common types.
+        </p>
+        <p>
+          <strong>System for Draining and Ventilation:</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Drain Pipes: </strong> These direct wastewater and sewage
+            toward the sewer or septic system in order to remove it from sinks,
+            toilets, showers, and appliances.
+          </li>
+          <li>
+            <strong>Traps: </strong> These sections of U-shaped piping are
+            engineered to hold a small volume of water, serving as a barrier
+            against sewer gases infiltrating the building while still permitting
+            waste passage.
+          </li>
+          <li>
+            <strong>Ventilation: </strong> These mechanisms aid in upholding
+            appropriate air pressure within the drainage system, averting the
+            accumulation of suction or pressure that could cause sluggish
+            drainage or unsettling gurgling sounds.
+          </li>
+        </ul>
+        <p>
+          <strong>Plumbing Fixtures:</strong>
+        </p>
+        <ul>
+          <li>
+            Toilets are indispensable for waste management, equipped with
+            complex mechanisms for effective flushing and waste elimination.
+          </li>
+          <li>
+            Baths and sinks are used for hand washing, bathing, dishwashing, and
+            other things.
+          </li>
+          <li>
+            Showers are specifically crafted for bathing, employing precise
+            plumbing configurations to regulate water flow and temperature.
+          </li>
+        </ul>
+        <p>
+          <strong>Maintaining and Fixing: </strong>
+        </p>
+        <ul>
+          <li>
+            Detecting and Fixing Leaks: It's vital to routinely inspect pipes
+            and fixtures to prevent water damage and unnecessary usage.
+          </li>
+          <li>
+            Clearing Blocked Drains and Pipes: Removing obstructions in drains
+            and pipes to guarantee smooth flow.
+          </li>
+          <li>
+            Fixture Upgrades: Improving efficiency and appearance by replacing
+            or upgrading obsolete fixtures.
+          </li>
+        </ul>
+        <p>
+          <strong>Plumbing Regulations and Safety: </strong>
+        </p>
+        <ul>
+          <li>
+            Plumbing jobs must comply to building codes and regulations to
+            ensure safety and adherence to standards.
+          </li>
+          <li>
+            Certain types of plumbing work frequently necessitate the use of
+            qualified specialists in order to maintain quality and safety
+            requirements.
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
     id: "5",
     img: "/assets/images/ElectricalMaintenance.jpeg",
-    video:"https://www.youtube.com/watch?v=lYlBcy_y7U8",
+    video: "https://www.youtube.com/watch?v=lYlBcy_y7U8",
     title: "Electrical Maintenance",
     title2: "Why need for electrical maintenance company in Dubai",
     title3: "The way to find exceptional neighborhood Plumbers on your area?",
@@ -905,7 +1103,7 @@ export let serviceDetailsList = [
   {
     id: "3",
     img: "/assets/images/Handyman.jpeg",
-    video:"https://www.youtube.com/watch?v=Hh3MjLaDNG8",
+    video: "https://www.youtube.com/watch?v=Hh3MjLaDNG8",
     title: "Handyman in dubai",
     title2:
       "HomeFixRepairs offers a wide range of services to address various home repair and improvement needs. These services include, but are not limited to:",
@@ -1014,12 +1212,12 @@ export let serviceDetailsList = [
       </div>
     ),
     description3:
-      "If you're looking for a trusted and reliable handyman and home repair company in [Your Location], HomeFixRepairs is a top choice. Their commitment to quality, professionalism, and customer satisfaction makes them a valuable partner for all your home improvement needs. Contact them today for a free consultation and experience the HomeFixRepairs difference.",
+      "A handyman is a qualified expert who specializes in a wide range of home and workplace repairs, maintenance, and minor duties. They have a wide range of skills and can handle services including basic plumbing repairs, electrical work, carpentry, painting, installations, and regular upkeep. Handyman services are useful for swiftly resolving a variety of household requirements, and they frequently entail jobs that may not require skilled tradesmen but still require experience and precision. Hiring a handyman may save time and assure quality when it comes to managing numerous odd chores and other projects around the house. If you're looking for a trusted and reliable handyman and home repair company in [Your Location], HomeFixRepairs is a top choice. Their commitment to quality, professionalism, and customer satisfaction makes them a valuable partner for all your home improvement needs. Contact them today for a free consultation and experience the HomeFixRepairs difference.",
   },
-  { 
+  {
     id: "6",
     img: "/assets/images/Cleaning.jpeg",
-    video:"https://www.youtube.com/watch?v=I1kCO7wXR6M",
+    video: "https://www.youtube.com/watch?v=I1kCO7wXR6M",
     title: "Cleaning Service in dubai",
     title2:
       "HomeFixRepairs is your trusted partner when it comes to professional cleaning services for your home. With a passion for cleanliness and a commitment to customer satisfaction, we have built a reputation as a top-tier cleaning service company. Our mission is to transform your living spaces into spotless sanctuaries, ensuring your home is a place of comfort and hygiene",

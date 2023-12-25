@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import ReactPlayer from "react-player";
 import WhyChooseUs from "../components/WhyChooseUs";
 import { useLocation } from "react-router-dom";
@@ -6,9 +6,8 @@ const AboutUs = () => {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    return () => {
-    }
-  }, [location.pathname])
+    return () => {};
+  }, [location.pathname]);
   return (
     <div>
       <div className="mb-5">
@@ -20,35 +19,37 @@ const AboutUs = () => {
             <div className="col-md-12">
               <p className="SubHeadingInAboutUs">10+ YEARS EXPERIENCE:</p>
               <p className="DescriptionInAboutUs">
-                HomeFixRepair is one of the leading regional incorporated
-                centers management answers company within the center East. Its
-                service specialties are unfold across integrated facilities
-                control, waste control, and lots of greater. HomeFixRepair
-                released its domestic pro maintenance offerings in 2009 as an
-                one-of-a-kind carrier department to hold and keep houses within
-                the UAE.HomeFixRepair has accrued a group of reliable home
-                preservation specialists to decorate the value, life, and beauty
-                of your house. Our 24/7 preservation carrier team takes care of
-                your house so you can cognizance at the critical things in
-                existence. Time is treasured and so is your private home.
-                HomeFixRepair is here to serve you so you in no way ought to
-                surrender on both of them.
+                We strive to simplify your life by offering cost-effective and
+                expert services right at your doorstep. HomeFixRepair is one of
+                the leading regional incorporated centers management answers
+                company within the center East. Its service specialties are
+                unfold across integrated facilities control, waste control, and
+                lots of greater. HomeFixRepair released its domestic pro
+                maintenance offerings in 2009 as an one-of-a-kind carrier
+                department to hold and keep houses within the UAE.HomeFixRepair
+                has accrued a group of reliable home preservation specialists to
+                decorate the value, life, and beauty of your house. Our 24/7
+                preservation carrier team takes care of your house so you can
+                cognizance at the critical things in existence. Time is
+                treasured and so is your private home. HomeFixRepair is here to
+                serve you so you in no way ought to surrender on both of them.
               </p>
               <div className="my-4">
                 <ReactPlayer
-                  url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                  url="https://www.youtube.com/watch?v=Ghf6G8d1hfE"
                   width={"100%"}
+                  height={"572px"}
                 />
               </div>
             </div>
             <div className="col-md-6 mt-4">
-              <p className="SubHeadingInAboutUs">Our Challenges:</p>
+              <p className="SubHeadingInAboutUs mb-2">Our Challenges:</p>
               <p className="DescriptionInAboutUs">
                 To emerge as a pacesetter in top rate home protection services
                 and solutions for the duration of the UAE with an first rate
                 crew of professionals.
               </p>
-              <p className="SubHeadingInAboutUs mt-3">
+              <p className="SubHeadingInAboutUs mt-3 mb-3">
                 HomeFixRepair offerings:
               </p>
               <p className="DescriptionInAboutUs">

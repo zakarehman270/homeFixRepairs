@@ -103,13 +103,13 @@ const Footer = () => {
                   <p className="textHolderFollowUp">Follow Us</p>
                   <div className="d-flex gap-2 align-items-center mt-2">
                     <a href="https://www.instagram.com/">
-                      <img src="/assets/icons/insta.svg" alt="insta" />
+                      <img src="/assets/icons/insta.svg" alt="insta" className="FooterIcons" />
                     </a>
                     <a href="https://mail.google.com/">
-                      <img src="/assets/icons/apple.svg" alt="apple" />
+                      <img src="/assets/icons/apple.svg" alt="apple" className="FooterIcons" />
                     </a>
                     <a href="https://www.facebook.com/">
-                      <img src="/assets/icons/facebook.svg" alt="facebook" />
+                      <img src="/assets/icons/facebook.svg" alt="facebook" className="FooterIcons" />
                     </a>
                   </div>
                 </div>

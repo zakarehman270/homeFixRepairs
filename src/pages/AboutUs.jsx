@@ -63,14 +63,14 @@ const AboutUs = () => {
             </div>
             <div className="col-md-6 mt-4">
               <img
-                src="/assets/images/AboutUsimage1.svg"
+                src="/assets/images/AboutUsimage1.png"
                 className="w-100"
                 alt="AboutUsimage1"
               />
             </div>
             <div className="col-md-6 mt-5">
               <img
-                src="/assets/images/AboutUsimage2.svg"
+                src="/assets/images/AboutUsimage1.png"
                 className="w-100"
                 alt="AboutUsimage1"
               />

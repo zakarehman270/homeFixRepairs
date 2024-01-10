@@ -42,15 +42,15 @@ const CustomDropdown = ({
         >
           {selectedOption ? selectedOption.label : defaultSelected}
           {!selected ? (
-            <img src="/assets/icons/AngleDown.svg" alt="AngleDown" />
+            <img src="/assets/icons/AngleDown.svg" alt="AngleDown" className="DropdownIcon" />
           ) : (
-            <img src="/assets/icons/AngleDownWhite.svg" alt="AngleDownWhite" />
+            <img src="/assets/icons/AngleDownWhite.svg" alt="AngleDownWhite" className="DropdownIcon" />
           )}
         </div>
         {isOpen && (
           <ul className={`dropdown-options`}>
             {options.map((option, index) => (
-              <Link to={`/deep-service-details?${option?.id}`} className="text-decoration-none">
+              <Link key={index} to={`/deep-service-details?${option?.id}`} className="text-decoration-none">
                 <li
                   className={`${
                     SelectedInnerIndex === index ? "selectedOptions" : ""

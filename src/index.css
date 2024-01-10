@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo&family=Inter&family=Open+Sans&family=Poppins&family=Sora&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 :root {
   ---primary: #3fa2db;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -47,7 +45,7 @@ p {
   border-radius: 8px !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 16px !important;
   color: var(---primary) !important;
 }
@@ -303,8 +301,16 @@ img.handyManHomePic {
 
 .SearchIcons {
   width: 20px;
+  height: 23px;
 }
-
+.PencilIcon{
+  width: 20px;
+  height: 23px;
+}
+.DropdownIcon{
+  width: 14px;
+  height: 16px;
+}
 /* hover border bottom */
 
 /* styles.css */
@@ -437,8 +443,16 @@ img.handyManHomePic {
 
 .widthWhyChooseUsImage {
   width: 38%;
+  height: 85px;
 }
-
+img.MediaIcons.ImageHover {
+  width: 100%;
+  height: 42px;
+}
+.FooterIcons{
+  width: 36px;
+  height: 36px;
+}
 .outerWrapperServices {
   width: 192px;
 }
@@ -637,6 +651,7 @@ img.handyManHomePic {
 }
 .Stars {
   width: 30px;
+  height: 30px;
 }
 
 .css-doq0dk {
@@ -671,7 +686,7 @@ img.handyManHomePic {
 }
 
 .outerWrapperFooter {
-  background-image: url("/assets/images/footerImage.png");
+  background-image: url("/assets/images/footerImage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1210,6 +1225,14 @@ body {
 .blogDetailImage {
   height: 484px;
   border-radius: 8px;
+}
+.btn-primary{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important; 
+}
+.outerWrapperServiceImage{
+  border-radius: 6px;
+  height: 163px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .descriptionInBlogDetails {

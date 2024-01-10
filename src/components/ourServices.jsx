@@ -16,14 +16,14 @@ const OurServices = () => {
       <div className="d-flex flex-wrap justify-content-center gap-4">
         {services?.map((item, index) => {
           return (
-            <FadeInAnimation>
-              <div key={index} className="outerWrapperServices text-center">
+            <FadeInAnimation key={index}>
+              <div  className="outerWrapperServices text-center">
                 <div>
                   <Link to={`/service-details?${item?.id}`}>
                     <img
                       src={item?.img}
                       alt={item?.title}
-                      className="w-100 ImageHover"
+                      className="w-100 ImageHover outerWrapperServiceImage"
                     />
                   </Link>
                 </div>

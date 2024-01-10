@@ -68,7 +68,7 @@ const BlogDetails = () => {
             </h1>
             <div className="mt-2">
               <img
-                src="/assets/images/blogDetailImage.png"
+                src="/assets/images/blogDetailImage.jpg"
                 alt="blogDetailImage"
                 className="blogDetailImage w-100"
               />
@@ -209,7 +209,7 @@ const BlogDetails = () => {
                   </p>
                 </div>
                 <div>
-                  <img src="/assets/images/LogoInBlogDetails.svg" alt="" />
+                  <img src="/assets/images/LogoInBlogDetails.jpg" alt="" />
                 </div>
               </div>
               <div className="d-flex gap-2 mt-2">
@@ -229,7 +229,7 @@ const BlogDetails = () => {
                   </p>
                 </div>
                 <div>
-                  <img src="/assets/images/LogoInBlogDetails2.svg" alt="" />
+                  <img src="/assets/images/LogoInBlogDetails2.jpg" alt="" />
                 </div>
               </div>
               <div className="d-flex gap-2 mt-2">
@@ -249,7 +249,7 @@ const BlogDetails = () => {
                   </p>
                 </div>
                 <div>
-                  <img src="/assets/images/LogoInBlogDetails3.svg" alt="" />
+                  <img src="/assets/images/LogoInBlogDetails3.jpg" alt="" />
                 </div>
               </div>
             </div>

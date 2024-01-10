@@ -264,19 +264,19 @@ const Home = () => {
                 now.
               </p>
               <div className="d-flex gap-2 align-items-center mt-2">
-                <img src="/assets/icons/Pencil.svg" alt="Pencil" />
+                <img src="/assets/icons/Pencil.svg" alt="Pencil" className="PencilIcon" />
                 <p className="text-white descriptionInEnterPriseSuit">
                   Access expert talent to fill your skill gaps.
                 </p>
               </div>
               <div className="d-flex gap-2 align-items-center mt-2">
-                <img src="/assets/icons/bag.svg" alt="bag" />
+                <img src="/assets/icons/bag.svg" alt="bag" className="PencilIcon" />
                 <p className="text-white descriptionInEnterPriseSuit">
                   Control your workflow: hire, classify and pay your talent
                 </p>
               </div>
               <div className="d-flex gap-2 align-items-center mt-2">
-                <img src="/assets/icons/headPhone.svg" alt="headPhone" />
+                <img src="/assets/icons/headPhone.svg" alt="headPhone" className="PencilIcon" />
                 <p className="text-white descriptionInEnterPriseSuit">
                   Partner with upwork for end-to-end support
                 </p>

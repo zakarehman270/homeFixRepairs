@@ -124,7 +124,7 @@ const CustomCarousel = () => {
   return (
     <div className="position-relative">
       <img
-        src="/assets/images/CarouselBackImage.png"
+        src="/assets/images/CarouselBackImage.jpg"
         className="BackImagesInCarousel"
         alt=""
       />

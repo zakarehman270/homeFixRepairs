@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { DeepServiceDetailsList } from "../Data";
 import { Link, useLocation } from "react-router-dom";
-// import _sidebar-and-main-panel from '../pages/_sidebar-and-main-panel.scss'
 const DeepServiceDetails = () => {
   const [ActiveTas, setActiveTas] = useState("1");
   const [DataService, setDataService] = useState(null);

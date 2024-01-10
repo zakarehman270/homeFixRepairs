@@ -19,7 +19,7 @@ const Blog = () => {
             <div>
               <Link to={"/blog-details"}>
                 <img
-                  src="/assets/images/BlogImage1.svg"
+                  src="/assets/images/BlogImage1.jpg"
                   className="w-100 rounded h-100"
                   alt="BlogImage1"
                 />
@@ -77,7 +77,7 @@ const Blog = () => {
               environments. Here are key aspects of an electrician's work:
             </p>
             <div className="outerWrapperUserInBlog d-flex gap-2">
-              <img src="/assets/images/johnDeo.webp" alt="johnDeo" className="UserImageInBlog" />
+              <img src="/assets/images/johnDeo.jpg" alt="johnDeo" className="UserImageInBlog" />
               <div>
                 <p className="userHeadingInBlog">John Deo</p>
                 <p className="mt-2 userSubHeadingInBlog">
@@ -191,7 +191,7 @@ const Blog = () => {
           <div className="col-md-7">
             <Link to={"/blog-details"}>
               <img
-                src="/assets/images/blogDetails1.png"
+                src="/assets/images/blogDetails1.jpg"
                 className="w-100 h-100 rounded"
                 alt="blogDetails1"
               />
@@ -200,7 +200,7 @@ const Blog = () => {
           <div className="col-md-5">
             <Link to={"/blog-details"}>
               <img
-                src="/assets/images/blogDetails2.png"
+                src="/assets/images/blogDetails2.jpg"
                 className="w-100 h-100 rounded"
                 alt="blogDetails1"
               />
@@ -209,7 +209,7 @@ const Blog = () => {
           <div className="col-md-5">
             <Link to={"/blog-details"}>
               <img
-                src="/assets/images/blogDetails3.png"
+                src="/assets/images/blogDetails3.jpg"
                 className="w-100 h-100 rounded"
                 alt="blogDetails3"
               />
@@ -218,7 +218,7 @@ const Blog = () => {
           <div className="col-md-7">
             <Link to={"/blog-details"}>
               <img
-                src="/assets/images/blogDetails4.png"
+                src="/assets/images/blogDetails4.jpg"
                 className="w-100 h-100 rounded"
                 alt="blogDetails4"
               />

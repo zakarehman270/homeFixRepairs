@@ -2,6 +2,9 @@
 :root {
   ---primary: #3fa2db;
 }
+* {
+  letter-spacing: 1px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -93,9 +96,11 @@ textarea:focus::placeholder {
 
 .HeaderLogo {
   width: 100%;
+  height: 100px;
 }
 .HeaderLogoInMenu {
-  width: 120px;
+  width: 123px;
+  height: 128px;
 }
 
 .dropdown-options li:hover {
@@ -736,7 +741,8 @@ img.MediaIcons.ImageHover {
 }
 
 .logoInFooter {
-  width: 22%;
+  width: 28%;
+  height: 109px;
 }
 
 .container,

@@ -308,11 +308,11 @@ img.handyManHomePic {
   width: 20px;
   height: 23px;
 }
-.PencilIcon{
+.PencilIcon {
   width: 20px;
   height: 23px;
 }
-.DropdownIcon{
+.DropdownIcon {
   width: 14px;
   height: 16px;
 }
@@ -454,7 +454,7 @@ img.MediaIcons.ImageHover {
   width: 100%;
   height: 42px;
 }
-.FooterIcons{
+.FooterIcons {
   width: 36px;
   height: 36px;
 }
@@ -1232,10 +1232,10 @@ body {
   height: 484px;
   border-radius: 8px;
 }
-.btn-primary{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important; 
+.btn-primary {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
-.outerWrapperServiceImage{
+.outerWrapperServiceImage {
   border-radius: 6px;
   height: 163px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -1548,7 +1548,7 @@ img.homeImage {
 
 @media (max-width: 646px) {
   .BackImagesInCarousel {
-    height: 400px;
+    height: 450px;
   }
 }
 @media (max-width: 620px) {
@@ -1587,6 +1587,11 @@ img.homeImage {
     width: 151px;
     top: 42px;
   }
+}
+@media (max-width: 434px) {
+.BackImagesInCarousel {
+  height: 512px;
+}
 }
 
 @media (max-width: 594px) {
@@ -1655,7 +1660,11 @@ img.homeImage {
     height: 499px;
   }
 }
-
+@media (max-width: 382px) {
+  .BackImagesInCarousel {
+    height: 554px;
+  }
+}
 @media (max-width: 376px) {
   .outerWrapperCarousel {
     height: 529px;

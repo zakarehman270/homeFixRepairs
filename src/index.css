@@ -160,32 +160,79 @@ textarea:focus::placeholder {
 }
 
 .estrellas span:nth-of-type(1) {
-  transform: rotate(54deg);
+  transform: rotate(62deg);
 }
 .estrellas span:nth-of-type(2) {
-  transform: rotate(41deg);
+  transform: rotate(47deg);
 }
 .estrellas span:nth-of-type(3) {
-  transform: rotate(29deg);
+  transform: rotate(37deg);
 }
 .estrellas span:nth-of-type(4) {
-  transform: rotate(14deg);
+  transform: rotate(22deg);
 }
 .estrellas span:nth-of-type(5) {
-  transform: rotate(-1deg);
+  transform: rotate(11deg);
 }
 .estrellas span:nth-of-type(6) {
-  transform: rotate(-13deg);
+  transform: rotate(-5deg);
 }
 .estrellas span:nth-of-type(7) {
-  transform: rotate(-26deg);
+  transform: rotate(-20deg);
 }
 .estrellas span:nth-of-type(8) {
-  transform: rotate(-40deg);
+  transform: rotate(-35deg);
 }
 .estrellas span:nth-of-type(9) {
-  transform: rotate(-55deg);
+  transform: rotate(-49deg);
 }
+.estrellas span:nth-of-type(10) {
+  transform: rotate(-61deg);
+}
+.estrellas span:nth-of-type(11) {
+  transform: rotate(-76deg);
+}
+
+
+.estrellasHandyman {
+  font-size: 14px;
+  position: absolute;
+  top: -81px;
+  right: 89px;
+}
+
+.estrellasHandyman span {
+  position: absolute;
+  text-align: center;
+  transform-origin: top center;
+}
+ 
+.estrellasHandyman span:nth-of-type(1) {
+  transform: rotate(60deg);
+}
+.estrellasHandyman span:nth-of-type(2) {
+  transform: rotate(44deg);
+}
+.estrellasHandyman span:nth-of-type(3) {
+  transform: rotate(26deg);
+}
+.estrellasHandyman span:nth-of-type(4) {
+  transform: rotate(10deg);
+}
+.estrellasHandyman span:nth-of-type(5) {
+  transform: rotate(-7deg);
+}
+.estrellasHandyman span:nth-of-type(6) {
+  transform: rotate(-22deg);
+}
+.estrellasHandyman span:nth-of-type(7) {
+  transform: rotate(-39deg);
+}
+.estrellasHandyman span:nth-of-type(8) {
+  transform: rotate(-52deg);
+}
+
+
 /* Reverse mode */
 .inverso {
   font-weight: bold;
@@ -1411,6 +1458,9 @@ img.homeImage {
   opacity: 1;
   color: #ffffff;
 }
+.DisplayTextInMobile{
+  display: none;
+}
 
 @media (max-width: 1270px) {
   .outerWrapperLeftSideContentHome {
@@ -1568,19 +1618,16 @@ img.homeImage {
     width: 70%;
   }
 }
+@media (max-width: 460px) {
+   .inverso{
+    display: none;
+   }
+   .DisplayTextInMobile{
+    display: block;
+   }
+}
 @media (max-width: 450px) {
-  .inverso span {
-    display: contents;
-  }
-  .estrellas {
-    right: 46px !important;
-  }
-  .estrellasSecondWord {
-    right: 10px !important;
-  }
-  .estrellasThird {
-    right: 17px !important;
-  }
+  
 }
 @media (max-width: 450px) {
   .outerWrapperLeftSideContentHome {
@@ -1712,3 +1759,9 @@ img.homeImage {
     font-size: 30px;
   }
 }
+
+
+
+
+
+

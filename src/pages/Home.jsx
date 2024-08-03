@@ -157,6 +157,7 @@ const Home = () => {
                 <div className="d-flex flex-column outerWrapperImagesInHome justify-content-between h-100">
                   <Link to={"/service-details?1"}>
                     <div className="position-relative outerWrapperCurveImage">
+                      <span className="DisplayTextInMobile">Carpenter</span>
                       <div className="estrellas inverso">
                         <span>R</span>
                         <span>E</span>
@@ -179,6 +180,7 @@ const Home = () => {
                   </Link>
                   <div className="position-relative">
                     <Link to={"/service-details?2"}>
+                    <span className="DisplayTextInMobile">Electrician</span>
                       <div className="estrellas estrellasSecondWord inverso">
                         <span>N</span>
                         <span>A</span>
@@ -203,7 +205,8 @@ const Home = () => {
                   </div>
                   <div className="position-relative outerWrapperThirdCurveImage">
                     <Link to={"/service-details?3"}>
-                      <div className="estrellas estrellasThird inverso">
+                    <span className="DisplayTextInMobile">Handyman</span>
+                      <div className="estrellasHandyman estrellasThird inverso">
                         {/* <span>I</span> */}
                         <span>N</span>
                         <span>A</span>

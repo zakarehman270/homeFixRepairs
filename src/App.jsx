@@ -13,6 +13,8 @@ import BlogDetails from "./pages/BlogDetails";
 import Blog from "./pages/Blog";
 import AboutUs from "./pages/AboutUs";
 import Home from './pages/Home'
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 function App() {
   return (
     <div>
@@ -46,6 +48,8 @@ function App() {
         />
         <Route exact path="/service-details" element={<ServiceDetails />} />
         <Route exact path="/blog-details" element={<BlogDetails />} />
+        <Route exact path="/sign-up" element={<SignUp />} />
+        <Route exact path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>

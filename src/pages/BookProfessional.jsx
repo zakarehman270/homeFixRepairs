@@ -79,8 +79,8 @@ const BookProfessional = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     emailjs
       .sendForm(
-        "service_9ecy55l",
-        "template_8wr7t4p",
+        "service_zennb2u",
+        "template_oqzis21",
         event.target,
         "ng0MaJFLD-mYiEWhw"
       )

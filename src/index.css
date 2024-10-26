@@ -193,7 +193,6 @@ textarea:focus::placeholder {
   transform: rotate(-76deg);
 }
 
-
 .estrellasHandyman {
   font-size: 14px;
   position: absolute;
@@ -206,7 +205,7 @@ textarea:focus::placeholder {
   text-align: center;
   transform-origin: top center;
 }
- 
+
 .estrellasHandyman span:nth-of-type(1) {
   transform: rotate(60deg);
 }
@@ -231,7 +230,6 @@ textarea:focus::placeholder {
 .estrellasHandyman span:nth-of-type(8) {
   transform: rotate(-52deg);
 }
-
 
 /* Reverse mode */
 .inverso {
@@ -1186,10 +1184,17 @@ body {
 }
 
 .alert {
-  padding: 3px 8px !important;
+  padding: 2px 8px 1px 8px !important;
   display: inline-block !important;
   font-size: 12px !important;
-  margin-top: 3px !important;
+  margin-top: 2px !important;
+  margin-bottom: 0px !important;
+}
+.AlreadyAccount {
+  font-size: 18px !important;
+}
+.Or {
+  font-size: 18px !important;
 }
 
 .tabsTitle {
@@ -1458,8 +1463,30 @@ img.homeImage {
   opacity: 1;
   color: #ffffff;
 }
-.DisplayTextInMobile{
+.DisplayTextInMobile {
   display: none;
+}
+
+.SignUpButton {
+  background-color: white !important;
+  color: black !important;
+}
+.LoginButton {
+  background-color: #9a3412 !important;
+}
+.outerWrapperSignUpFom p {
+  font-size: 12px;
+}
+.outerWrapperSignUpFom h2 {
+  font-size: 24px !important;
+  margin-bottom: 0px !important;
+  font-weight: 600 !important;
+}
+.outerWrapperSignUpFom {
+  /* min-height: 570px; */
+}
+.text-color {
+  color: #3fa2db !important;
 }
 
 @media (max-width: 1270px) {
@@ -1619,15 +1646,14 @@ img.homeImage {
   }
 }
 @media (max-width: 460px) {
-   .inverso{
+  .inverso {
     display: none;
-   }
-   .DisplayTextInMobile{
+  }
+  .DisplayTextInMobile {
     display: block;
-   }
+  }
 }
 @media (max-width: 450px) {
-  
 }
 @media (max-width: 450px) {
   .outerWrapperLeftSideContentHome {
@@ -1636,9 +1662,9 @@ img.homeImage {
   }
 }
 @media (max-width: 434px) {
-.BackImagesInCarousel {
-  height: 512px;
-}
+  .BackImagesInCarousel {
+    height: 512px;
+  }
 }
 
 @media (max-width: 594px) {
@@ -1760,8 +1786,4 @@ img.homeImage {
   }
 }
 
-
-
-
-
-
+/* dashboard csss */

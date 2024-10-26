@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useLocation } from "react-router-dom";
 import CustomDropdown from "./CustomDropdown";
+import { Button } from "react-bootstrap";
 function Header() {
   const [SelectedIdex, setSelectedIdex] = useState(0);
   const location = useLocation();
@@ -130,6 +131,18 @@ function Header() {
               >
                 Contact Us
               </Nav.Link>
+              <div className="d-flex gap-3 ms-3">
+                <Link to={"/sign-up"} className="text-decoration-none">
+                  <Button className="button SignUpButton   d-none d-lg-block">
+                    Sign Up
+                  </Button>
+                </Link>
+                <Link to={"/login"} className="text-decoration-none">
+                  <Button className="button LoginButton d-none d-lg-block">
+                    Login
+                  </Button>
+                </Link>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -92,7 +92,6 @@ const BookProfessional = () => {
             text: "Our team will review your details and get back to you as soon as possible.",
             icon: "success",
           }).then(()=>{
-            console.log("helo this is called")
             navigate("/")
           });
         },
@@ -460,7 +459,6 @@ const BookProfessional = () => {
 											SubmittedFrom:  ${"Booking Form"}
 														`}
                 onChange={() => {
-                  console.log("Onchange");
                 }}
               />
             </div>

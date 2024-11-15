@@ -1,8 +1,15 @@
 import React from "react";
 import { Alert, Button } from "react-bootstrap";
 import { useForm, Controller } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLoginMutation } from "../redux/api";
+import { toast } from "react-toastify";
+import { setToken } from "../redux/AuthReducer";
+import { useDispatch } from "react-redux";
 const Login = () => {
+  const dispatch = useDispatch()
+  const [Login] = useLoginMutation();
+  const navigate = useNavigate("")
   const {
     handleSubmit,
     control,
@@ -11,7 +18,27 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form Data", data);
+    new Promise((resolve, reject) => {
+      Login(data).unwrap()
+        .then((responseData) => {
+          resolve(responseData);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+      .then((response) => {
+        if(response?.statusCode===200){
+          toast.success(response?.message)
+          dispatch(setToken(response?.data))
+          localStorage.setItem("token", JSON.stringify(response?.data))
+          navigate("/dashboard")
+        }
+      })
+      .catch((error) => {
+        toast.error(error.data.error?.message);
+      });
+
   };
 
   const password = watch("password");

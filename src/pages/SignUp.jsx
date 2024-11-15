@@ -1,8 +1,13 @@
 import React from "react";
 import { Alert, Button } from "react-bootstrap";
 import { useForm, Controller } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSignUpMutation } from "../redux/api";
+import LoadingButton from "../components/LoadingButton";
+import { toast } from "react-toastify";
 const SignUp = () => {
+  const navigate = useNavigate();
+  const [SignUp, ResponseData, error] = useSignUpMutation();
   const {
     handleSubmit,
     control,
@@ -11,9 +16,31 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form Data", data);
+    new Promise((resolve, reject) => {
+      SignUp({
+        first_name: data?.firstName,
+        last_name: data?.lastName,
+        phone: data?.phone,
+        email: data.email,
+        password: data?.password,
+      }).unwrap()
+        .then((responseData) => {
+          resolve(responseData);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+      .then((response) => {
+        if(response?.message){
+          toast.success(response?.message)
+          navigate("/login");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.data.error?.message);
+      });
   };
-
   const password = watch("password");
   return (
     <div className="d-flex outerWrapperSignUpFom">
@@ -98,21 +125,21 @@ const SignUp = () => {
                     name="phone"
                     control={control}
                     rules={{
-                      required: "Phone is required",
+                      required: "Phone number is required",
                       pattern: {
-                        value: /^[0-9]{10}$/,
-                        message: "Invalid phone number",
+                        value: /^\+?[1-9]\d{0,2}[\s\(\)\-\d]*$/,
+                        message: "Please enter a valid phone number",
                       },
                     }}
-                    render={({ field }) => (
-                      <input className="form-control " {...field} />
+                    render={({ field, fieldState: { error } }) => (
+                      <>
+                        <input className="form-control" {...field} />
+                        {error && (
+                          <span className="text-danger">{error.message}</span>
+                        )}
+                      </>
                     )}
                   />
-                  {errors.phone && (
-                    <Alert key={"danger"} variant={"danger"}>
-                      <span>{errors.phone.message}</span>
-                    </Alert>
-                  )}
                 </div>
                 <div className="col-md-6">
                   <label className="FormLabel">
@@ -163,9 +190,13 @@ const SignUp = () => {
                   )}
                 </div>
                 <div className="mt-3 w-100">
-                  <Button className="SubmitButton w-100" type="submit">
-                    Register
-                  </Button>
+                  {ResponseData?.isLoading ? (
+                    <LoadingButton />
+                  ) : (
+                    <Button className="SubmitButton w-100" type="submit">
+                      Register
+                    </Button>
+                  )}
                 </div>
 
                 <div className="mt-2">

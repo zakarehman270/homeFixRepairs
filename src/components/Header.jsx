@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import CustomDropdown from "./CustomDropdown";
 import { Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { setClearToken } from "../redux/AuthReducer";
 function Header() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [SelectedIdex, setSelectedIdex] = useState(0);
   const location = useLocation();
   const [isOpen1, setIsOpen1] = useState(false);
@@ -60,6 +64,9 @@ function Header() {
       ],
     },
   ];
+
+  const { auth } = useSelector((state) => state.Auth);
+
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="HeaderContainer">
@@ -76,7 +83,7 @@ function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
-            <Nav className="d-flex">
+            <Nav className="d-flex align-items-center">
               <Nav.Link
                 as={Link}
                 eventKey="/"
@@ -131,18 +138,44 @@ function Header() {
               >
                 Contact Us
               </Nav.Link>
-              <div className="d-flex gap-3 ms-3">
-                <Link to={"/sign-up"} className="text-decoration-none">
-                  <Button className="button SignUpButton   d-none d-lg-block">
-                    Sign Up
-                  </Button>
-                </Link>
-                <Link to={"/login"} className="text-decoration-none">
-                  <Button className="button LoginButton d-none d-lg-block">
-                    Login
-                  </Button>
-                </Link>
-              </div>
+              {auth?.AccessToken ? (
+                <div className="d-flex align-items-center">
+                  <div className="image-circle">
+                    <img src="/assets/images/timkozak.jpg" alt="Profile" />
+                  </div>
+                  <Nav.Link
+                    as={Link}
+                    eventKey="/dashboard"
+                    to="/dashboard"
+                    className={`text-decoration-none headerLinks border-animation-header ${
+                      location.pathname === "/dashboard" ? "" : ""
+                    }`}
+                  >
+                    <p className="mb-0 headerAdmin">{auth?.user?.first_name} {auth?.user?.last_name}</p>
+                    <p>Admin</p>
+                  </Nav.Link>
+                  <p><img src="/assets/icons/logout.svg" className="c_pointer" alt="logout" 
+                  onClick={()=>{
+                    navigate("/")
+                    localStorage.removeItem("token")
+                    dispatch(setClearToken())
+                  }}
+                  /></p>
+                </div>
+              ) : (
+                <div className="d-flex gap-3 ms-3">
+                  <Link to={"/sign-up"} className="text-decoration-none">
+                    <Button className="button SignUpButton   d-none d-lg-block">
+                      Sign Up
+                    </Button>
+                  </Link>
+                  <Link to={"/login"} className="text-decoration-none">
+                    <Button className="button LoginButton d-none d-lg-block">
+                      Login
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

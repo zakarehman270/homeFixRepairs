@@ -1787,3 +1787,25 @@ img.homeImage {
 }
 
 /* dashboard csss */
+/* FullCalendar container background */
+.fc {
+  background-color: white; /* Set calendar background to white */
+}
+.fc-header-toolbar{
+padding: 12px;
+}
+.fc-theme-standard{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.image-circle img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Ensure the width and height are equal to make the image circular */
+  border-radius: 50%; /* This makes the image a circle */
+  object-fit: cover; /* Ensures the image covers the circle area without distortion */
+  border: 2px solid #23646b; /* Optional: Adds a border around the circle */
+}
+.headerAdmin{
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}

@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import BookProfessional from "./Pages/BookProfessional";
@@ -8,14 +8,24 @@ import TermAndCondition from "./Pages/TermAndCondition";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ServiceDetails from "./Pages/ServiceDetails";
 import DeepServiceDetails from "./Pages/DeepServiceDetails";
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags";
 import BlogDetails from "./pages/BlogDetails";
 import Blog from "./pages/Blog";
 import AboutUs from "./pages/AboutUs";
-import Home from './pages/Home'
+import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./components/PrivateRoutes";
+import { useSelector } from "react-redux";
 function App() {
+  const { auth } = useSelector((state) => state.Auth);
+  useEffect(() => {
+    if (!auth?.AccessToken) {
+      <Navigate to="/login" />;
+    }
+  }, [auth]);
+
   return (
     <div>
       <FloatingWhatsApp
@@ -50,11 +60,13 @@ function App() {
         <Route exact path="/blog-details" element={<BlogDetails />} />
         <Route exact path="/sign-up" element={<SignUp />} />
         <Route exact path="/login" element={<Login />} />
+
+        <Route element={<PrivateRoute auth={auth?.AccessToken} />}>
+          <Route exact path="/dashboard" element={<Dashboard />} />
+        </Route>
       </Routes>
       <Footer />
     </div>
   );
 }
 export default App;
-
-

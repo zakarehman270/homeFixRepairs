@@ -46,7 +46,7 @@ const TermAndCondition = () => {
               Privacy Policy, as revised.
             </p>
           </div>
-          <div className="mt-3 d-flex align-items-center flex-column">
+          {/* <div className="mt-3 d-flex align-items-center flex-column">
             <div className="form-check">
               <label className="form-check-label">
                 <input type="checkbox" className="form-check-input" value="" />I
@@ -59,15 +59,15 @@ const TermAndCondition = () => {
                 agree with Privacy Policy
               </label>
             </div>
-          </div>
-          <div className="mt-3 d-flex justify-content-center align-items-center gap-2">
+          </div> */}
+          {/* <div className="mt-3 d-flex justify-content-center align-items-center gap-2">
             <Button className="CancelButton" type="submit">
               Cancel
             </Button>
             <Button className="SubmitButton" type="submit">
               Submit
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -200,7 +200,7 @@ export let DeepServiceDetailsList = [
         img: "https://images.ctfassets.net/jarihqritqht/3l4YHbOCeOTOFgeo0jeBJ2/6c4b0f42d5730dbbb06dc6cefa8ef19a/home_light_switch_on_wall.jpg",
       },
       {
-        title: "Switch Repair",
+        title: "Switch Repairs",
         subTitle: "",
         description:
           "If your switches are acting up, causing flickering lights or failing to work consistently, our skilled technicians will diagnose and repair the issue promptly. We are experts in troubleshooting and resolving switch problems, ensuring your home remains safe.",
@@ -525,7 +525,7 @@ export let DeepServiceDetailsList = [
       "HomeFixRepairs is a reputable company specializing in leakage fixing services for residential properties. With a strong commitment to ensuring the well-being of homeowners and the integrity of their homes, HomeFixRepairs has gained a reputation for excellence in addressing various types of leaks and water-related issues:",
     tabs: [
       {
-        title: "Roof Leak Repair",
+        title: "Roof Leak Repairs",
         subTitle: "",
         description:
           "HomeFixRepairs is equipped to fix leaks in all types of roofs, including shingle, tile, and flat roofs. Their experienced team can identify and repair damaged roofing materials, flashing, and any other sources of leaks to ensure a watertight and secure roof.",
@@ -533,7 +533,7 @@ export let DeepServiceDetailsList = [
         img: "https://constrofacilitator.com/wp-content/uploads/2022/02/roof-repairing.jpg",
       },
       {
-        title: "Plumbing Leak Repair",
+        title: "Plumber Leak Repairs",
         subTitle: "",
         description:
           "Leaky pipes, faucets, and fixtures can cause significant damage to a home. HomeFixRepairs offers expert plumbing services to detect and repair these issues promptly. They can also address more complex problems like slab leaks and underground pipe repairs.",
@@ -541,7 +541,7 @@ export let DeepServiceDetailsList = [
         img: "https://i.ytimg.com/vi/QrD_oPhMVWs/maxresdefault.jpg",
       },
       {
-        title: "Basement and Foundation Leak Repair",
+        title: "Basement and Foundation Leak Repairs",
         subTitle: "",
         description:
           "Water infiltration in basements and foundation walls can lead to mold, mildew, and structural damage. HomeFixRepairs can diagnose the source of the leak, whether it's through cracks in the foundation, poor drainage, or other issues, and implement effective solutions to stop the leakage.",
@@ -549,7 +549,7 @@ export let DeepServiceDetailsList = [
         img: "https://www.fixyourwaterybasement.com/wp-content/uploads/2019/04/Typical-Sources-of-Basement-Foundation-Leaks-main-1200x800.jpg",
       },
       {
-        title: "Window and Door Leak Repair",
+        title: "Window and Door Leak Repairs",
         subTitle: "",
         description:
           "Drafty and leaky windows and doors can compromise energy efficiency and indoor comfort. HomeFixRepairs can assess and seal gaps, replace weatherstripping, and make necessary repairs to ensure a tight seal and prevent water intrusion.",
@@ -557,7 +557,7 @@ export let DeepServiceDetailsList = [
         img: "https://www.checkatrade.com/blog/wp-content/uploads/2020/09/Feature-window-seal-replacement-cost-with-caulk.jpg",
       },
       // {
-      //   title: "Exterior Siding and Stucco Leak Repair",
+      //   title: "Exterior Siding and Stucco Leak Repairs",
       //   subTitle: "",
       //   description:
       //     "Water can penetrate through damaged or improperly installed siding and stucco, causing damage to the underlying structure. HomeFixRepairs offers solutions to repair or replace siding and stucco to prevent leaks and maintain the aesthetic appeal of your home.",
@@ -582,7 +582,7 @@ export let DeepServiceDetailsList = [
         img: "https://cellinoplumbing.com/wp-content/uploads/2022/02/Benefits-of-Drain-Cleaning-img-1.jpg",
       },
       {
-        title: "Clogged Drain Repair",
+        title: "Clogged Drain Repairs",
         subTitle: "",
         description:
           "If you have a clogged drain, Homefixrepairs can diagnose the issue and provide quick and effective repairs. Whether it's a simple blockage or a more complex problem, they have the expertise to fix it.",
@@ -590,7 +590,7 @@ export let DeepServiceDetailsList = [
         img: "https://superiorplumbinganddrains.com/wp-content/uploads/2022/02/superior-plumbing-and-drains-plumber-home-remedies-for-clogged-drains.jpg",
       },
       {
-        title: "Sewer Line Inspection and Repair",
+        title: "Sewer Line Inspection and Repairs",
         subTitle: "",
         description:
           "Homefixrepairs offers sewer line inspection services to identify any issues within your sewer system. They can repair damaged or leaking sewer lines to prevent further damage and ensure proper sewage disposal.",
@@ -618,7 +618,7 @@ export let DeepServiceDetailsList = [
 
   {
     id: "14",
-    title: "Plumbing",
+    title: "Plumber",
     description:
       "Homefixrepairs is a reputable and dependable plumbing company specializing in providing top-notch plumbing services for residential properties. With a commitment to excellence, this company offers a wide range of plumbing solutions to ensure your home's plumbing systems run smoothly and efficiently. Here are some key descriptions of Homefixrepairs:",
     tabs: [
@@ -642,7 +642,7 @@ export let DeepServiceDetailsList = [
         title: "Emergency Response",
         subTitle: "",
         description:
-          "Plumbing emergencies can happen at any time, and Homefixrepairs understands the urgency. They offer 24/7 emergency plumbing services, ensuring that they are there to address your critical plumbing issues promptly.",
+          "Plumber emergencies can happen at any time, and Homefixrepairs understands the urgency. They offer 24/7 emergency plumbing services, ensuring that they are there to address your critical plumbing issues promptly.",
         id: "3",
         img: "https://baltimorecitypolicedept.org/wp-content/uploads/2020/04/Emergency-plumbing-service.jpg",
       },
@@ -692,10 +692,10 @@ export let services = [
     img: "/assets/images/Handyman.jpeg",
   },
   {
-    title: "Plumbing",
+    title: "Plumber",
     url: "/plumbing",
     description:
-      "Plumbing, a vital service within the HomeFixRepair company, is delivered by skilled and certified professionals who specialize in the installation, repair, and maintenance of plumbing systems. These experts are essential for ensuring the proper functioning of water supply and drainage systems in homes, businesses, and industrial settings. Here's a comprehensive description of the Plumbing service offered by HomeFixRepair:",
+      "Plumber, a vital service within the HomeFixRepair company, is delivered by skilled and certified professionals who specialize in the installation, repair, and maintenance of plumbing systems. These experts are essential for ensuring the proper functioning of water supply and drainage systems in homes, businesses, and industrial settings. Here's a comprehensive description of the Plumber service offered by HomeFixRepair:",
     id: "4",
     img: "/assets/images/Plumbing.jpg",
   },
@@ -731,7 +731,7 @@ export let serviceDetailsList = [
       "Carpenters install different wooden fixtures and fittings using organic materials such as wood or lumber. In this position, you may be responsible for installing doors, flooring, and furniture in newly built spaces, restoring or adapting existing buildings, building sets for film and theater performances, and doing a variety of carpentry-related duties. Are you starting to get bored with how your house looks inside and out? If so consider top carpenter service Dubai as your preference in this spectrum. If you have an idea or a plan that has been brewing in your head for a few months, or even a year, about how to breathe new life into your home but do not have the carpentry skills to turn your ideas into reality, it is time to look for carpenter services to assist you. In every city and every town, there are a good number skilled professionals working under banner of top notch carpenter service Dubai like us. And these carpenters have a diverse set of skills, which vary according to their experience and the size of the company. For example, a lone carpenter who has been in his trade for only a couple of years must just be specializing in home repairs. That is for things like fixing your door and window, fixing a creaking floor, or building a nice tree house for your kids. There are also the big-time guys, the carpenters, who can work on every carpentry and construction project, and for the typical homeowner customer, they are offering home improvement services. These are the guys that you would want to contact if your home remodeling ideas consist of putting up an addition to your house, re-roofing, or completely remodeling the inside of your home.",
 
     description2:
-      "When projects as big as these are part of your home improvement plan, then you should put much effort into finding and hiring the right carpenter service Dubai for the job. You can start by asking a friend who recently had a home improvement project of his own if he can recommend the carpenter that worked for him. That is the best kind of recommendation that you can get because not only is your friend a reliable source, but you can actually see the work of that carpenter. If that does not work for you, then simply make some phone calls and individually interview these carpenter service Dubai. Look for the amount of experience that they have, and most importantly, ask for a portfolio of their previous carpentry projects so that you can get a good idea if they are the right people to do your home improvement. However, if all you want is a set of new kitchen cabinets, then you will have to look for carpenters who specialize in cabinetry. Some carpenters would prefer to just work on one specialty rather than spread their services too thinly. Because this allows them to master the art of cabinetry and establish themselves as the expert or authority on that type of carpentry service. And there are the multitude of professionals from carpenter service Dubai who call themselves handymen and who can do all the minor home repairs, including some Electrical and Plumbing repairs. These are the people that you will call when all you want are some minor repair jobs. As a result, the most important thing is to determine how complicated or large your home improvement or home repair is. Then narrow down your list to Home Fix Repairs as your prime carpenter service Dubai. Give us a call now to discuss the bright prospects.",
+      "When projects as big as these are part of your home improvement plan, then you should put much effort into finding and hiring the right carpenter service Dubai for the job. You can start by asking a friend who recently had a home improvement project of his own if he can recommend the carpenter that worked for him. That is the best kind of recommendation that you can get because not only is your friend a reliable source, but you can actually see the work of that carpenter. If that does not work for you, then simply make some phone calls and individually interview these carpenter service Dubai. Look for the amount of experience that they have, and most importantly, ask for a portfolio of their previous carpentry projects so that you can get a good idea if they are the right people to do your home improvement. However, if all you want is a set of new kitchen cabinets, then you will have to look for carpenters who specialize in cabinetry. Some carpenters would prefer to just work on one specialty rather than spread their services too thinly. Because this allows them to master the art of cabinetry and establish themselves as the expert or authority on that type of carpentry service. And there are the multitude of professionals from carpenter service Dubai who call themselves handymen and who can do all the minor home repairs, including some Electrical and Plumber repairs. These are the people that you will call when all you want are some minor repair jobs. As a result, the most important thing is to determine how complicated or large your home improvement or home repair is. Then narrow down your list to Home Fix Repairs as your prime carpenter service Dubai. Give us a call now to discuss the bright prospects.",
     description3:
       "If your kitchen door hinges want a restore, our organisation Handyman chippie Dubai can help. we've got a group of experienced carpenters who can quick and effortlessly fix any door hinge problem you can have. Door hinges are an important a part of any door, and maintaining them in precise operating order is critical to the overall feature of your door. Our chippie in Dubai is professional in fixing all sorts of door hinges, from small ones to massive ones. We keep in mind that occasionally doors can get damaged or wiped out over time, and we are here to help you repair those problems. We want to make certain that your doors are functioning properly and searching their excellent.",
     details: (
@@ -762,7 +762,7 @@ export let serviceDetailsList = [
           or finishing off furniture.
         </p>
         <p>
-          <strong>Repair and restoration:</strong>
+          <strong>Repairs and restoration:</strong>
         </p>
         <p>
           It refer to a carpenter's ability to successfully repair damaged
@@ -913,12 +913,12 @@ export let serviceDetailsList = [
     id: "4",
     img: "/assets/images/Plumbing.jpg",
     video: "https://www.youtube.com/watch?v=3UywnY3lGhI",
-    title: "Emergency Plumbing Dubai",
+    title: "Emergency Plumber Dubai",
     title2:
       "Benefits of acquiring top emergency plumbing Dubai service like Home Fix Repairs",
     title3: "The way to find exceptional neighborhood Plumbers on your area?",
     description1:
-      "Plumbing services are professional services offered for the installation, maintenance, repair, and replacement of water supply, drainage, and sewage systems in buildings or infrastructure. Plumbers are experienced craftsmen who specialize in these systems, assuring appropriate operation, repairing leaks, blockages, and damages, and installing fixtures such as pipes, faucets, toilets, water heaters, and so on. Plumbing services include a variety of duties designed to assure the effective and safe movement of water into and out of homes, commercial buildings, and other structures. Before we get into the need for emergency plumbing Dubai services, let's define plumbing. Plumbing is the system of pipes, tanks, fittings, and other fixtures that is used to supply water to a building and to remove waste water and other waste products from the building. Plumbers are professionals who install and maintain these systems. Plumbing work can be quite complex, as it involves installing and repairing pipes, fittings, and fixtures that are used to carry water, gas, and waste in residential, commercial, and industrial buildings. Some common tasks that plumbers working under banner of any top emergency plumbing Dubai services might do include installing water heaters, repairing or replacing leaking pipes, and cleaning clogged drains",
+      "Plumber services are professional services offered for the installation, maintenance, repair, and replacement of water supply, drainage, and sewage systems in buildings or infrastructure. Plumbers are experienced craftsmen who specialize in these systems, assuring appropriate operation, repairing leaks, blockages, and damages, and installing fixtures such as pipes, faucets, toilets, water heaters, and so on. Plumber services include a variety of duties designed to assure the effective and safe movement of water into and out of homes, commercial buildings, and other structures. Before we get into the need for emergency plumbing Dubai services, let's define plumbing. Plumber is the system of pipes, tanks, fittings, and other fixtures that is used to supply water to a building and to remove waste water and other waste products from the building. Plumbers are professionals who install and maintain these systems. Plumber work can be quite complex, as it involves installing and repairing pipes, fittings, and fixtures that are used to carry water, gas, and waste in residential, commercial, and industrial buildings. Some common tasks that plumbers working under banner of any top emergency plumbing Dubai services might do include installing water heaters, repairing or replacing leaking pipes, and cleaning clogged drains",
     description2: (
       <div>
         <h1>Why Choose Professional Plumbers?</h1>
@@ -929,7 +929,7 @@ export let serviceDetailsList = [
             issues.
           </li>
           <li>
-            Safety: Plumbing repairs and installations can be dangerous if you
+            Safety: Plumber repairs and installations can be dangerous if you
             don't know what you're doing. A professional plumber has the tools
             and protective equipment necessary to complete the job safely.
           </li>
@@ -1001,7 +1001,7 @@ export let serviceDetailsList = [
           </li>
         </ul>
         <p>
-          <strong>Plumbing Fixtures:</strong>
+          <strong>Plumber Fixtures:</strong>
         </p>
         <ul>
           <li>
@@ -1035,11 +1035,11 @@ export let serviceDetailsList = [
           </li>
         </ul>
         <p>
-          <strong>Plumbing Regulations and Safety: </strong>
+          <strong>Plumber Regulations and Safety: </strong>
         </p>
         <ul>
           <li>
-            Plumbing jobs must comply to building codes and regulations to
+            Plumber jobs must comply to building codes and regulations to
             ensure safety and adherence to standards.
           </li>
           <li>
@@ -1121,7 +1121,7 @@ export let serviceDetailsList = [
             woodwork projects.
           </li>
           <li>
-            <strong>Plumbing:</strong> Whether it's fixing a leaky faucet,
+            <strong>Plumber:</strong> Whether it's fixing a leaky faucet,
             unclogging a drain, or installing new plumbing fixtures,
             HomeFixRepairs has experienced plumbers who can handle all your
             plumbing needs with precision and efficiency.

@@ -10,10 +10,10 @@ body {
   padding: 0;
 }
 * {
-  /* font-family: "Poppins";
-  font-family: "Open Sans"; */
-  font-family: "Sora";
-  /* font-family: Arial, sans-serif; */
+   /* font-family: "Poppins"; */
+  /* font-family: "Open Sans";  */
+  /* font-family: "Sora"; */
+   font-family: Arial, sans-serif;
 }
 p {
   padding: 0 !important;
@@ -729,7 +729,7 @@ img.MediaIcons.ImageHover {
 .ServiceListSubHeading {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 141%;
   /* identical to box height, or 18px */
   color: #475569;
@@ -806,6 +806,7 @@ img.MediaIcons.ImageHover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   padding: 1.5rem;
+  width: 70%;
 }
 
 body {
@@ -1474,6 +1475,7 @@ img.homeImage {
 .LoginButton {
   background-color: #9a3412 !important;
 }
+
 .outerWrapperSignUpFom p {
   font-size: 12px;
 }
@@ -1560,6 +1562,9 @@ img.homeImage {
   }
   .outerWrapperHeaderClients {
     margin-bottom: 5px !important;
+  }
+  .outerWrapperServiceListHome{
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 764px) {
@@ -1651,6 +1656,10 @@ img.homeImage {
   }
   .DisplayTextInMobile {
     display: block;
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: nowrap;
+    text-decoration: unset;
   }
 }
 @media (max-width: 450px) {
@@ -1808,4 +1817,350 @@ padding: 12px;
   font-size: 18px !important;
   font-weight: 600 !important;
   color: #ffffff !important;
+}
+.text-red{
+  color: rgb(240, 40, 40);
+}
+
+
+.custom-calendar {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding-bottom: 16px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 17px;
+  background: #3FA2DB;
+  color: white;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar-days,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  padding: 0px 0px 0px 10px;
+}
+
+.calendar-day-header {
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.calendar-day {
+  padding: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 55px;
+}
+
+.calendar-day:hover {
+  background: #e6f2f3;
+  transform: scale(1.1); /* Slight zoom effect */
+  border-radius: 7px;
+}
+
+.calendar-day.selected {
+  background: #3FA2DB;
+  color: white;
+  border-radius: 7px;
+}
+
+.calendar-day.disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.dateHeading{
+  font-size: 20px;
+  margin-bottom: 0px !important;
+}
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 130px;
+  font-family: Arial, sans-serif;
+  background-color: #e6f2f3;
+}
+
+.form-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.form-section h1 {
+  font-size: 2.5rem;
+  color: #34919c;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.form-section p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 30px !important;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+.send-button {
+  background-color: #3FA2DB;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.send-button:hover {
+  background-color: #27737b;
+}
+
+.info-section {
+  flex: 1;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.MediaIcons{
+  width: 25px;
+}
+
+.phoneIcons{
+  width: 31px;
+}
+
+.info-details{
+  display: flex;
+  justify-content: center;
+}
+
+.info-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: black;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #34919c;
+  font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+  color: #27737b;
+}
+.instagramIcons{
+  width: 78px;
+}
+.outerWrapperMediaIconsInContactUS{
+  margin-left: 178px;
+}
+
+/* Container styles */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Spacing between elements */
+  font-family: 'Arial', sans-serif; /* Adjust to match your font */
+}
+
+/* Label styles */
+.input-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4a6fa1; /* Adjust color to match the design */
+}
+
+/* Input field styles */
+.custom-input {
+  width: 100%;
+  padding: 17px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px; /* Makes it rounded */
+  background-color:#DFEBF6;
+  color:black;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Subtle shadow */
+}
+
+.custom-input::placeholder {
+  color: #90bdd4; /* Placeholder text color */
+  opacity: 1;
+}
+
+/* Input focus styles */
+.custom-input:focus {
+  outline: 2px solid #34919c; /* Highlight border on focus */
+  background-color: #eaf9fa; /* Slightly lighter background on focus */
+}
+
+/* Textarea field styles */
+.custom-textarea {
+  width: 100%;
+  padding: 17px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px; /* Rounded edges for textarea */
+  background-color: #DFEBF6;
+  color: black;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Subtle shadow */
+  resize: none; /* Prevent resizing */
+}
+
+.custom-textarea::placeholder {
+  color: #90bdd4; /* Placeholder text color */
+  opacity: 1;
+}
+
+/* Textarea focus styles */
+.custom-textarea:focus {
+  outline: 2px solid #34919c; /* Highlight border on focus */
+  background-color: #eaf9fa; /* Slightly lighter background on focus */
+}
+.image-container {
+  margin-bottom: 16px;
+}
+.custom-input.input-error,
+.custom-textarea.input-error {
+  border-color: red;
+  background-color: #ffe5e5;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Header Section */
+.ourproject_header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.ourproject_header h1 {
+  font-size: 24px;
+}
+
+.ourproject_highlight {
+  color: #3cbf3c;
+  font-weight: bold;
+}
+.ourproject_gridItem {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* Makes sure images fit their space without stretching */
+}
+
+
+.image-grid {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 32%;
+  height: 350px !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button {
+  background-color: white; /* Blue background */
+  color: black; /* Red text */
+  border: none;
+  border-radius: 50px; /* Makes the button oval-shaped */
+  padding: 10px 20px; /* Adjusts spacing */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+.custom-button:focus {
+  outline: none;
 }

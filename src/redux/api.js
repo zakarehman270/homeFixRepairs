@@ -8,18 +8,30 @@ export const MyApi = createApi({
     // getPosts: builder.query({ query: () => "/auth/login" }),
     Login: builder.mutation({
       query: (LoginData) => ({
-        url: "/auth/login", 
-        method:"POST",
-        body:LoginData
+        url: "/auth/login",
+        method: "POST",
+        body: LoginData,
       }),
     }),
     SignUp: builder.mutation({
-        query: (SignUpData) => ({
-          url: "/auth/register", 
-          method:"POST",
-          body:SignUpData
-        }),
+      query: (SignUpData) => ({
+        url: "/auth/register",
+        method: "POST",
+        body: SignUpData,
       }),
+    }),
+    getEvent: builder.query({
+      query: () => ({
+        url: `/events/`,
+        method: "GET",
+      }),
+    }),
+    getResource: builder.query({
+      query: () => ({
+        url: `/resources/`,
+        method: "GET",
+      }),
+    }),
   }),
 });
-export const { useLoginMutation,useSignUpMutation } = MyApi;
+export const { useLoginMutation, useSignUpMutation ,useGetEventQuery,useGetResourceQuery} = MyApi;

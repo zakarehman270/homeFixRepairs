@@ -8,8 +8,8 @@ import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { setClearToken } from "../redux/AuthReducer";
 function Header() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [SelectedIdex, setSelectedIdex] = useState(0);
   const location = useLocation();
   const [isOpen1, setIsOpen1] = useState(false);
@@ -56,11 +56,11 @@ function Header() {
     {
       is_open: isOpen4,
       setOpen: setIsOpen4,
-      defaultSelected: "Plumbing",
+      defaultSelected: "Plumber",
       options: [
         { label: "Leakage Fixing", value: "Leakage Fixing", id: "12" },
         { label: "Drainage Works", value: "Drainage Works", id: "13" },
-        { label: "Plumbing", value: "Plumbing", id: "14" },
+        { label: "Plumber", value: "Plumber", id: "14" },
       ],
     },
   ];
@@ -83,7 +83,7 @@ function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
-            <Nav className="d-flex align-items-center">
+            <Nav className="d-flex align-items-center gap-4">
               <Nav.Link
                 as={Link}
                 eventKey="/"
@@ -103,7 +103,7 @@ function Header() {
                   location.pathname === "/blog" ? "ActiveLink" : ""
                 }`}
               >
-                Blog{" "}
+                Our Projects{" "}
               </Nav.Link>
 
               <Nav.Link
@@ -114,7 +114,7 @@ function Header() {
                   location.pathname === "/book-professional" ? "ActiveLink" : ""
                 }`}
               >
-                Book Professional
+                Book A Professional
               </Nav.Link>
 
               <Nav.Link
@@ -138,6 +138,11 @@ function Header() {
               >
                 Contact Us
               </Nav.Link>
+
+              <Nav.Link as={Link} eventKey="/get-quote" to="/get-quote">
+                <button className="custom-button">Get a Free Quote</button>
+              </Nav.Link>
+
               {auth?.AccessToken ? (
                 <div className="d-flex align-items-center">
                   <div className="image-circle">
@@ -151,20 +156,27 @@ function Header() {
                       location.pathname === "/dashboard" ? "" : ""
                     }`}
                   >
-                    <p className="mb-0 headerAdmin">{auth?.user?.first_name} {auth?.user?.last_name}</p>
+                    <p className="mb-0 headerAdmin">
+                      {auth?.user?.first_name} {auth?.user?.last_name}
+                    </p>
                     <p>Admin</p>
                   </Nav.Link>
-                  <p><img src="/assets/icons/logout.svg" className="c_pointer" alt="logout" 
-                  onClick={()=>{
-                    navigate("/")
-                    localStorage.removeItem("token")
-                    dispatch(setClearToken())
-                  }}
-                  /></p>
+                  <p>
+                    <img
+                      src="/assets/icons/logout.svg"
+                      className="c_pointer"
+                      alt="logout"
+                      onClick={() => {
+                        navigate("/");
+                        localStorage.removeItem("token");
+                        dispatch(setClearToken());
+                      }}
+                    />
+                  </p>
                 </div>
               ) : (
                 <div className="d-flex gap-3 ms-3">
-                  <Link to={"/sign-up"} className="text-decoration-none">
+                  {/* <Link to={"/sign-up"} className="text-decoration-none">
                     <Button className="button SignUpButton   d-none d-lg-block">
                       Sign Up
                     </Button>
@@ -173,7 +185,7 @@ function Header() {
                     <Button className="button LoginButton d-none d-lg-block">
                       Login
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </Nav>

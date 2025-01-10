@@ -13,22 +13,16 @@ const Footer = () => {
               alt="logo"
             />
             <p className="descriptionInFooter mt-3">
-              "HomeFixRepairs" suggests a company dedicated to providing
-              solutions for home-related issues and repairs. The name conveys a
-              sense of reliability, expertise, and a focus on fixing and
-              maintaining residential properties. Here's a brief description
-              based on the name:
-              <b>HomeFixRepairs: Your Trusted Partner in Home Solutions </b>
-              Welcome to HomeFixRepairs, where we transform houses into homes by
-              offering comprehensive repair and maintenance services. With a
-              commitment to excellence, we take pride in being your go-to
-              partner for addressing a wide range of home-related issues.
+              At HomeFixRepairs, we specialize in reliable home repair and
+              maintenance solutions. From plumbing to carpentry, we handle it
+              all with precision and care. Trust our skilled team to keep your
+              home functional, safe, and beautiful.
             </p>
           </div>
           <div className="col-md-8">
             <div className="row">
               <div className="col-md-4">
-                <p className="headingInFooter contactInFooter">Contact</p>
+                {/* <p className="headingInFooter contactInFooter">Contact</p> */}
                 <Link
                   to={"/contact-us"}
                   className="text-decoration-none border-animation"
@@ -79,10 +73,10 @@ const Footer = () => {
                     to={"/service-details?4"}
                     className="text-decoration-none border-animation"
                   >
-                    <p className="mt-2 SubHeadingInFooter">Plumbing</p>
+                    <p className="mt-2 SubHeadingInFooter">Plumber</p>
                   </Link>
                 </div>
-                <div>
+                {/* <div>
                   <Link
                     to={"/service-details?5"}
                     className="text-decoration-none border-animation"
@@ -91,7 +85,7 @@ const Footer = () => {
                       Electrical Maintenance
                     </p>
                   </Link>
-                </div>
+                </div> */}
               </div>
               <div className="col-md-4">
                 <p className="headingInFooter">Contact Information</p>
@@ -102,14 +96,38 @@ const Footer = () => {
                 <div className="mt-3">
                   <p className="textHolderFollowUp">Follow Us</p>
                   <div className="d-flex gap-2 align-items-center mt-2">
-                    <a href="https://www.instagram.com/">
-                      <img src="/assets/icons/insta.svg" alt="insta" className="FooterIcons" />
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/assets/icons/insta.svg"
+                        alt="insta"
+                        className="FooterIcons"
+                      />
                     </a>
-                    <a href="https://mail.google.com/">
-                      <img src="/assets/icons/apple.svg" alt="apple" className="FooterIcons" />
+                    <a
+                      href="https://mail.google.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/assets/icons/apple.svg"
+                        alt="apple"
+                        className="FooterIcons"
+                      />
                     </a>
-                    <a href="https://www.facebook.com/">
-                      <img src="/assets/icons/facebook.svg" alt="facebook" className="FooterIcons" />
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100083605351014"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/assets/icons/facebook.svg"
+                        alt="facebook"
+                        className="FooterIcons"
+                      />
                     </a>
                   </div>
                 </div>

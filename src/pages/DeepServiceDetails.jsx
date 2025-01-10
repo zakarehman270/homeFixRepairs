@@ -27,7 +27,7 @@ const DeepServiceDetails = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <div className="d-flex flex-wrap gap-3 justify-content-between"> 
+            <div className="d-flex flex-wrap gap-3 justify-content-between">
               <p className="ourServiceHeading headingColor text-wrap text-start ">
                 Professional {DataService?.title} In Dubai
               </p>
@@ -39,7 +39,12 @@ const DeepServiceDetails = () => {
                   <Button className="button d-block d-lg-none">Book Now</Button>
                 </Link>
                 <div>
-                  <a href="https://www.facebook.com/" className="">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100083605351014"
+                    className=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="/assets/icons/facebookService.svg"
                       alt="facebookService"
@@ -49,7 +54,12 @@ const DeepServiceDetails = () => {
                 </div>
 
                 <div>
-                  <a href="https://web.whatsapp.com/" className="">
+                  <a
+                    href="https://web.whatsapp.com/"
+                    className=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="/assets/icons/whatsAppService.svg"
                       alt="whatsAppService"
@@ -59,7 +69,12 @@ const DeepServiceDetails = () => {
                 </div>
 
                 <div>
-                  <a href="https://mail.google.com/" className="">
+                  <a
+                    href="https://mail.google.com/"
+                    className=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="/assets/icons/EmialService.svg"
                       alt="EmialService"

@@ -137,9 +137,9 @@ const AboutUs = () => {
                 could a nail that would hurt
               </p>
             </div>
-            <div className="col-md-12 mt-4 mb-3">
+            {/* <div className="col-md-12 mt-4 mb-3">
               <WhyChooseUs />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

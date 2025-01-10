@@ -50,14 +50,14 @@ const Home = () => {
             <div className="outerWrapperEllipseImage position-relative">
               <LeftRightSideAnimation x={"-100%"}>
                 <div className="outerWrapperLeftSideContentHome">
-                  <h3 className="HomeHeading">Home Fix Repair</h3>
+                  <h3 className="HomeHeading">Home Fix Repairs</h3>
                   <p className="SubHeadingInHome">
-                    Home Fix Repair is your trusted partner for all your home
+                    Home Fix Repairs is your trusted partner for all your home
                     improvement needs. Our team of skilled professionals is
                     dedicated to delivering top-notch repair and maintenance
                     services. Whether it's a leaky faucet, a faulty electrical
                     system, or a renovation project, we're here to make your
-                    home a better place. With Home Fix Repair, your home is in
+                    home a better place. With Home Fix Repairs, your home is in
                     capable hands.
                   </p>
                   <div className="my-3  outerWrapperSearchInHomeInHome py-2 px-3">
@@ -116,7 +116,12 @@ const Home = () => {
                   </div>
                   <div className="d-flex  mb-4">
                     <div>
-                      <a href="https://www.facebook.com/" className="">
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100083605351014"
+                        className=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src="/assets/icons/facebookService.svg"
                           alt="facebookService"
@@ -125,7 +130,12 @@ const Home = () => {
                       </a>
                     </div>
                     <div>
-                      <a href="https://web.whatsapp.com/" className="">
+                      <a
+                        href="https://web.whatsapp.com/"
+                        className=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src="/assets/icons/whatsAppService.svg"
                           alt="whatsAppService"
@@ -134,7 +144,12 @@ const Home = () => {
                       </a>
                     </div>
                     <div>
-                      <a href="https://mail.google.com/" className="">
+                      <a
+                        href="https://mail.google.com/"
+                        className=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src="/assets/icons/EmialService.svg"
                           alt="EmialService"
@@ -155,7 +170,10 @@ const Home = () => {
             <div className="EllipseImageRightSide">
               <div className="d-flex h-100">
                 <div className="d-flex flex-column outerWrapperImagesInHome justify-content-between h-100">
-                  <Link to={"/service-details?1"}>
+                  <Link
+                    to={"/service-details?1"}
+                    className="text-decoration-none"
+                  >
                     <div className="position-relative outerWrapperCurveImage">
                       <span className="DisplayTextInMobile">Carpenter</span>
                       <div className="estrellas inverso">
@@ -170,17 +188,20 @@ const Home = () => {
                         <span>C</span>
                       </div>
                       <p>
-                          <img
-                            src="/assets/images/carpenters.jpg"
-                            alt="carpenters"
-                            className="HomeImages"
-                          />
+                        <img
+                          src="/assets/images/carpenters.jpg"
+                          alt="carpenters"
+                          className="HomeImages"
+                        />
                       </p>
                     </div>
                   </Link>
                   <div className="position-relative">
-                    <Link to={"/service-details?2"}>
-                    <span className="DisplayTextInMobile">Electrician</span>
+                    <Link
+                      to={"/service-details?2"}
+                      className="text-decoration-none"
+                    >
+                      <span className="DisplayTextInMobile">Electrician</span>
                       <div className="estrellas estrellasSecondWord inverso">
                         <span>N</span>
                         <span>A</span>
@@ -195,17 +216,20 @@ const Home = () => {
                         <span>E</span>
                       </div>
                       <p>
-                          <img
-                            src="/assets/images/Electrician.jpg"
-                            alt="Electrician"
-                            className="HomeImages"
-                          />
+                        <img
+                          src="/assets/images/Electrician.jpg"
+                          alt="Electrician"
+                          className="HomeImages"
+                        />
                       </p>
                     </Link>
                   </div>
                   <div className="position-relative outerWrapperThirdCurveImage">
-                    <Link to={"/service-details?3"}>
-                    <span className="DisplayTextInMobile">Handyman</span>
+                    <Link
+                      to={"/service-details?3"}
+                      className="text-decoration-none"
+                    >
+                      <span className="DisplayTextInMobile">Handyman</span>
                       <div className="estrellasHandyman estrellasThird inverso">
                         {/* <span>I</span> */}
                         <span>N</span>
@@ -218,11 +242,11 @@ const Home = () => {
                         <span>H</span>
                       </div>
                       <p>
-                          <img
-                            src="/assets/images/handyman.jpg"
-                            alt="handyman"
-                            className="HomeImages"
-                          />
+                        <img
+                          src="/assets/images/handyman.jpg"
+                          alt="handyman"
+                          className="HomeImages"
+                        />
                       </p>
                     </Link>
                   </div>
@@ -250,7 +274,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      {/* <div className="">
         <div className="d-flex mt-5">
           <div className="col-md-6 pe-0 ps-0">
             <div className="outerWrapperInterPriseSection py-4 px-3">
@@ -293,8 +317,8 @@ const Home = () => {
             <div className="outerWrapperEnterpriseSuiteRightSection"></div>
           </div>
         </div>
-      </div>
-      <div className="container-fluid">
+      </div> */}
+      {/* <div className="container-fluid">
         <div className="row">
           <div className="col-12">
             <div className="mt-5">
@@ -302,73 +326,97 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mt-5">
         <CustomCarousel />
       </div>
       <div className="container-fluid">
-        <div className="row mt-5">
-          <div className="d-flex gap-1 justify-content-center flex-wrap mb-3">
+        <div className="mt-5">
+          {/* <div className="d-flex gap-1 justify-content-center flex-wrap mb-3">
             <h3 className="HeadingPickService">Pick from </h3>
             <h3 className="HeadingPickService headingColor">
-              over 5000 services{" "}
+              over 5 services{" "}
             </h3>
             <h3 className="HeadingPickService">list for your home</h3>
-          </div>
-          <div className="col-md-3">
-            <p className="ServiceListHeading">Moving & Storage</p>
-            <p className="ServiceListSubHeading mt-2">Local moving in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">
-              International moving from Dubai
-            </p>
-            <p className="ServiceListSubHeading mt-2">Villa moving in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">
-              Furniture moving in Dubai
-            </p>
-            <p className="ServiceListSubHeading mt-2">Office moving in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">Storage in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">
-              Furniture Storage in Dubai
-            </p>
-            <p className="ServiceListSubHeading mt-2">Car Shipping in Dubai</p>
-          </div>
-
-          <div className="col-md-3">
-            <p className="ServiceListHeading">AC Services</p>
-            <p className="ServiceListSubHeading mt-2">AC Cleaning in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">
-              AC Duct Cleaning in Dubai
-            </p>
-            <p className="ServiceListSubHeading mt-2">
+          </div> */}
+          <div className="d-flex justify-content-between gap-4 outerWrapperServiceListHome">
+            <div className="">
+              <p className="ServiceListHeading">Handyman Services</p>
+              <p className="ServiceListSubHeading mt-2">
+                Furniture Installation
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                TV/entertainment system installation
+              </p>
+              <p className="ServiceListSubHeading mt-2">Drilling and hanging</p>
+              <p className="ServiceListSubHeading mt-2">
+                Curtain and blinds installation
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Flyscreen installation
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Door locks installation/repairs
+              </p>
+            </div>
+            <div className="">
+              <p className="ServiceListHeading">Plumbing Services</p>
+              <p className="ServiceListSubHeading mt-2">
+                Drainage Related Services
+              </p>
+              <p className="ServiceListSubHeading mt-2">Leakage Repairs</p>
+              <p className="ServiceListSubHeading mt-2">
+                Bathroom installation/Repairs
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Water Heater installation/Repairs
+              </p>
+            </div>
+            <div className="">
+              <p className="ServiceListHeading">Electrical Services</p>
+              <p className="ServiceListSubHeading mt-2">
+                Chandelier & Decorative Lights
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Replacing Switches & Lights
+              </p>
+              <p className="ServiceListSubHeading mt-2">Wiring</p>
+              {/* <p className="ServiceListSubHeading mt-2">
               AC Installation in Dubai
             </p>
             <p className="ServiceListSubHeading mt-2">
               AC Maintenance in Dubai
             </p>
-            <p className="ServiceListSubHeading mt-2">AC Repair in Dubai</p>
-          </div>
-          <div className="col-md-3">
-            <p className="ServiceListHeading">Cleaning Services</p>
-            <p className="ServiceListSubHeading mt-2">Home Cleaning Services</p>
-            <p className="ServiceListSubHeading mt-2">Carpet Cleaning</p>
-            <p className="ServiceListSubHeading mt-2">Deep Cleaning</p>
-            <p className="ServiceListSubHeading mt-2">Laundry Services</p>
-            <p className="ServiceListSubHeading mt-2">Mattress Cleaning</p>
+            <p className="ServiceListSubHeading mt-2">AC Repairs in Dubai</p> */}
+            </div>
+            <div className="">
+              <p className="ServiceListHeading">Carpenter Services</p>
+              <p className="ServiceListSubHeading mt-2">
+                Furniture Assembling (IKEA, Amazon etc)
+              </p>
+              <p className="ServiceListSubHeading mt-2">Furniture Repairs</p>
+              <p className="ServiceListSubHeading mt-2">
+                Door & Cabinets Repairs
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Wooden holes and Cracks filling
+              </p>
+              {/* <p className="ServiceListSubHeading mt-2">Mattress Cleaning</p>
             <p className="ServiceListSubHeading mt-2">Office Cleaning</p>
             <p className="ServiceListSubHeading mt-2">Sofa Cleaning</p>
             <p className="ServiceListSubHeading mt-2">Water Tank Cleaning</p>
-            <p className="ServiceListSubHeading mt-2">Window Cleaning</p>
-          </div>
-          <div className="col-md-3">
-            <p className="ServiceListHeading">Maintenance & Handyman</p>
-            <p className="ServiceListSubHeading mt-2">Handyman in Dubai</p>
-            <p className="ServiceListSubHeading mt-2">
-              Home Maintenance in Dibai
-            </p>
-            <p className="ServiceListSubHeading mt-2">
-              Annual Maintenance in Dubai
-            </p>
-            <p className="ServiceListSubHeading mt-2">
+            <p className="ServiceListSubHeading mt-2">Window Cleaning</p> */}
+            </div>
+            <div className="">
+              <p className="ServiceListHeading">Paint Services</p>
+              <p className="ServiceListSubHeading mt-2">
+                Apartment ans Villa Paint
+              </p>
+              <p className="ServiceListSubHeading mt-2">
+                Pictures, Mirrors & Curtains holes filling and touchup
+              </p>
+              <p className="ServiceListSubHeading mt-2">Door polish</p>
+              {/* <p className="ServiceListSubHeading mt-2">
               Building & Flooring in Dubai
             </p>
             <p className="ServiceListSubHeading mt-2">Carpentry in Dubai</p>
@@ -379,7 +427,8 @@ const Home = () => {
             <p className="ServiceListSubHeading mt-2">
               Furniture Assembly in Dubai
             </p>
-            <p className="ServiceListSubHeading mt-2">Plumber in Dubai</p>
+            <p className="ServiceListSubHeading mt-2">Plumber in Dubai</p> */}
+            </div>
           </div>
         </div>
       </div>

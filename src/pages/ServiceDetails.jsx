@@ -17,9 +17,8 @@ const ServiceDetails = () => {
   }, [location?.search]);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    return () => {
-    }
-  }, [location.pathname])
+    return () => {};
+  }, [location.pathname]);
   return (
     <div className="pb-5">
       <div className="container-fluid">
@@ -32,7 +31,12 @@ const ServiceDetails = () => {
               <div className="">
                 <div className="d-flex justify-content-end gap-2">
                   <div>
-                    <a href="https://www.facebook.com/" className="">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100083605351014"
+                      className=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/assets/icons/facebookService.svg"
                         alt="facebookService"
@@ -41,7 +45,12 @@ const ServiceDetails = () => {
                     </a>
                   </div>
                   <div>
-                    <a href="https://web.whatsapp.com/" className="">
+                    <a
+                      href="https://web.whatsapp.com/"
+                      className=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/assets/icons/whatsAppService.svg"
                         alt="whatsAppService"
@@ -50,7 +59,12 @@ const ServiceDetails = () => {
                     </a>
                   </div>
                   <div>
-                    <a href="https://mail.google.com/" className="">
+                    <a
+                      href="https://mail.google.com/"
+                      className=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/assets/icons/EmialService.svg"
                         alt="EmialService"
@@ -82,12 +96,10 @@ const ServiceDetails = () => {
 
         <div className="row">
           <div className="col-md-12">
-            <div className="mt-3">
-              {DataService?.details}
-            </div>
+            <div className="mt-3">{DataService?.details}</div>
           </div>
         </div>
-        
+
         <div className="row">
           <div className="col-md-12">
             <div className="mt-3">

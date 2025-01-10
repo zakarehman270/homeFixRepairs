@@ -18,6 +18,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PrivateRoute from "./components/PrivateRoutes";
 import { useSelector } from "react-redux";
+import GetQuoteMessage from "./pages/GetQuote";
 function App() {
   const { auth } = useSelector((state) => state.Auth);
   useEffect(() => {
@@ -48,6 +49,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/book-professional" element={<BookProfessional />} />
         <Route exact path="/contact-us" element={<ContactUs />} />
+        <Route exact path="/get-quote" element={<GetQuoteMessage />} />
+        
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/term-condition" element={<TermAndCondition />} />
         <Route exact path="/blog" element={<Blog />} />

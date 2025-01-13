@@ -1,21 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { config } from "react-spring";
 import CarouselBox from "./CarouselBox";
 import CarouselInMobile from "./CarouselInMobile";
-const getTouches = (evt) => {
-  return evt.touches || evt.originalEvent.touches; // browser API
-};
 
 const CustomCarousel = () => {
   const [goToSlide, setGoToSlide] = useState(0);
-  const [offsetRadius] = useState(2);
-  const [showNavigation] = useState(true);
-  const [enableSwipe] = useState(true);
   const [xDown, setXDown] = useState(null);
   const [yDown, setYDown] = useState(null);
-  let CarouselData = [
+  const [autoScroll, setAutoScroll] = useState(true);
+
+  const carouselData = useMemo(() => [
     {
       title: "Greg Archbld, Founder & CE",
       image: "/assets/images/carousel1.svg",
@@ -31,118 +27,89 @@ const CustomCarousel = () => {
       image: "/assets/images/carousel3.svg",
       des: "HomeFixRepairs exceeded my expectations in every aspect. I highly recommend them for their professionalism, skilled workforce, and commitment to customer satisfaction. If you're looking for a reliable home improvement partner, HomeFixRepairs is the way to go.",
     },
-  ];
-  const slides = [
-    {
+  ], []);
+
+  const slides = useMemo(() => {
+    return carouselData.map((data, index) => ({
       key: uuidv4(),
       content: (
         <CarouselBox
-          title={CarouselData[0].title}
-          imag={CarouselData[0].image}
-          description={CarouselData[0].des}
-          activeSlide={goToSlide == 0}
+          title={data.title}
+          imag={data.image}
+          description={data.des}
+          activeSlide={goToSlide === index}
         />
       ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <CarouselBox
-          title={CarouselData[1].title}
-          imag={CarouselData[1].image}
-          description={CarouselData[1].des}
-          activeSlide={goToSlide == 1}
-        />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <CarouselBox
-          title={CarouselData[2].title}
-          imag={CarouselData[2].image}
-          description={CarouselData[2].des}
-          activeSlide={goToSlide == 2}
-        />
-      ),
-    },
-  ].map((slide, index) => {
-    return { ...slide, onClick: () => setGoToSlide(index) };
-  });
+      onClick: () => setGoToSlide(index),
+    }));
+  }, [carouselData, goToSlide]);
 
   const handleTouchStart = (evt) => {
-    if (!enableSwipe) {
-      return;
-    }
-
-    const firstTouch = getTouches(evt)[0];
+    const firstTouch = evt.touches[0];
     setXDown(firstTouch.clientX);
     setYDown(firstTouch.clientY);
   };
 
   const handleTouchMove = (evt) => {
-    if (!enableSwipe || (!xDown && !yDown)) {
-      return;
-    }
+    if (!xDown || !yDown) return;
 
-    let xUp = evt.touches[0].clientX;
-    let yUp = evt.touches[0].clientY;
+    const xUp = evt.touches[0].clientX;
+    const yUp = evt.touches[0].clientY;
 
-    let xDiff = xDown - xUp;
-    let yDiff = yDown - yUp;
+    const xDiff = xDown - xUp;
+    const yDiff = yDown - yUp;
+
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-      if (xDiff > 0) {
-        /* left swipe */
-        setGoToSlide(goToSlide + 1);
-      } else {
-        /* right swipe */
-        setGoToSlide(goToSlide - 1);
-      }
-      setXDown(null);
-      setYDown(null);
+      setGoToSlide((prev) => {
+        if (xDiff > 0) {
+          // Left swipe
+          return (prev + 1) % slides.length;
+        } else {
+          // Right swipe
+          return (prev - 1 + slides.length) % slides.length;
+        }
+      });
     }
-  };
-  const [autoScroll, setAutoScroll] = useState(true);
 
+    setXDown(null);
+    setYDown(null);
+  };
 
   useEffect(() => {
-    // Define a function to handle automatic scrolling
-    const handleAutoScroll = () => {
+    const intervalId = setInterval(() => {
       if (autoScroll) {
-        // Increment the slide index to move to the next slide
         setGoToSlide((prevGoToSlide) => (prevGoToSlide + 1) % slides.length);
       }
-    };
+    }, 3000);
 
-    // Set up an interval for automatic scrolling
-    const intervalId = setInterval(handleAutoScroll, 2000); // Adjust the interval as needed (e.g., 5000ms for 5 seconds)
-
-    // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
-  }, [autoScroll]);
+  }, [autoScroll, slides.length]);
 
   return (
     <div className="position-relative">
       <img
         src="/assets/images/CarouselBackImage.jpg"
         className="BackImagesInCarousel"
-        alt=""
+        alt="Background"
       />
       <div className="outerContainerCarousel">
         <div className="outerWrapperHeaderClients">
           <h3 className="headingOurClients">Our Clients Reviews</h3>
         </div>
         <div className="carouselInFullSize">
-          <CarouselInMobile data={CarouselData} />
+          <CarouselInMobile data={carouselData} />
         </div>
         <div className="d-flex justify-content-center">
           <div className="CarouselInMobile CarouselSize">
-            <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+            <div
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+            >
               <Carousel
                 slides={slides}
                 goToSlide={goToSlide}
-                offsetRadius={offsetRadius}
-                showNavigation={showNavigation}
+                offsetRadius={2}
+                showNavigation={true}
                 animationConfig={config.slow}
               />
             </div>
@@ -152,4 +119,5 @@ const CustomCarousel = () => {
     </div>
   );
 };
+
 export default CustomCarousel;

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import ReactPlayer from "react-player";
-import WhyChooseUs from "../components/WhyChooseUs";
 import { useLocation } from "react-router-dom";
 const AboutUs = () => {
   const location = useLocation();

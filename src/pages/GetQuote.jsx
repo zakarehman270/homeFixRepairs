@@ -2,21 +2,25 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
-const GetQuoteMessage = () => {
+const ContactUs = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    message: "",
+    workDescription: "",
+    phone: "",
+    address: "",
   });
 
   const [errors, setErrors] = useState({
     name: false,
-    email: false,
-    message: false,
+    workDescription: false,
+    phone: false,
+    address: false,
   });
 
   const [loading, setLoading] = useState(false);
@@ -24,8 +28,6 @@ const GetQuoteMessage = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
-
-  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -38,8 +40,9 @@ const GetQuoteMessage = () => {
   const validateForm = () => {
     const newErrors = {
       name: formData.name.trim() === "",
-      email: !validateEmail(formData.email),
-      message: formData.message.trim() === "",
+      workDescription: formData.workDescription.trim() === "",
+      phone: formData.phone.trim() === "",
+      address: formData.address.trim() === "",
     };
     setErrors(newErrors);
     return !Object.values(newErrors).some((error) => error);
@@ -47,10 +50,8 @@ const GetQuoteMessage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!validateForm()) return;
-
+    if (!validateForm()) return; 
     setLoading(true);
-
     emailjs
       .sendForm(
         "service_zennb2u",
@@ -77,7 +78,6 @@ const GetQuoteMessage = () => {
         }
       );
   };
-
   return (
     <div className="contact-container">
       <div className="form-section">
@@ -89,7 +89,7 @@ const GetQuoteMessage = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-container mb-4">
             <label htmlFor="name" className="input-label">
-              Your Name
+              Name
             </label>
             <input
               type="text"
@@ -104,42 +104,81 @@ const GetQuoteMessage = () => {
               <small className="error-text">Name is required.</small>
             )}
           </div>
+
           <div className="input-container mb-4">
-            <label htmlFor="email" className="input-label">
-              Email
+            <label htmlFor="phone" className="input-label">
+              Phone Number
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="xxxxx@gmail.com"
-              className={`custom-input ${errors.email ? "input-error" : ""}`}
+            <PhoneInput
+              country={"ae"}
+              value={formData.phone}
+              enableSearch
+              name={formData.phone}
+              id={formData.phone}
+              className={errors.phone ? "input-error" : ""}
+              onChange={(phone) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  phone,
+                }))
+              }
             />
-            {errors.email && (
-              <small className="error-text">Enter a valid email address.</small>
+            {errors.phone && (
+              <small className="error-text">Phone is required.</small>
             )}
           </div>
+
           <div className="input-container mb-4">
-            <label htmlFor="message" className="input-label">
-              Your Message
+            <label htmlFor="address" className="input-label">
+              Your Address
+            </label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleInputChange}
+              placeholder="123 Main Street"
+              className={`custom-input ${errors.address ? "input-error" : ""}`}
+            />
+            {errors.address && (
+              <small className="error-text">Address is required.</small>
+            )}
+          </div>
+
+          <div className="input-container mb-4">
+            <label htmlFor="workDescription" className="input-label">
+              Work Description
             </label>
             <textarea
-              id="message"
-              name="message"
-              value={formData.message}
+              id="workDescription"
+              name="workDescription"
+              value={formData.workDescription}
               onChange={handleInputChange}
-              placeholder="Write your message here..."
+              placeholder="Write your work Description here..."
               className={`custom-textarea ${
-                errors.message ? "input-error" : ""
+                errors.workDescription ? "input-error" : ""
               }`}
               rows="4"
             ></textarea>
-            {errors.message && (
-              <small className="error-text">Message is required.</small>
+            {errors.workDescription && (
+              <small className="error-text">Work Description is required.</small>
             )}
           </div>
+
+          <div className="d-none">
+            <textarea
+              name="message"
+              value={`
+                      Name:             ${formData.name} 
+											Phone:            ${formData.phone}  
+                      Message:          ${formData.workDescription}
+                      Address :         ${formData.address}
+														`}
+              onChange={() => {}}
+            />
+          </div>
+
           <button
             type="submit"
             className="send-button w-100"
@@ -151,7 +190,7 @@ const GetQuoteMessage = () => {
       </div>
       <div className="info-section">
         <div className="image-container">
-          <img src="/assets/images/contactus.png" alt="Contact Graphic" />
+          <img src="/assets/images/contactus.png" alt="Contact Graphic" className="w-100" />
         </div>
         <div className="info-details">
           <div className="outerWrapperMediaIconsInContactUS">
@@ -161,7 +200,7 @@ const GetQuoteMessage = () => {
                 alt="location"
                 className="MediaIcons"
               />
-              <p>Office 316, Jessco building, Albraha, Dubai</p>
+              <p className="address">Office 316, Jessco building, Albraha, Dubai</p>
             </div>
             <div className="d-flex gap-2 align-items-center mb-3">
               <img
@@ -197,14 +236,14 @@ const GetQuoteMessage = () => {
           >
             <img src="/assets/icons/facebooklogo.svg" alt="facebook" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#">
             <img
               src="/assets/icons/instagram.svg"
               alt="instagram"
               className="instagramIcons"
             />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="#">
             <img src="/assets/icons/twitter.svg" alt="twitter" />
           </a>
         </div>
@@ -213,4 +252,4 @@ const GetQuoteMessage = () => {
   );
 };
 
-export default GetQuoteMessage;
+export default ContactUs;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import OurServices from "../components/ourServices";
 import { services } from "../Data";
-import WhyChooseUs from "../components/WhyChooseUs";
 import CustomCarousel from "../components/CustomCarousel";
 import { Link, useLocation } from "react-router-dom";
 import { useRef } from "react";
@@ -51,6 +50,15 @@ const Home = () => {
               <LeftRightSideAnimation x={"-100%"}>
                 <div className="outerWrapperLeftSideContentHome">
                   <h3 className="HomeHeading">Home Fix Repairs</h3>
+                  <h1 className="d-none">handyman</h1>
+                  <h1 className="d-none">Home Repairs</h1>
+                  <h1 className="d-none">Home Repair</h1>
+                  <h1 className="d-none">Home fix Repair</h1>
+                  <h1 className="d-none">Home maintenance</h1>
+                  <h1 className="d-none">Home paint</h1>
+                  <h1 className="d-none">Home electrician</h1>
+                  <h1 className="d-none">plumber</h1>
+                  <h1 className="d-none">Carpenter</h1>
                   <p className="SubHeadingInHome">
                     Home Fix Repairs is your trusted partner for all your home
                     improvement needs. Our team of skilled professionals is
@@ -60,7 +68,7 @@ const Home = () => {
                     home a better place. With Home Fix Repairs, your home is in
                     capable hands.
                   </p>
-                  <div className="my-3  outerWrapperSearchInHomeInHome py-2 px-3">
+                  <div className="my-3  outerWrapperSearchInHomeInHome py-3 px-3">
                     <p className="textInSearchHome mb-1">
                       Select your service.
                     </p>
@@ -160,11 +168,11 @@ const Home = () => {
                   </div>
                 </div>
               </LeftRightSideAnimation>
-
               <img
                 src="/assets/images/EllipseImage.png"
                 alt="EllipseImage"
                 className="EllipseImage"
+                loading="lazy"
               />
             </div>
             <div className="EllipseImageRightSide">
@@ -339,7 +347,7 @@ const Home = () => {
             </h3>
             <h3 className="HeadingPickService">list for your home</h3>
           </div> */}
-          <div className="d-flex justify-content-between gap-4 outerWrapperServiceListHome">
+          <div className="d-flex justify-content-between gap-3 outerWrapperServiceListHome">
             <div className="">
               <p className="ServiceListHeading">Handyman Services</p>
               <p className="ServiceListSubHeading mt-2">

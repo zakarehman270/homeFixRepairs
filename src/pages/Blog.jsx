@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import { Button } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
-import Masonry from "react-layout-masonry";
+// import { Button } from "react-bootstrap";
+import {  useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Blog = () => {

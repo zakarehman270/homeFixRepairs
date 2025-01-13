@@ -304,7 +304,6 @@ const BookProfessional = () => {
                       className="form-control"
                       min={minDate}
                       onChange={(date) => {
-                        console.log("ee.", date.target.value);
                         formData.date = date.target.value;
                         setFormData({ ...formData });
                       }}

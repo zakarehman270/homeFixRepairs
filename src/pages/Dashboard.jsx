@@ -4,29 +4,10 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import resourceTimeGridPlugin from "@fullcalendar/resource-timegrid";
 import { useGetEventQuery, useGetResourceQuery } from "../redux/api";
 
-const resources = [
-  { id: "1", title: "Qamar Javed Bab Al Qarya HM1 (5)" },
-  { id: "2", title: "Asif Raza Shahani Bab Al Qarya HM1 (4.8)" },
-  { id: "3", title: "Muhammad Bal Al Qarya HM1 (4.71)" },
-  { id: "4", title: "Pervaiz Bab Al Qarya HM1 (4.71)" },
-  { id: "5", title: "Soulat Abbas Bab Al Qarya HM1 (4.7)" },
-  { id: "6", title: "Muhammad Jameel Bab Al Qarya HM1 (4.49)" },
-  { id: "7", title: "Ahmad Sher Jan Bab Al Qarya HM1 (4.4)" },
-];
-
-const events = [
-  { title: "Meeting", start: new Date(), resourceId: "1" },
-  { title: "Lunch", start: new Date(), resourceId: "2" },
-  { title: "Workshop", start: new Date(), resourceId: "3" },
-  { title: "Conference", start: new Date(), resourceId: "4" },
-];
-
 export default function Dashboard() {
   const { data: eventData, error: eventError, isLoading: eventIsLoading, isError: eventIsError } = useGetEventQuery();
   // Fetch resource data
   const { data: resourceData, error: resourceError, isLoading: resourceIsLoading, isError: resourceIsError } = useGetResourceQuery();
-console.log("eventData", eventData?.events)
-console.log("resourceData", resourceData?.resources)
   return (
     <div className="p-5">
       <FullCalendar

@@ -1,4 +1,4 @@
-import { Carousel } from "react-bootstrap";
+
 import Slider from "react-slick";
 
 function CarouselInMobile({ data }) {
